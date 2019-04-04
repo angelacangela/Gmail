@@ -1,0 +1,226 @@
+#entireSignUpBox {
+    font-family: 'Google Sans',arial,sans-serif;
+    width: 748px;
+    height: 538px;
+    margin: auto;
+    padding: 48 40 36px;
+    display: flex;
+    border: 1px solid #E0E0E0;
+}
+
+#fillInTheBlank {
+    width:448px;
+}
+
+#rightBox {
+    height: 180px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #imageLogo {
+    width: 252px;
+    height: 454px;
+    display: flex;
+    padding: 0 48px;
+    margin: 0 -48px;
+} */
+
+#accountImage {
+    height: 244px;
+    align-content: center;
+    /* padding-top: 40px; */
+}
+
+
+#explanationUnderImage {
+    font-size: 16px;
+    color: #202124;
+    margin: auto;
+
+}
+    
+#googlelogo {
+    width: auto;
+    height: 37px;
+    padding-left: 24px;
+    display:flex;
+    flex-direction: row;
+}
+
+
+
+#createYourGoogleAccount {
+    font-size: 24px;
+    color: #202124;
+    padding-top: 16px;
+    padding-left: 24px;
+    width: 100%;
+    height: 48px;
+    text-align: left;
+}
+
+#toContinueToGmail {
+    padding-top: 8px;
+    font-size: 16px;
+    width: 100%;
+    height: 32px;
+    color: #202124;
+    padding-bottom: 24px;
+    text-align: left;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+#nameInput {
+    height: 60px;
+    /* width: 368px; */
+    padding-left: 24px;
+    display: flex;
+    flex-direction: row;
+}
+
+#firstNameInput {
+    height: 34px;
+    width: 174px;
+    align-content: left;
+    margin-right: 16px;
+
+}
+
+#lastNameInput {
+    height: 34px;
+    width: 350px;
+
+}
+
+#username {
+
+}
+
+#usernameInput {
+    width: 270px;
+    height: 34px;
+    margin-left: 24px;
+    /* margin-top: 8px; */
+    display: flex;
+    flex-direction: row;
+}
+
+#endGmailCom {
+    text-align:right;
+}
+
+#userNameInsturction {
+    width: 384px;
+    height: 24px;
+    display: flex;
+    margin-left: 24px;
+    
+}
+
+#pwpw {
+    display: flex;
+    flex-direction: row;
+}
+
+#pw {
+    width: 150px;
+    height: 34px;
+    align-content: left;
+    margin-left: 24px;
+    margin-right: 16px;
+}
+
+#passwordConfirm {
+    width: 150px;
+    height: 34px;
+}
+
+#pwInstruction {
+    color: #202124;
+    width: 100%;
+    height: 17px;
+    font: 12px;
+    padding-left: 24px;
+    text-align: left;
+    padding-top: 24px;
+}
+
+#signInAndNext {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    margin-top: 24px;
+}
+
+#signInInstead {
+    font: 14px;
+    color: #1A73E8;
+    margin-top: 8px;
+    padding-top: 8px;
+    padding-left: 24px;
+    width: 70%; /* 여기 */
+    height: 48px;
+    font-weight: bold;
+    display: flex;
+    text-align: left;
+    cursor: pointer;
+}
+
+#next {
+    width: 88px;
+    height: 36px;
+    font: 14px;
+    color: white;
+    background-color: #1A73E8;
+    font-weight: bold 500px;
+    border-radius: 4px;
+    display: inline-block;
+
+}
+#next:hover { /* 여기 */
+    background-color: #4285f4;
+}
+
+#signUpBoxHelp {
+    color: #202124;
+    font: 12px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
+#one {
+    color: #757575;
+    margin: -6px 0px 0px;
+    padding: 6px 16px;
+    height: 28px;
+    display: inline-block;
+    justify-content: right;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#signUpBoxHelp {
+    font-family: 'Google Sans',arial,sans-serif;
+    width: 748px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

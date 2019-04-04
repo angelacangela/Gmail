@@ -1,0 +1,235 @@
+#NewMessage {
+    display: flex;
+    flex-direction: row;
+    width: 24px;
+    height: 24px;
+    justify-content: flex-end;
+    padding-left: 400px;
+    margin-bottom: 30px;
+
+}
+
+#composeNM {
+    width: 446PX;
+    height: 40px;
+    padding: 7px 0px;
+    margin: 0px 0px 0px 16px;
+    justify-content: flex-end;
+}
+
+#composeRecipients {
+    height: 36px;
+}
+
+#composeSubject {
+    height: 36px;
+
+}
+
+#composeBody {
+    height: 266px;
+    width: 534px;
+}
+
+#NMHeading {
+    font-weight: bold;
+    font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    letter-spacing: .2px;
+    text-align: left;
+    /* padding: 10px 0px; */
+    margin-left: 10px;
+}
+
+#bottomDraftSend {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 12px 16px;
+    text-align: right; 
+    margin: auto;
+}
+
+#senddraft {
+    color: white;
+    background-color: #1A73E8;
+    font-size: 14px;
+    width: 72px;
+    height: 36px;
+    padding: 0px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: .25px;
+}
+
+#formattingoptions {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#formattingoptions:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+
+#attachfiles {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#attachfiles:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#insertlink {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#insertlink:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#insertemoji {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#insertemoji:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#insertfilesusingdrive {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#insertfilesusingdrive:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#insertphoto {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#insertphoto:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#turnconfidentialmodeonoff {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#turnconfidentialmodeonoff:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#sendandreceivemoney {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#sendandreceivemoney:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#moreoptionsoptions {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#moreoptions:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+#discarddraft {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 6px;
+}
+
+#discarddraft:hover {
+    height: 30px;
+    width: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+}
+
+

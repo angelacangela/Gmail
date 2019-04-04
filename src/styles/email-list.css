@@ -1,0 +1,721 @@
+#bigRightBox {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+#leftDropMenu {
+    width: 256px;
+    color: #202124;
+    font-size: 14px;
+    font: roboto;
+}
+
+/* INSIDE INBOX MAIL */
+#topHeadingIcons {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+
+#backToInbox {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#backToInbox:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#archieve {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#archieve:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#reportSpam {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#reportSpam:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#delette {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    border-right: 1px solid lightgray;
+    align-content: left;
+    cursor: pointer;
+}
+
+#delette:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#markasunread {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#markasunread:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#snooze {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    border-right: 1px solid lightgray;
+    align-content: left;
+    cursor: pointer;
+}
+
+#snooze:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#moveto {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+} 
+
+#moveto:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#labels {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#labels:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#moreoptions {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+}
+
+#moreoptions:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#titleOptions {
+    align-content: right;
+}
+
+#newer {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: right;
+    cursor: pointer;
+}
+
+#newer:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#older {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: right;
+    cursor: pointer;
+}
+
+#older:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#keyboard {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    justify-content: right;
+    cursor: pointer;
+}
+
+#keyboard:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+}
+
+#settings {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: right;
+    cursor: pointer;
+}
+
+#settings:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+}
+
+#wholeBox {
+    display: flex;
+    flex-direction: row;
+}
+
+#gmailpng {
+    width: 109px;
+    height: 40px;
+}
+
+#topHeading {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-bottom: 0px;
+}
+
+#topKey {
+    width: 390px;
+    font-size: 14px;
+    height: 56px;
+    display: flex;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    justify-content: center;
+    padding-top: 17px;
+    cursor: pointer;
+}
+
+#topKey:hover {
+    background-color:#f2f2f2;
+    width: 390px;
+    height: 56px;
+    /* border-radius: 17px;  */
+}
+
+#senderLine {
+    height: 14px;
+    color: #5F6368;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+#favorite {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+#favorite:hover {
+    background-color: #f2f2f2;;
+    border-radius: 13px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+#replyreply {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+#replyreply:hover {
+    background-color: #f2f2f2;;
+    border-radius: 13px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    padding-top: 6px;
+}
+
+
+
+
+#subject {
+    /* color:#202124; */
+    font-size: 22px;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding-left: 64px;
+    padding-top: 20px;
+}
+
+#contentPrint {
+    font-size: 16px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#contentPrint:hover {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+#senderName {
+    /* color:#202124; */
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+#senderEmail {
+    color:#202124;
+    font-size: 14px;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+#receivedDate {
+    /* color:#202124; */
+    font-size: 12px;
+    padding: 10px 0px;
+    margin-right: 18px;
+    height: 40px;
+    text-align: right;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+
+#bigLeftBox {
+    
+
+}
+
+#emailContent {
+    text-align: left;
+}
+
+
+#inbox {
+    width: 164px;
+    height: 32px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+}
+
+#inbox:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+
+
+#inboximage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#starred {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#starred:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#starredimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+
+}
+
+
+#snoozed {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#snoozedimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#snoozed:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#sent {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#sentimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#sent:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#drafts {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#draftsimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#drafts:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#important {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#importantimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#important:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#chats {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#chatsimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#chats:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#allmail {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#allmailimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#allmail:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#spam {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+#spamimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#spam:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#trash {
+    width: 164px;
+    height: 24px;
+    font-size: 14px;
+    color: #202124;
+    text-align: left;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    padding: 4px 12px 4px 26px;
+    cursor: pointer;
+}
+
+
+#trashimage {
+    width: 23px;
+    height: 23px;
+    margin: 4px 18px 4px 0px;
+}
+
+#trash:hover {
+    background-color: #f2f2f2;
+    width: 240px;
+    height: 32px;
+    border-radius: 17px;
+}
+
+#noRecentChatBottom {
+    margin: auto;
+    width: 217px;
+    height: 201px;
+}
+
+#norecentchat {
+    width: 72px;
+    height: 72px;
+    /* margin-top: 30px; */
+    margin: auto;
+}
+
+#NO {
+    color: #1155CC;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#NRC {
+    color: #737373;
+    font-size: 13px;
+}
+
+#emailSubjectContent {
+    display: flex;
+    flex-direction: row;
+}
+
+#replyButton {
+    width: 104px;
+    height: 36px;
+    margin: 0px 12px 0px 0px;
+    padding: 0px 16px 0px 12px;
+    align-items: center;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    letter-spacing: .25px;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #5f6368;
+    flex-direction: row;
+}
+
+#replyButton:hover {
+    background-color:#f2f2f2;
+}
+
+#forwardButton {
+    width: 104px;
+    height: 36px;
+    margin: 0px 12px 0px 0px;
+    padding: 0px 16px 0px 12px;
+    align-items: center;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    letter-spacing: .25px;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #5f6368;
+    flex-direction: row;
+}
+
+#forwardButton:hover {
+    background-color:#f2f2f2;
+}
+
+#bottomButton {
+    height: 36px; 
+    width: 284px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 36px;
+}
+
+/* width: 320px;
+height: 556px;
+
+64px;
+64px; */
+
+
+
+
+
+
+
