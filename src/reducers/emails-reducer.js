@@ -22,7 +22,7 @@ export default handleActions(
         activeEmail: {
             id: 1,
             subject: "Angela, welcome to your new Google Account",
-            body: "The password for your Google account angelafarts247@gmail.com was changed. If you didn't change it, you should recover your account.",
+            body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
             senderName: "Google",
             senderEmail: "no-reply@accounts.google.com",
             receivedDate: "Wed Mar 27 2019 21:36:22 GMT-0700 (Pacific Daylight Time)"
@@ -48,25 +48,25 @@ export default handleActions(
             },
             4: {
                 id: 4,
-                subject: "STOP FARTING NOW, LEARN HOW!",
+                subject: "STOP laughING NOW, LEARN HOW!",
                 senderName: "Google",
                 receivedDate: "March 23"
             },
             5: {
                 id: 5,
-                subject: "Everyone around you keep farting? Click this email",
+                subject: "Everyone around you keep laughing? Click this email",
                 senderName: "Google",
                 receivedDate: "March 24"
             },
             6: {
                 id: 6,
-                subject: "Angela, stop farting today. We can show you how.",
+                subject: "Angela, stop laughing today. We can show you how.",
                 senderName: "Google",
                 receivedDate: "March 24"
             },
             7: {
                 id: 7,
-                subject: "Driving people away because of your farting? We can change that.",
+                subject: "Driving people away because of your laughing? We can change that.",
                 senderName: "Google",
                 receivedDate: "March 24"
             },
@@ -85,55 +85,55 @@ export default handleActions(
             10: {
                 id: 10,
                 subject: "Old People Are Very Gross",
-                senderName: "OldFart",
+                senderName: "Oldlaugh",
                 receivedDate: "March 25"
             },
             11: {
                 id: 11,
-                subject: "Find someone to fart with today.",
+                subject: "Find someone to laugh with today.",
                 senderName: "Match.com",
                 receivedDate: "March 25"
             },
             12: {
                 id: 12,
-                subject: "Fart Around This Weekend!",
-                senderName: "FartingWeekend",
+                subject: "laugh Around This Weekend!",
+                senderName: "laughingWeekend",
                 receivedDate: "March 26"
             },
             13: {
                 id: 13,
-                subject: "Need fart help? We can help.",
-                senderName: "Fart Help",
+                subject: "Need laugh help? We can help.",
+                senderName: "laugh Help",
                 receivedDate: "March 26"
             },
             14: {
                 id: 14,
-                subject: "Introducing the fart plug. Stop farting today!",
-                senderName: "Fart Plug",
+                subject: "Introducing the laugh plug. Stop laughing today!",
+                senderName: "laugh Plug",
                 receivedDate: "March 26"
             },
             15: {
                 id: 15,
-                subject: "Fart Forever - the cologne",
-                senderName: "Fart Forever",
+                subject: "laugh Forever - the cologne",
+                senderName: "laugh Forever",
                 receivedDate: "March 28"
             },
             16: {
                 id: 16,
-                subject: "Learn to be your best farter, TODAY!",
+                subject: "Learn to be your best laugher, TODAY!",
                 senderName: "Karen Valentine",
                 receivedDate: "March 28"
             },
             17: {
                 id: 17,
-                subject: "Fart in a class TOMORROW! What are you waiting for?",
+                subject: "laugh in a class TOMORROW! What are you waiting for?",
                 senderName: "GrouponDeals",
                 receivedDate: "March 28"
             },
             18: {
                 id: 18,
-                subject: "FartTown, coming to San Jose this weekend!",
-                senderName: "FartTown Promotions",
+                subject: "laughTown, coming to San Jose this weekend!",
+                senderName: "laughTown Promotions",
                 receivedDate: "March 29"
             }
         }
