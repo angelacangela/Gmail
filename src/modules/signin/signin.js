@@ -28,10 +28,13 @@ class SignIn extends Component {
                             id="signInInput"
                             placeholder="Email or phone"
                         />
-
-                        <div onClick={() => changePage("ForgotEmail")} id="forgotEmail">
-                        Forgot email?
+                        
+                        <div id="row">
+                            <div onClick={() => changePage("ForgotEmail")} id="forgotEmail">
+                            Forgot email?
+                            </div>
                         </div>
+
                         <div id="guestMode">
                         Not your computer? Use Guest mode to sign in privately.
                         </div>
@@ -53,9 +56,9 @@ class SignIn extends Component {
                         English (United States)
                         </div>
                         <div id="rightBoxButtons">
-                            <div id="rbHelp"><a href="https://support.google.com/accounts?hl=en#topic=3382296" target="_blank">Help</a></div>
-                            <div id="rbPrivacy"><a href="https://policies.google.com/privacy?gl=US&hl=en" target="_blank">Privacy</a></div>
-                            <div id="rbTerms"><a href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a></div>
+                            <a id="rbButton" href="https://support.google.com/accounts?hl=en#topic=3382296" target="_blank">Help</a>
+                            <a id="rbButton" href="https://policies.google.com/privacy?gl=US&hl=en" target="_blank">Privacy</a>
+                            <a id="rbButton" href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a>
                         </div>
                     </div>
                 

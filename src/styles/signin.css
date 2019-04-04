@@ -2,6 +2,8 @@
     font-family: 'Google Sans',arial,sans-serif;
     margin: auto;
     border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    margin-top: 16vh;
     width: 448px;
     height: 500px; 
 }
@@ -15,80 +17,65 @@
 #signInBox {
     width: 448px;
     height: 500px;
-    padding-left: 24px;
+    padding: 48px 40px 36px 40px;
 }
 
 #signIn {
-    width:366px;
-    height: 54px;
     color: #202124;
     margin: auto;
     font-size: 24px;
-    padding-left: 13 15px;
-    padding-bottom: -20px;
-
+    padding-top: 16px;
 }
 
 #toContinuetoGmail {
     color: #202124;
     width: 145px;
     height: 16px;
-    /* padding-top: 8px; */
     font-size: 16px;
     margin: auto;
     padding-bottom: 24px;
+    padding-top: 8px;
 }
 
 #signInInput {
     width: 366px;
-    height: 54px;
-    border-radius: 5px;
-    margin-left: 24px;
-    margin-right: 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 32px;
+    padding: 13px 15px;
 }
 
 #forgotEmail {
-    width: 331px;
-    height: 32px;
-    padding-top: 9px;
     font-size: 14px;
     color: #1A73E8;
+    cursor: pointer;
     font-weight: bold;
     text-align: left;
-    margin-left: 24px;
-
+    width: 100px;
 }
 
 #guestMode {
-    width: 331px;
-    height: 52px;
     font-size: 14px;
     color: #5F6363;
-    margin-left: 24px;
     text-align: left;
-    padding-top: 24px;
+    padding-top: 35px;
 }
 
 #learnMore {
-    width: 368px;
-    height: 20px;
     color: #1a73e8;
     font-size: 14px;
     font-weight: bold;
     text-align: left;
-    padding-left: 24px;
-    padding-top: 10px;
     cursor: pointer;
 }
 
 #createAccountNext {
-    width: 339px;
-    height: 41px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    /* padding-bottom: 20px; */
     padding-top: 30px;
-    /* flex: 1; */
-
 }
 
 #next {
@@ -112,60 +99,45 @@
     margin-top: 8px; 
     font-size: 14px;
     font-weight: bold;
-    padding-left: 24px;
     text-align: left;
     cursor: pointer;
 }
 
 #Help {
-    width: 448px;
-    height: 14px;
     font-family: 'Google Sans',arial,sans-serif;
+    width: 448px;
     margin: auto;
+    padding-top: 18px;
     display: flex;
     flex-direction: row;
-    /* align-items: flex-start; */
+    justify-content: space-between;
     cursor: pointer;
     color: #757575;
     font-weight: bold;
 }
 
 #leftBox {
-    width: 121px;
-    height: 16px;
-    padding: 8px 24px 8px 16px;
     color: #202124;
     font-size: 12px;
+    font-weight: normal;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
-
 
 #rightBoxButtons {
     color: #757575;
     font-size: 12px;
-    width: 66px;
-    height: 28px;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-
+    align-items: space-between;
 }
 
-#rbHelp {
-    text-align: right;
-    padding-right: 30px;
-    padding-top: 32px;
+#rbButton {
+    color: #757575;
+    padding: 6px 16px;
 }
 
-#rbPrivacy {
-    text-align: right;
-    padding-right: 30px;
-    padding-top: 32px;
+#row {
+    padding-top: 25px;
+    width: "100%";
 }
-
-#rbTerms {
-    text-align: right;
-    padding-right: 30px;
-    padding-top: 32px;
-}
-
-

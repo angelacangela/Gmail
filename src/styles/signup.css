@@ -44,7 +44,6 @@
 #googlelogo {
     width: auto;
     height: 37px;
-    padding-left: 24px;
     display:flex;
     flex-direction: row;
 }
