@@ -3,9 +3,11 @@
     width: 748px;
     height: 538px;
     margin: auto;
-    padding: 48 40 36px;
+    margin-top: 12vh;
+    padding: 48px 40px 36px;
     display: flex;
     border: 1px solid #E0E0E0;
+    border-radius: 6px;
 }
 
 #fillInTheBlank {
@@ -13,22 +15,29 @@
 }
 
 #rightBox {
-    height: 180px;
-    width: auto;
+    width: 300px;
     display: flex;
-    flex-direction: column;
+    padding-left: 48px;
+    justify-content: center;
 }
 
-/* #imageLogo {
-    width: 252px;
-    height: 454px;
+#imageContainer {
     display: flex;
-    padding: 0 48px;
-    margin: 0 -48px;
-} */
+    flex-direction: column;
+    margin: auto;
+}
+
+#imageLogo {
+    margin-left: -15px;
+    margin-top: -10px;
+    width: 110px;
+    object-fit: contain;
+}
 
 #accountImage {
     height: 244px;
+    width: 244px;
+    object-fit: contain;
     align-content: center;
     /* padding-top: 40px; */
 }
@@ -37,8 +46,6 @@
 #explanationUnderImage {
     font-size: 16px;
     color: #202124;
-    margin: auto;
-
 }
     
 #googlelogo {
@@ -52,10 +59,10 @@
 
 #createYourGoogleAccount {
     font-size: 24px;
+    font-weight: 400;
     color: #202124;
-    padding-top: 16px;
-    padding-left: 24px;
     width: 100%;
+    padding-top: 11px;
     height: 48px;
     text-align: left;
 }
@@ -63,97 +70,130 @@
 #toContinueToGmail {
     padding-top: 8px;
     font-size: 16px;
+    font-weight: 400;
     width: 100%;
     height: 32px;
     color: #202124;
     padding-bottom: 24px;
     text-align: left;
-    padding-left: 24px;
     cursor: pointer;
 }
 
 #nameInput {
     height: 60px;
-    /* width: 368px; */
-    padding-left: 24px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+#allInputs {
+    padding-top: 24px;
+    width: 368px;
 }
 
 #firstNameInput {
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
     height: 34px;
+    padding: 7px 11px;
     width: 174px;
-    align-content: left;
-    margin-right: 16px;
-
 }
 
 #lastNameInput {
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
     height: 34px;
-    width: 350px;
-
+    border-radius: 4px;
+    padding: 7px 11px;
+    width: 174px;
 }
 
 #username {
-
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
 }
 
 #usernameInput {
     width: 270px;
     height: 34px;
-    margin-left: 24px;
-    /* margin-top: 8px; */
+    border: none;
     display: flex;
     flex-direction: row;
+    padding: 7px 11px;
 }
 
-#endGmailCom {
-    text-align:right;
+#endGmailContainer {
+    flex: 1;
 }
 
-#userNameInsturction {
-    width: 384px;
+#gmailDotCom {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 7px 0px;
+}
+
+#userNameInstruction {
+    color: black;
+    font-size: 12px;
+    margin-top: 5px;
+    width: 100%;
     height: 24px;
     display: flex;
-    margin-left: 24px;
-    
 }
 
 #pwpw {
+    align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
 }
 
 #pw {
-    width: 150px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
     height: 34px;
-    align-content: left;
-    margin-left: 24px;
-    margin-right: 16px;
+    border-radius: 4px;
+    padding: 7px 11px;
+    width: 150px;
+}
+
+#eyeball {
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 #passwordConfirm {
-    width: 150px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
     height: 34px;
+    border-radius: 4px;
+    padding: 7px 11px;
+    width: 150px;
 }
 
 #pwInstruction {
     color: #202124;
-    width: 100%;
+    width: 320px;
     height: 17px;
-    font: 12px;
-    padding-left: 24px;
+    font-size: 12px;
     text-align: left;
-    padding-top: 24px;
+    padding-top: 8px;
 }
 
 #signInAndNext {
     width: 100%;
-    height: 48px;
     display: flex;
     flex-direction: row;
     padding-top: 24px;
     margin-top: 24px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #signInInstead {
@@ -161,7 +201,6 @@
     color: #1A73E8;
     margin-top: 8px;
     padding-top: 8px;
-    padding-left: 24px;
     width: 70%; /* 여기 */
     height: 48px;
     font-weight: bold;
@@ -179,7 +218,6 @@
     font-weight: bold 500px;
     border-radius: 4px;
     display: inline-block;
-
 }
 #next:hover { /* 여기 */
     background-color: #4285f4;
@@ -187,32 +225,35 @@
 
 #signUpBoxHelp {
     color: #202124;
-    font: 12px;
-    height: 32px;
     display: flex;
     flex-direction: row;
+    width: 748px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 24px;
+    font-family: 'Google Sans',arial,sans-serif;
+}
+
+#signUpHelpRight {
+    display: flex;
+    flex-direction: row;
+    margin-right: -16px;
 }
 
 #one {
     color: #757575;
-    margin: -6px 0px 0px;
     padding: 6px 16px;
-    height: 28px;
-    display: inline-block;
-    justify-content: right;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
 }
 
-#signUpBoxHelp {
-    font-family: 'Google Sans',arial,sans-serif;
-    width: 748px;
-    margin: auto;
+#languageBox {
+    background: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
 }
-
-
-
-
 
 
 
