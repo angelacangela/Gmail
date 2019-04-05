@@ -9,15 +9,16 @@ export default handleActions(
     {
         [SET_ACTIVE_EMAIL] : (state, { payload }) => {
             console.log(payload, "==== payload")
+            const emails = Object.assign({}, {
+                ...state.emails,
+                [payload.email.id]: {
+                    ...payload.email,
+                    read: true
+                }
+            })
             return {
                 ...state,
-                emails: {
-                    ...state.emails,
-                    [payload.email.id]: {
-                        ...payload.email,
-                        read: true
-                    }
-                },
+                emails,
                 activeEmail: {
                     ...generateEmail(payload.email),
                     read: true         

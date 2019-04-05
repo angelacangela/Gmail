@@ -56,6 +56,7 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            emails: Object.values(props.emails),
             showActiveEmail: false,
             composeNewEmail: false,
             inboxCategory: "primary",
@@ -64,18 +65,30 @@ class Home extends Component {
         this.toggleActiveEmail = this.toggleActiveEmail.bind(this);
         this.toggleEmailForm = this.toggleEmailForm.bind(this);
         this.selectInboxCategory = this.selectInboxCategory.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     selectInboxCategory(inboxCategory) {
+        const { emails } = this.props;
         this.setState({ 
             inboxCategory,
-            showActiveEmail: false
+            showActiveEmail: false,
+            emails: Object.values(emails).filter((email) => email.category === inboxCategory)
         });
+    }
+
+    handleSearch(value) {
+        const { emails } = this.props;
+        const returnedEmails = value.length < 1 ? Object.values(emails) : Object.values(emails).filter((email) => (
+            email.subject.toLowerCase().includes(value.toLowerCase()) || email.senderName.toLowerCase().includes(value.toLowerCase())
+        ))
+        this.setState({ emails: returnedEmails });
     }
 
     onChangeHandler(e) {
         e.preventDefault();
         this.setState({ inputContent: e.target.value }); //value를 찾는것//
+        this.handleSearch(e.target.value);
     }
 
     toggleActiveEmail(newState = !this.state.activeEmail) {
@@ -87,9 +100,10 @@ class Home extends Component {
     }
 
     render() {
-        const { activeEmail, changePage, emails, setActiveEmail } = this.props;
+        const { activeEmail, changePage, setActiveEmail } = this.props;
         const { 
             composeNewEmail,
+            emails,
             showActiveEmail,
             inboxCategory,
             inputContent
@@ -314,7 +328,7 @@ class Home extends Component {
                             </div>
                         ) : (
                             <EmailList 
-                                emails={Object.values(emails).filter((email) => email.category === inboxCategory)}
+                                emails={emails}
                                 category={inboxCategory}
                                 setActiveEmail={setActiveEmail}
                                 toggleActiveEmail={this.toggleActiveEmail}
