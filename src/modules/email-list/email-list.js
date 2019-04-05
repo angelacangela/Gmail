@@ -56,11 +56,18 @@ class EmailList extends Component {
         super(props);
         this.state = {
             showActiveEmail: false,
-            composeNewEmail: false
+            composeNewEmail: false,
+            inboxCategory: "primary"
         }
         this.toggleActiveEmail = this.toggleActiveEmail.bind(this);
         this.toggleEmailForm = this.toggleEmailForm.bind(this);
+        this.selectInboxCategory = this.selectInboxCategory.bind(this);
     }
+
+    selectInboxCategory(inboxCategory) {
+        this.setState({ inboxCategory });
+    }
+
     onChangeHandler(e) {
         e.preventDefault();
         this.setState({ inputContent: e.target.value }); //value를 찾는것//
@@ -79,7 +86,8 @@ class EmailList extends Component {
         const { activeEmail, changePage, emails, setActiveEmail } = this.props;
         const { 
             composeNewEmail,
-            showActiveEmail 
+            showActiveEmail,
+            inboxCategory
         } = this.state;
         const {
             subject,
@@ -88,6 +96,11 @@ class EmailList extends Component {
             senderEmail,
             receivedDate,
         } = activeEmail;
+
+        const primary = inboxCategory === "primary";
+        const social = inboxCategory === "social";
+        const promotions = inboxCategory === "promotions";
+
         return (
             <div id="wholeBox" style={{ 
                 display: "flex", 
@@ -128,7 +141,7 @@ class EmailList extends Component {
                         // value={inputContent}
                         onChange={(e) => this.onChangeHandler(e)}
                     />
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button type="submit"><i className="fa fa-search"></i></button>
 
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>
@@ -178,17 +191,72 @@ class EmailList extends Component {
                 </div>
                 <div id="bigRightBox">
                     <div id="topHeading">
-                        <div id="topKey">
-                            <span className="glyphicon glyphicon-inbox"></span>
-                            <div>Primary</div>
+                        <div 
+                            id="topKey"
+                            onClick={() => this.selectInboxCategory("primary")}
+                            style={{
+                                borderBottom: primary ? "3px solid #d93025" : null
+                            }}
+                        >
+                            <div id="topKeyInside">
+                                <span 
+                                    style={{
+                                        color: primary ? "#d93025" : "black"
+                                    }}
+                                    className="glyphicon glyphicon-inbox"
+                                ></span>
+                                <div
+                                    style={{
+                                        color: primary ? "#d93025" : "black"
+                                    }}
+                                >Primary</div>
+                            </div>
                         </div>
-                        <div id="topKey">
-                            <span className="glyphicon glyphicon-tag"></span>
-                            <div>Social</div>
+                        <div 
+                            id="topKey"
+                            onClick={() => this.selectInboxCategory("social")}
+                            style={{
+                                borderBottom: social ? "3px solid #1a73e8" : null
+                            }}
+                        >
+                            <div 
+                                id="topKeyInside"
+                            >
+                                <span 
+                                    style={{
+                                        color: social ? "#1a73e8" : "black"
+                                    }}
+                                    className="glyphicon glyphicon-tag"
+                                ></span>
+                                <div
+                                    style={{
+                                        color: social ? "#1a73e8" : "black"
+                                    }}
+                                >Social</div>
+                            </div>
                         </div>
-                        <div id="topKey">
-                            <span className="glyphicon glyphicon-eye-open"></span>
-                            <div>Promotions</div>
+                        <div 
+                            id="topKey"
+                            onClick={() => this.selectInboxCategory("promotions")}
+                            style={{
+                                borderBottom: promotions ? "3px solid #1e8e3e" : null
+                            }}
+                        >
+                            <div 
+                                id="topKeyInside"
+                            >
+                                <span 
+                                    className="glyphicon glyphicon-eye-open"
+                                    style={{
+                                        color: promotions ? "#1e8e3e" : "black"
+                                    }}
+                                ></span>
+                                <div
+                                    style={{
+                                        color: promotions ? "#1e8e3e" : "black"
+                                    }}
+                                >Promotions</div>
+                            </div>
                         </div>
                         
                     </div>
@@ -235,22 +303,42 @@ class EmailList extends Component {
                                 </div>
                             </div>
                         ) : (
-                            <div>
+                            <div id="allEmails">
                                 {
                                     Object.values(emails).map((email, index) => {
-                                        const { receivedDate, senderName, subject } = email;
+                                        const { receivedDate, senderName, subject, read } = email;
                                         return (
-                                            <div onClick={() => {
-                                                setActiveEmail({ email });
-                                                this.toggleActiveEmail();
-                                            }} key={index} style={{ display: "flex", flexDirection: "row" }}>
-                                            <tr>
-                                                <th><input type="checkbox"></input></th>
-                                                <th><div style={{ width: "25%", textAlign: "left" }}>{senderName}</div></th>
-                                                <th><div style={{ width: "60%", textAlign: "left"}}>{subject}</div></th>
-                                                <th><div style={{ textAlign: "right" }}>{receivedDate}</div></th>
-                                            </tr>
-
+                                            <div 
+                                                onClick={() => {
+                                                    setActiveEmail({ email });
+                                                    this.toggleActiveEmail();
+                                                }} key={index} 
+                                                id="emailLine"
+                                                style={{
+                                                    background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
+                                                }}
+                                            >
+                                                <div id="checkBoxAndSender">
+                                                    <input type="checkbox" />
+                                                    <div 
+                                                        id="senderName"
+                                                        style={{
+                                                            fontWeight: read ? "normal" : "bold"
+                                                        }}
+                                                    >{senderName}</div>
+                                                </div>
+                                                <div 
+                                                    id="subject"
+                                                    style={{
+                                                        fontWeight: read ? "normal" : "bold"
+                                                    }}
+                                                >{subject}</div>
+                                                <div 
+                                                    id="receivedDate"
+                                                    style={{
+                                                        fontWeight: read ? "normal" : "bold"
+                                                    }}
+                                                >{receivedDate}</div>
                                             </div>  
                                         )
                                     })
