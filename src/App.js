@@ -3,7 +3,7 @@ import './App.css';
 import SignIn from "./modules/signin/index.js"
 import SignUp from "./modules/signup/index.js";
 import ForgotEmail from "./modules/forgotemail/index.js";
-import EmailList from "./modules/email-list/index.js";
+import Home from "./modules/home/index.js";
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class App extends Component {
     } else if (currentPage === "EmailList") {
       return (
         <div className="App">
-          <EmailList changePage={this.changePage}/>
+          <Home changePage={this.changePage}/>
         </div>
       )
     }

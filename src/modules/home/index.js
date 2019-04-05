@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import EmailList from "./email-list";
+import Home from "./home";
 import {
     setActiveEmail
 } from "../../actions/email-actions";
@@ -19,5 +19,5 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(EmailList);
+)(Home);
 

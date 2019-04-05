@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EmailForm from "../../components/email-form.js";
+import EmailList from "../../components/email-list.js";
 import "../../styles/email-list.css";
 
 const allmail = require("../../assets/allmail.png");
@@ -51,13 +52,14 @@ const shopping = require("../../assets/shopping.png");
 
 
 
-class EmailList extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
             showActiveEmail: false,
             composeNewEmail: false,
-            inboxCategory: "primary"
+            inboxCategory: "primary",
+            inputContent: ""
         }
         this.toggleActiveEmail = this.toggleActiveEmail.bind(this);
         this.toggleEmailForm = this.toggleEmailForm.bind(this);
@@ -65,14 +67,16 @@ class EmailList extends Component {
     }
 
     selectInboxCategory(inboxCategory) {
-        this.setState({ inboxCategory });
+        this.setState({ 
+            inboxCategory,
+            showActiveEmail: false
+        });
     }
 
     onChangeHandler(e) {
         e.preventDefault();
         this.setState({ inputContent: e.target.value }); //value를 찾는것//
     }
-    
 
     toggleActiveEmail(newState = !this.state.activeEmail) {
         this.setState({ showActiveEmail: newState });
@@ -87,7 +91,8 @@ class EmailList extends Component {
         const { 
             composeNewEmail,
             showActiveEmail,
-            inboxCategory
+            inboxCategory,
+            inputContent
         } = this.state;
         const {
             subject,
@@ -108,10 +113,7 @@ class EmailList extends Component {
                 padding: "8px"
             }}>
                 { composeNewEmail && <EmailForm /> }
-                <div id="TopBox" style={{ 
-                    display: "flex", 
-                    flexDirection: "row",
-                }}>
+                <div id="TopBox">
                     <div style={{ 
                         minWidth: "248px",
                         textAlign: "left"
@@ -136,13 +138,21 @@ class EmailList extends Component {
                             }}
                         />
                     </div>
-                    <input 
-                        placeholder="Search mail"
-                        // value={inputContent}
-                        onChange={(e) => this.onChangeHandler(e)}
-                    />
-                    <button type="submit"><i className="fa fa-search"></i></button>
-
+                    <div id="middleHeader">
+                        <div id="searchContainer">
+                            <div className="glyphicon glyphicon-search"/>
+                            <input 
+                                placeholder="Search mail"
+                                value={inputContent}
+                                onChange={(e) => this.onChangeHandler(e)}
+                            />
+                        </div>
+                    </div>
+                    
+                    <div id="rightHeader">
+                        <div id="chart" className="glyphicon glyphicon-th"/>
+                        <div id="initialCircle">A</div>
+                    </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                 <div id="bigLeftBox" style={{
@@ -201,13 +211,13 @@ class EmailList extends Component {
                             <div id="topKeyInside">
                                 <span 
                                     style={{
-                                        color: primary ? "#d93025" : "black"
+                                        color: primary ? "#d93025" : "#5F6368"
                                     }}
                                     className="glyphicon glyphicon-inbox"
                                 ></span>
                                 <div
                                     style={{
-                                        color: primary ? "#d93025" : "black"
+                                        color: primary ? "#d93025" : "#5F6368"
                                     }}
                                 >Primary</div>
                             </div>
@@ -225,12 +235,12 @@ class EmailList extends Component {
                                 <span 
                                     className="glyphicon glyphicon-user"
                                     style={{
-                                        color: social ? "#1a73e8" : "black"
+                                        color: social ? "#1a73e8" : "#5F6368"
                                     }}
                                 ></span>
                                 <div
                                     style={{
-                                        color: social ? "#1a73e8" : "black"
+                                        color: social ? "#1a73e8" : "#5F6368"
                                     }}
                                 >Social</div>
                             </div>
@@ -248,12 +258,12 @@ class EmailList extends Component {
                                 <span 
                                     className="glyphicon glyphicon-tag"
                                     style={{
-                                        color: promotions ? "#1e8e3e" : "black"
+                                        color: promotions ? "#1e8e3e" : "#5F6368"
                                     }}
                                 ></span>
                                 <div
                                     style={{
-                                        color: promotions ? "#1e8e3e" : "black"
+                                        color: promotions ? "#1e8e3e" : "#5F6368"
                                     }}
                                 >Promotions</div>
                             </div>
@@ -303,66 +313,12 @@ class EmailList extends Component {
                                 </div>
                             </div>
                         ) : (
-                            <div id="allEmails">
-                                {
-                                    Object.values(emails).map((email, index) => {
-                                        const { receivedDate, senderName, subject, read } = email;
-                                        return (
-                                            <div 
-                                                onClick={() => {
-                                                    setActiveEmail({ email });
-                                                    this.toggleActiveEmail();
-                                                }} key={index} 
-                                                id="emailLine"
-                                                style={{
-                                                    background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
-                                                }}
-                                            >
-                                                <div id="checkBoxAndSender">
-                                                    <input type="checkbox" />
-                                                    <div 
-                                                        id="senderName"
-                                                        style={{
-                                                            fontWeight: read ? "normal" : "bold"
-                                                        }}
-                                                    >{senderName}</div>
-                                                </div>
-                                                <div 
-                                                    id="subject"
-                                                    style={{
-                                                        fontWeight: read ? "normal" : "bold"
-                                                    }}
-                                                >{subject}</div>
-                                                <div 
-                                                    id="receivedDate"
-                                                    style={{
-                                                        fontWeight: read ? "normal" : "bold"
-                                                    }}
-                                                >{receivedDate}</div>
-                                            </div>  
-                                        )
-                                    })
-                                }     
-                                <div id="emailFooter">
-                                    <div id="emailFooterPiece">
-                                        <div id="footerStatement">0 GB (0%) of 15 GB used</div>
-                                        <div id="footerLinks">
-                                            <a id="footerLink" href="https://policies.google.com/terms?hl=en">Terms</a>
-                                            ·
-                                            <a id="footerLink" href="https://policies.google.com/privacy?hl=en">Privacy</a>
-                                            ·
-                                            <a id="footerLink" href="https://www.google.com/gmail/about/policy/">Program Policies</a>
-                                        </div>
-                                        <div id="footerStatement">
-                                            Last account activity: 1 hour ago
-                                        </div>
-                                    </div>
-                                    <div id="emailFooterPiece">
-                                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Manage</a>
-                                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Details</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <EmailList 
+                                emails={Object.values(emails).filter((email) => email.category === inboxCategory)}
+                                category={inboxCategory}
+                                setActiveEmail={setActiveEmail}
+                                toggleActiveEmail={this.toggleActiveEmail}
+                            />
                         )
                     }
                     </div>     
@@ -373,6 +329,6 @@ class EmailList extends Component {
     }
 }
  
-export default EmailList;
+export default Home;
 
 
