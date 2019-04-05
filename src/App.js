@@ -23,7 +23,7 @@ class App extends Component {
     if (currentPage === "SignIn") {
       return (
         <div className="App">
-          <EmailList changePage={this.changePage}/>
+          <SignIn changePage={this.changePage}/>
         </div>
       )
     } else if (currentPage === "SignUp") {

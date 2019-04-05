@@ -184,7 +184,7 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    align-content: right;
+    justify-content: right;
     cursor: pointer;
 }
 
@@ -201,7 +201,7 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    align-content: right;
+    justify-content: right;
     cursor: pointer;
 }
 
@@ -234,7 +234,7 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    align-content: right;
+    justify-content: right;
     cursor: pointer;
 }
 
@@ -283,11 +283,12 @@
     justify-content: flex-start;
 }
 
+#topKeyInside span {
+    margin-right: 16px;
+}
+
 #topKey:hover {
     background-color:#f2f2f2;
-    width: 390px;
-    height: 56px;
-    /* border-radius: 17px;  */
 }
 
 #senderLine {
@@ -378,6 +379,11 @@
     flex-direction: row;
 }
 
+#checkBoxAndSender input {
+    margin-right: 10px;
+    font-size: 44px;
+}
+
 #bigLeftBox {
     
 
@@ -389,19 +395,20 @@
 
 
 #inbox {
-    width: 164px;
-    height: 32px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 18px 7px 26px;
+    cursor: pointer;
 }
 
 #inbox:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
@@ -410,211 +417,210 @@
 #inboximage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #starred {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #starred:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #starredimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
-
+    margin: 0px 18px 7px 0px;
 }
 
 
 #snoozed {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #snoozedimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #snoozed:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #sent {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #sentimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #sent:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #drafts {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #draftsimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #drafts:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #important {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #importantimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #important:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #chats {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #chatsimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #chats:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #allmail {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #allmailimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #allmail:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #spam {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
 #spamimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #spam:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
 #trash {
-    width: 164px;
-    height: 24px;
+    width: 240px;
+    height: 28px;
     font-size: 14px;
     color: #202124;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    padding: 4px 12px 4px 26px;
+    padding: 0px 12px 4px 26px;
     cursor: pointer;
 }
 
@@ -622,13 +628,13 @@
 #trashimage {
     width: 23px;
     height: 23px;
-    margin: 4px 18px 4px 0px;
+    margin: 0px 18px 7px 0px;
 }
 
 #trash:hover {
     background-color: #f2f2f2;
     width: 240px;
-    height: 32px;
+    height: 28px;
     border-radius: 17px;
 }
 
@@ -660,7 +666,8 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    max-height: 80vh;
+    max-height: 100vh;
+    padding-bottom: 90px;
     overflow: scroll;
 }
 
@@ -669,6 +676,7 @@
     padding-right: 32px;
     font-size: 14px;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #subject {
@@ -678,11 +686,13 @@
     max-height: 3.6em;
     line-height: 1.8em;
     text-align: left;
+    white-space: nowrap;
     flex: 1;
 }
 
 #emailLine {
     align-items: center;
+    border-bottom: 0.5px solid #e6e6e6;
     display: flex;
     flex-direction: "row";
     padding-left: 20px;
@@ -743,15 +753,32 @@
     padding-top: 36px;
 }
 
-/* width: 320px;
-height: 556px;
+#emailFooter {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
 
-64px;
-64px; */
+#emailFooterPiece {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+#footerLink {
+    color: #666666;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
 
+#footerStatement {
+    color: #666666;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
 
-
-
-
-
+#footerLinks a {
+    margin: 0px 5px;
+}

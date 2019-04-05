@@ -223,10 +223,10 @@ class EmailList extends Component {
                                 id="topKeyInside"
                             >
                                 <span 
+                                    className="glyphicon glyphicon-user"
                                     style={{
                                         color: social ? "#1a73e8" : "black"
                                     }}
-                                    className="glyphicon glyphicon-tag"
                                 ></span>
                                 <div
                                     style={{
@@ -246,7 +246,7 @@ class EmailList extends Component {
                                 id="topKeyInside"
                             >
                                 <span 
-                                    className="glyphicon glyphicon-eye-open"
+                                    className="glyphicon glyphicon-tag"
                                     style={{
                                         color: promotions ? "#1e8e3e" : "black"
                                     }}
@@ -343,6 +343,25 @@ class EmailList extends Component {
                                         )
                                     })
                                 }     
+                                <div id="emailFooter">
+                                    <div id="emailFooterPiece">
+                                        <div id="footerStatement">0 GB (0%) of 15 GB used</div>
+                                        <div id="footerLinks">
+                                            <a id="footerLink" href="https://policies.google.com/terms?hl=en">Terms</a>
+                                            ·
+                                            <a id="footerLink" href="https://policies.google.com/privacy?hl=en">Privacy</a>
+                                            ·
+                                            <a id="footerLink" href="https://www.google.com/gmail/about/policy/">Program Policies</a>
+                                        </div>
+                                        <div id="footerStatement">
+                                            Last account activity: 1 hour ago
+                                        </div>
+                                    </div>
+                                    <div id="emailFooterPiece">
+                                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Manage</a>
+                                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Details</a>
+                                    </div>
+                                </div>
                             </div>
                         )
                     }
