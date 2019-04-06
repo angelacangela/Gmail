@@ -69,11 +69,9 @@ class Home extends Component {
     }
 
     selectInboxCategory(inboxCategory) {
-        const { emails } = this.props;
         this.setState({ 
             inboxCategory,
-            showActiveEmail: false,
-            emails: Object.values(emails).filter((email) => email.category === inboxCategory)
+            showActiveEmail: false        
         });
     }
 
@@ -101,9 +99,9 @@ class Home extends Component {
 
     render() {
         const { activeEmail, changePage, setActiveEmail } = this.props;
+        const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
-            emails,
             showActiveEmail,
             inboxCategory,
             inputContent
@@ -287,7 +285,7 @@ class Home extends Component {
             
                     <div id="emailSubjectContent">
                     {
-                        showActiveEmail ? (
+                        showActiveEmail && (
                             <div>
                                 <div id="topHeadingIcons">
                                     <div id="backToInbox"><span className="glyphicon glyphicon-arrow-left"></span></div>
@@ -325,16 +323,44 @@ class Home extends Component {
                                     <div id="replyButton"> <span className="glyphicon glyphicon-arrow-right"></span>Reply</div>
                                     <div id="forwardButton"><span className="glyphicon glyphicon-share-alt"></span>Forward</div>
                                 </div>
-                            </div>
-                        ) : (
-                            <EmailList 
-                                emails={emails}
-                                category={inboxCategory}
-                                setActiveEmail={setActiveEmail}
-                                toggleActiveEmail={this.toggleActiveEmail}
-                            />
-                        )
-                    }
+                            </div>) 
+                        }
+                        {
+                            primary && (
+                                <EmailList 
+                                    emails={emails.filter((email) => (
+                                        email.category === "primary"
+                                    ))}
+                                    category={inboxCategory}
+                                    setActiveEmail={setActiveEmail}
+                                    toggleActiveEmail={this.toggleActiveEmail}
+                                />
+                            )
+                        }
+                        {
+                            social && (
+                                <EmailList 
+                                    emails={emails.filter((email) => (
+                                        email.category === "social"
+                                    ))}
+                                    category={inboxCategory}
+                                    setActiveEmail={setActiveEmail}
+                                    toggleActiveEmail={this.toggleActiveEmail}
+                                />
+                            )
+                        }
+                        {
+                            promotions && (
+                                <EmailList 
+                                    emails={emails.filter((email) => (
+                                        email.category === "promotions"
+                                    ))}
+                                    category={inboxCategory}
+                                    setActiveEmail={setActiveEmail}
+                                    toggleActiveEmail={this.toggleActiveEmail}
+                                />
+                            )
+                        }
                     </div>     
                 </div>          
                 </div>

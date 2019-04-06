@@ -46,8 +46,8 @@ class EmailForm extends Component {
                         <div id= "NMHeading">New Message</div> 
                         <div id="NewMessage">
                             <span className="glyphicon glyphicon-minus"></span>
-                            <span className="glyphicon glyphicon-remove-circle"></span>
                             <span className="glyphicon glyphicon-resize-full"></span>
+                            <span className="glyphicon glyphicon-remove-circle"></span>
                         </div>
                     </div>
                 </div>

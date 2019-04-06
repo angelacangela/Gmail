@@ -175,7 +175,11 @@
 }
 
 #titleOptions {
-    align-content: right;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 100%;
 }
 
 #newer {
@@ -184,15 +188,20 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    justify-content: right;
+    justify-content: flex-end;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
 }
+
 
 #newer:hover {
     height: 40px;
     width: 40px;
     background-color: #f2f2f2;
     border-radius: 20px;
+    
 }
 
 #older {
@@ -201,8 +210,11 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    justify-content: right;
+    justify-content: flex-end;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
 }
 
 #older:hover {
@@ -218,7 +230,10 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    justify-content: right;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
     cursor: pointer;
 }
 
@@ -234,8 +249,10 @@
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    justify-content: right;
+    justify-content: flex-end;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
 #settings:hover {
