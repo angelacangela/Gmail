@@ -6,50 +6,6 @@ import Header from "../../components/header.js";
 import Tabs from "../../components/tabs.js";
 import "../../styles/email-list.css";
 
-const allmail = require("../../assets/allmail.png");
-const chats = require("../../assets/chats.png");
-const drafts = require("../../assets/drafts.png");
-const important = require("../../assets/important.png");
-const inbox = require("../../assets/inbox.png");
-const sent = require("../../assets/sent.png");
-const snoozed = require("../../assets/snoozed.png");
-const spam = require("../../assets/spam.png");
-const starred = require("../../assets/starred.png");
-const trash = require("../../assets/trash.png");
-const norecentchat = require("../../assets/norecentchat.png");
-const promotions = require("../../assets/promotions.png");
-const social = require("../../assets/social.png");
-const gmail = require("../../assets/gmail.png");
-const googleapps = require("../../assets/googleapps.png");
-const select = require("../../assets/select.png");
-const refresh = require("../../assets/refresh.png");
-const backtoinbox = require("../../assets/backtoinbox.png");
-const archieve = require("../../assets/archieve.png");
-const reportspam = require("../../assets/reportspam.png");
-const delette = require("../../assets/delette.png");
-const markasunread = require("../../assets/markasunread.png");
-const snooze = require("../../assets/snooze.png");
-const moveto = require("../../assets/moveto.png");
-const labels = require("../../assets/labels.png");
-const moreoptions = require("../../assets/moreoptions.png");
-const replyreply = require("../../assets/replyreply.png");
-
-
-const myaccount = require("../../assets/myaccount.png");
-const search = require("../../assets/search.png");
-const maps = require("../../assets/maps.png");
-const youtube = require("../../assets/youtube.png");
-const play = require("../../assets/play.png");
-const news = require("../../assets/news.png");
-const gmailicon = require("../../assets/gmailicon.png");
-const contacts = require("../../assets/contacts.png");
-const drive = require("../../assets/drive.png");
-const calendar = require("../../assets/calendar.png");
-const googleplus = require("../../assets/googleplus.png");
-const translate = require("../../assets/translate.png");
-const photos = require("../../assets/photos.png");
-const shopping = require("../../assets/shopping.png");
-
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -105,7 +61,7 @@ class Home extends Component {
     }
 
     render() {
-        const { activeEmail, deleteEmail, setActiveEmail } = this.props;
+        const { activeEmail, deleteEmail, setActiveEmail, sendEmail } = this.props;
         const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
@@ -129,7 +85,7 @@ class Home extends Component {
 
         return (
             <div id="wholeBox">
-                { composeNewEmail && <EmailForm /> }
+                { composeNewEmail && <EmailForm sendEmail={sendEmail}/> }
                 <Header 
                     inputContent={inputContent}
                     onChangeHandler={(e) => this.onChangeHandler(e)}

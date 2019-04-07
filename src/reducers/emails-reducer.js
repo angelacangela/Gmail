@@ -1,9 +1,10 @@
 import { handleActions } from "redux-actions";
 import {
     SET_ACTIVE_EMAIL,
-    DELETE_EMAIL
+    DELETE_EMAIL,
+    SEND_EMAIL
 } from "../actions/types";
-import { generateEmail } from "./utils";
+import { generateEmail, generateId } from "./utils";
 
 export default handleActions(
     {
@@ -19,7 +20,7 @@ export default handleActions(
                     }
                 },
                 activeEmail: {
-                    ...generateEmail(payload.email),
+                    ...payload.email,
                     read: true         
                 }       
             }
@@ -32,8 +33,40 @@ export default handleActions(
             return {
                 ...newState
             };
-        }
+        },
+        [SEND_EMAIL] : (state, { payload }) => {
+            const { subject, body } = payload;
+            const newState = Object.assign({}, state);
+            const id = generateId(state);
+            const date = new Date();
+            const newEmail = {
+                id: id,
+                subject,
+                body,
+                senderName: 'Angela C',
+                senderEmail: 'angela@gmail.com',
+                receivedDate: date.toString(),
+                read: false,
+                category: "primary"
+            };
+            return {
+                ...newState,
+                emails: {
+                    [id]: {
+                        ...newEmail
+                    },
+                    ...newState.emails
+                },
+                sent: {
+                    [id]: {
+                        ...newEmail
+                    },
+                    ...newState.sent
+                }
+            }
+        },
     },
+
     {
         activeEmail: {
             id: 1,
@@ -46,6 +79,7 @@ export default handleActions(
             category: "primary"
         },
         deleted: {},
+        sent: {},
         emails: {
             1: {
                 id: 1,

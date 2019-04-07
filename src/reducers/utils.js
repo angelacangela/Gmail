@@ -6,6 +6,25 @@ export const generateEmail = (email) => {
     return email;
 };
 
+export const generateId = (state) => {
+    const { emails, deleted } = state;
+    const lastId = Object.keys(emails)[Object.keys(emails).length-1]
+    let newId = lastId + 1;
+    while (!uniqueIdGenerated(newId, emails, deleted)) {
+        newId += 1;
+    }
+    return newId;
+};
+
+const uniqueIdGenerated = (id, ...fields) => {
+    fields.forEach((field) => {
+        if (field[id]) {
+            return false;
+        }
+    }) 
+    return true;
+};
+
 const pickRandomFromArr = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
 };

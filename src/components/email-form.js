@@ -11,18 +11,36 @@ const sendandreceivemoney = require(".././assets/sendandreceivemoney.png");
 const discarddraft = require(".././assets/discarddraft.png");
 const moreoptions = require(".././assets/moreoptions.png");
 
-
-
-
- 
-
-
-
-
-
 class EmailForm extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            subject: "",
+            body: "",
+        }
+        this.updateSubject = this.updateSubject.bind(this);
+        this.updateBody =  this.updateBody.bind(this);
+        this.handleSend = this.handleSend.bind(this)
+    }
+
+    handleSend() {
+        const { sendEmail } = this.props;
+        const { subject, body } = this.state
+        sendEmail({ subject, body })
+    }
+
+    updateSubject(e) {
+        e.preventDefault();
+        this.setState({
+            subject: e.target.value
+        });
+    }
+
+    updateBody(e) {
+        e.preventDefault();
+        this.setState({
+            body: e.target.value
+        });
     }
 
     render() {
@@ -64,6 +82,7 @@ class EmailForm extends Component {
                         width: "100%"
                     }} 
                     placeholder="Subject"
+                    onChange={this.updateSubject}
                 />
                 <textarea id="composeBody"
                     style={{
@@ -71,9 +90,10 @@ class EmailForm extends Component {
                         height: "366px",
                         width: "100%"
                     }}
+                    onChange={this.updateBody}
                 />
                 <div id="bottomDraftSend">
-                    <button id="senddraft">Send</button>
+                    <button onClick={ this.handleSend } id="senddraft">Send</button>
                     <div id="formattingoptions"><span className="glyphicon glyphicon-font"></span></div>
                     <div id="attachfiles"><span className="glyphicon glyphicon-paperclip"></span></div>
                     <div id="insertlink"><span className="glyphicon glyphicon-link"></span></div>

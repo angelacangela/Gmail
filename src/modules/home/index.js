@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import Home from "./home";
 import {
     deleteEmail,
-    setActiveEmail
+    setActiveEmail,
+    sendEmail
 } from "../../actions/email-actions";
 
 const mapStateToProps = state => {
@@ -15,7 +16,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     deleteEmail: (options) => dispatch(deleteEmail(options)),
-    setActiveEmail: (options) => dispatch(setActiveEmail(options))
+    setActiveEmail: (options) => dispatch(setActiveEmail(options)),
+    sendEmail: (options) => dispatch(sendEmail(options))
 });
 
 export default connect(
