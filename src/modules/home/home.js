@@ -105,7 +105,7 @@ class Home extends Component {
     }
 
     render() {
-        const { activeEmail, changePage, setActiveEmail } = this.props;
+        const { activeEmail, deleteEmail, setActiveEmail } = this.props;
         const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
@@ -116,6 +116,7 @@ class Home extends Component {
         } = this.state;
         const {
             body,
+            id,
             receivedDate,
             senderEmail,
             senderName,
@@ -155,7 +156,10 @@ class Home extends Component {
                                         <div id="backToInbox"><span className="glyphicon glyphicon-arrow-left"></span></div>
                                         <div id="archieve"> <span className="glyphicon glyphicon-collapse-down"></span></div>
                                         <div id="reportSpam"><span className="glyphicon glyphicon-exclamation-sign"></span></div>
-                                        <div id="delette"><span className="glyphicon glyphicon-trash"></span></div>
+                                        <div id="delette" onClick={() => {
+                                            deleteEmail({ id: id });
+                                            this.toggleActiveEmail(false);
+                                        }}><span className="glyphicon glyphicon-trash"></span></div>
                                         <div id="markasunread"><span className="glyphicon glyphicon-modal-window"></span></div>
                                         <div id="snooze"><span className="glyphicon glyphicon-dashboard"></span></div>
                                         <div id="moveto"><span className="glyphicon glyphicon-level-up"></span></div>
@@ -169,8 +173,8 @@ class Home extends Component {
                                         </div>
                                     </div>
                                     <div id="subject">{subject}
-                                        <div id="contentPrint"><span class="glyphicon glyphicon-print"></span></div>
-                                        <div id="newWindowLink"><span class="glyphicon glyphicon-new-window"></span></div>
+                                        <div id="contentPrint"><span className="glyphicon glyphicon-print"></span></div>
+                                        <div id="newWindowLink"><span className="glyphicon glyphicon-new-window"></span></div>
                                     </div>
                                     <div>
                                         <div id="senderLine">
