@@ -55,15 +55,15 @@ export default handleActions(
             },
             3: {
                 id: 3,
-                subject: "Angela, your 2018 GLE350 is due for a service.",
-                senderName: "Mercedes-Benz",
+                subject: "Angela, your 2018 Corolla is due for a service.",
+                senderName: "Toyota",
                 receivedDate: "March 23",
                 read: false,
                 category: "primary"
             },
             4: {
                 id: 4,
-                subject: "STOP laughING NOW, LEARN HOW!",
+                subject: "STOP LAUGHNG NOW, LEARN HOW!",
                 senderName: "Google",
                 receivedDate: "March 23",
                 read: false,
@@ -87,7 +87,7 @@ export default handleActions(
             },
             7: {
                 id: 7,
-                subject: "Driving people away because of your laughing? We can change that.",
+                subject: "Driving people away because of your laughter? We can change that.",
                 senderName: "Google",
                 receivedDate: "March 24",
                 read: false,
@@ -95,8 +95,8 @@ export default handleActions(
             },
             8: {
                 id: 8,
-                subject: "PLEASE PAY TODAY :)",
-                senderName: "CodingDojo",
+                subject: "PLEASE LAUGH TODAY :)",
+                senderName: "LaughToday",
                 receivedDate: "March 24",
                 read: false,
                 category: "primary"
@@ -111,8 +111,8 @@ export default handleActions(
             },
             10: {
                 id: 10,
-                subject: "Old People Are Very Gross",
-                senderName: "Oldlaugh",
+                subject: "Laughter has no age",
+                senderName: "TimelessLaughter",
                 receivedDate: "March 25",
                 read: false,
                 category: "primary"
@@ -120,15 +120,15 @@ export default handleActions(
             11: {
                 id: 11,
                 subject: "Find someone to laugh with today.",
-                senderName: "Match.com",
+                senderName: "Laugh.com",
                 receivedDate: "March 25",
                 read: false,
                 category: "primary"
             },
             12: {
                 id: 12,
-                subject: "laugh Around This Weekend!",
-                senderName: "laughingWeekend",
+                subject: "Laugh Around This Weekend!",
+                senderName: "LaughingWeekend",
                 receivedDate: "March 26",
                 read: false,
                 category: "primary"
@@ -136,26 +136,26 @@ export default handleActions(
             13: {
                 id: 13,
                 subject: "Need laugh help? We can help.",
-                senderName: "laugh Help",
+                senderName: "Laugh Help",
                 receivedDate: "March 26",
                 read: false,
-                category: "primary"
+                category: "social"
             },
             14: {
                 id: 14,
-                subject: "Introducing the laugh plug. Stop laughing today!",
-                senderName: "laugh Plug",
+                subject: "Introducing the Laugh Plug. Stop laughing today!",
+                senderName: "Laugh Plug",
                 receivedDate: "March 26",
                 read: false,
                 category: "primary"
             },
             15: {
                 id: 15,
-                subject: "laugh Forever - the cologne",
-                senderName: "laugh Forever",
+                subject: "Laugh Forever - the cologne",
+                senderName: "Laugh Forever",
                 receivedDate: "March 28",
                 read: false,
-                category: "primary"
+                category: "social"
             },
             16: {
                 id: 16,
@@ -175,8 +175,8 @@ export default handleActions(
             },
             18: {
                 id: 18,
-                subject: "laughTown, coming to San Jose this weekend!",
-                senderName: "laughTown Promotions",
+                subject: "LaughTown, coming to San Jose this weekend!",
+                senderName: "LaughTown Promotions",
                 receivedDate: "March 29",
                 read: false,
                 category: "primary"

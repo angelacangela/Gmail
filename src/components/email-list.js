@@ -64,6 +64,9 @@ const EmailList = ({
                                 background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
                             }}
                         >
+                            <div id="checkBoxSelectAll">
+                                <input id="selectAll" type="checkbox" />
+                            </div>
                             <div id="checkBoxAndSender">
                                 <input type="checkbox" />
                                 <div 
