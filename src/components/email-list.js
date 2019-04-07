@@ -65,7 +65,7 @@ const EmailList = ({
                             }}
                         >
                             <div id="checkBoxSelectAll">
-                                <input id="selectAll" type="checkbox" />
+                                <input id="selectAll" type="checkbox" /> //여기
                             </div>
                             <div id="checkBoxAndSender">
                                 <input type="checkbox" />

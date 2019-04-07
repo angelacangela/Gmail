@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EmailForm from "../../components/email-form.js";
+import InboxCategoryMenu from "../../components/inbox-category-menu.js";
 import EmailList from "../../components/email-list.js";
 import Header from "../../components/header.js";
 import Tabs from "../../components/tabs.js";
@@ -55,12 +56,15 @@ class Home extends Component {
         this.state = {
             showActiveEmail: false,
             composeNewEmail: false,
+            currentSideMenuCategory: "inbox",
             inboxCategory: "primary",
             inputContent: ""
         }
         this.toggleActiveEmail = this.toggleActiveEmail.bind(this);
         this.toggleEmailForm = this.toggleEmailForm.bind(this);
         this.selectInboxCategory = this.selectInboxCategory.bind(this);
+        this.setSearchValue = this.setSearchValue.bind(this);
+        this.setSideMenuCategory = this.setSideMenuCategory.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
     }
 
@@ -92,21 +96,30 @@ class Home extends Component {
         this.setState({ composeNewEmail: !this.state.composeNewEmail });
     }
 
+    setSearchValue(inputContent) {
+        this.setState({ inputContent });
+    }
+
+    setSideMenuCategory(currentSideMenuCategory) {
+        this.setState({ currentSideMenuCategory });
+    }
+
     render() {
         const { activeEmail, changePage, setActiveEmail } = this.props;
         const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
-            showActiveEmail,
+            currentSideMenuCategory,
             inboxCategory,
-            inputContent
+            inputContent,
+            showActiveEmail
         } = this.state;
         const {
-            subject,
             body,
-            senderName,
-            senderEmail,
             receivedDate,
+            senderEmail,
+            senderName,
+            subject
         } = activeEmail;
 
         const primary = inboxCategory === "primary";
@@ -114,59 +127,20 @@ class Home extends Component {
         const promotions = inboxCategory === "promotions";
 
         return (
-            <div id="wholeBox" style={{ 
-                display: "flex", 
-                flexDirection: "column",
-                padding: "8px"
-            }}>
+            <div id="wholeBox">
                 { composeNewEmail && <EmailForm /> }
                 <Header 
                     inputContent={inputContent}
                     onChangeHandler={(e) => this.onChangeHandler(e)}
                 />
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                    <div id="bigLeftBox" style={{ minWidth: "248px" }}>
-                        <div onClick={() => this.toggleEmailForm()}>
-                            <div style={{
-                                alignItems: "center",
-                                margin: "16px 0",
-                                paddingLeft: "8px",
-                                height: "48px",
-                                display: "flex",
-                                flexDirection: "row",
-                                border: "1px solid #e6e6e6",
-                                borderRadius: "50px",
-                                width: "145px"
-                            }}>
-                                <div className="glyphicon glyphicon-plus"
-                                style={{
-                                    minWidth: "44px",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}/>
-                                <div style={{
-                                    padding: "0 24px 0 0",
-                                    alignItems: "center"
-                                }}>
-                                    Compose
-                                </div>
-                            </div>
-                        </div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="inbox"><img id="inboximage" src={inbox}/>Inbox</div>
-                        <div onClick={() => this.toggleActiveEmail(false)} id="starred"><img id="starredimage" src={starred}/>Starred</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="snoozed"><img id="snoozedimage" src={snoozed}/>Snoozed</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="sent"><img id="sentimage" src={sent}/>Sent</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="drafts"><img id="draftsimage" src={drafts}/>Drafts</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="important"><img id="importantimage" src={important}/>Important</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="chats"><img id="chatsimage" src={chats}/>Chats</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="allmail"><img id="allmailimage" src={allmail}/>All Mail</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="spam"><img id="spamimage" src={spam}/>Spam</div>
-                        <div onClick={() => this.toggleActiveEmail(false)}id="trash"><img id="trashimage" src={trash}/>Trash</div>
-                        <div id="noRecentChatBottom"><img id="norecentchat" src={norecentchat}/>
-                            <div id="NRC">No recent chat</div>
-                            <div id="NO">Start a new one</div>
-                        </div>
-                    </div>
+                    <InboxCategoryMenu 
+                        setSearchValue={this.setSearchValue}
+                        setSideMenuCategory={this.setSideMenuCategory}
+                        sideMenuCategory={currentSideMenuCategory}
+                        toggleActiveEmail={this.toggleActiveEmail}
+                        toggleEmailForm={this.toggleEmailForm}
+                    />
                     <div id="emailSubjectContent">
                         <Tabs 
                             promotions={promotions}

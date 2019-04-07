@@ -269,13 +269,13 @@
     display: flex;
     flex-direction: row;
     border-bottom: 0.5px solid #e6e6e6;
-    margin: -4px -8px 8px -8px;;
+    margin: 0px -8px 8px -8px;;
     padding: 8px;
 }
 
 #wholeBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100vh;
     position: fixed;
     width: 100vw;
@@ -342,6 +342,7 @@
     font-size: 14px;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
     align-items: center;
+    max-width: 30%;
     padding: 16px;
     padding-bottom: 0px;
     flex: 1;
@@ -416,6 +417,7 @@
     font-size: 16px;
     text-align: right;
     cursor: pointer;
+    display: flex;
 }
 
 #contentPrint:hover {
@@ -423,6 +425,10 @@
     border-radius: 8px;
     width: 16px;
     height: 16px;
+}
+
+#newwindowLink {
+
 }
 
 #senderName {
@@ -461,8 +467,7 @@
 }
 
 #bigLeftBox {
-    
-
+    min-width: 248px;
 }
 
 #emailContent {
@@ -717,7 +722,6 @@
 #noRecentChatBottom {
     margin: auto;
     width: 217px;
-    height: 201px;
 }
 
 #norecentchat {
@@ -764,6 +768,8 @@
     text-align: left;
     white-space: nowrap;
     flex: 1;
+    display: flex;
+    flex-direction: row;
 }
 
 #emailLine {
@@ -913,4 +919,113 @@
 
 #middleHeader {
     flex: 1;
+}
+
+#composeButton {
+    align-items: center;
+    margin: 16px 0px;
+    padding-left: 8px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e6e6e6;
+    border-radius: 50px;
+    width: 145px;
+}
+
+#composePlus {
+    min-width: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+#composeText {
+    padding: 0 24px 0 0;
+    align-items: center;
+}
+
+#menuItems {
+    height: 30%;
+    border-bottom: 2px solid #e6e6e6;
+    overflow: scroll;
+}
+
+#chatMenu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#chatUser {
+    height: 28px;
+    width: 28px;
+}
+
+#chatUserContainer {
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 26px;
+    padding-bottom: 8px;
+}
+
+#photoAndName {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#chatPlus {
+    font-size: 16px;
+}
+
+#chatBubble {
+    height: 80px;
+    object-fit: contain;
+    width: 72px;
+}
+
+#chatBottomMenu {
+    border-top: 1px solid #e6e6e6;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    width: 248px;
+}
+
+#bottomMenuButton {
+    color: #333333;
+    cursor: pointer;
+    padding: 6px 8px 10px;
+}
+
+#bottomMenuButton:hover {
+    color: black;
+}
+
+#menuItem {
+    align-items: center;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #202124;
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+    text-align: left;
+    padding: 5px 0px 5px 26px;
+    cursor: pointer;
+}
+
+#menuItem:hover {
+    background: rgba(102,102,102,0.10);
+}
+
+#menuItemImage {
+    color: rgb(102,102,102);
+    font-size: 18px;
+    margin-right: 18px;
 }
