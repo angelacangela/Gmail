@@ -4,8 +4,10 @@ import "../styles/email-list.css";
 const EmailList = ({
     emails,
     category,
+    favoriteEmail,
     setActiveEmail,
-    toggleActiveEmail
+    toggleActiveEmail,
+    unfavoriteEmail
 }) => {
     const header = category.slice(0,1).toUpperCase() + category.slice(1);
     let blurb;
@@ -52,23 +54,41 @@ const EmailList = ({
             <div id="allEmails">
             {
                 emails.map((email, index) => {
-                    const { receivedDate, senderName, subject, read } = email;
+                    const { id, favorite, receivedDate, senderName, subject, read } = email;
                     return (
                         <div 
+                            key={index} 
+                            id="emailLine"
                             onClick={() => {
                                 setActiveEmail({ email });
                                 toggleActiveEmail();
-                            }} key={index} 
-                            id="emailLine"
+                            }} 
                             style={{
                                 background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
                             }}
                         >
-                            <div id="checkBoxSelectAll">
-                                <input id="selectAll" type="checkbox" /> //여기
-                            </div>
                             <div id="checkBoxAndSender">
-                                <input type="checkbox" />
+                                <input 
+                                    type="checkbox"
+                                    onClick={(event) => {
+                                        event.stopPropagation();
+                                    }} 
+                                />
+                                <div 
+                                    id="favoriteUn" 
+                                    onClick={(event) => {
+                                        event.stopPropagation();
+                                        if (favorite) {
+                                            unfavoriteEmail({ id }) 
+                                        } else {
+                                            favoriteEmail({id})
+                                        }
+                                    }}
+                                    className={favorite ? "glyphicon glyphicon-star" : "glyphicon glyphicon-star-empty"}
+                                    style={{
+                                        color: favorite ? "goldenrod" : "darkgray"
+                                    }}
+                                />
                                 <div 
                                     id="senderName"
                                     style={{

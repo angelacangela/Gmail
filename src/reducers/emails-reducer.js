@@ -2,7 +2,9 @@ import { handleActions } from "redux-actions";
 import {
     SET_ACTIVE_EMAIL,
     DELETE_EMAIL,
-    SEND_EMAIL
+    SEND_EMAIL,
+    FAVORITE_EMAIL,
+    UNFAVORITE_EMAIL
 } from "../actions/types";
 import { generateEmail, generateId } from "./utils";
 
@@ -25,6 +27,34 @@ export default handleActions(
                 }       
             }
         },
+        [FAVORITE_EMAIL] : (state, {payload}) => {
+            const { id } = payload;
+            return {
+                ...state,
+                emails: {
+                    ...state.emails,
+                    [id]: {
+                        ...state.emails[id],
+                        favorite: true
+                    }
+                }
+            }
+        },
+
+        [UNFAVORITE_EMAIL] : (state, {payload}) => {
+            const { id } = payload;
+            return {
+                ...state,
+                emails: {
+                    ...state.emails,
+                    [id]: {
+                        ...state.emails[id],
+                        favorite: false
+                    }
+                }
+            }
+        },
+
         [DELETE_EMAIL] : (state, { payload }) => {
             const { id } = payload;
             const newState = Object.assign({}, state);
@@ -76,6 +106,7 @@ export default handleActions(
             senderEmail: "no-reply@accounts.google.com",
             receivedDate: "Wed Mar 27 2019 21:36:22 GMT-0700 (Pacific Daylight Time)",
             read: true,
+            favorite: true,
             category: "primary"
         },
         deleted: {},
@@ -88,6 +119,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 21",
                 read: false,
+                favorite: true,
                 category: "primary"
             },
             2: {
@@ -97,6 +129,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 22",
                 read: false,
+                favorite: true,
                 category: "primary"
             },
             3: {
@@ -106,6 +139,7 @@ export default handleActions(
                 senderName: "Toyota",
                 receivedDate: "March 23",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             4: {
@@ -115,6 +149,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 23",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             5: {
@@ -124,6 +159,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 24",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             6: {
@@ -133,6 +169,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 24",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             7: {
@@ -142,6 +179,7 @@ export default handleActions(
                 senderName: "Google",
                 receivedDate: "March 24",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             8: {
@@ -151,6 +189,7 @@ export default handleActions(
                 senderName: "LaughToday",
                 receivedDate: "March 24",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             9: {
@@ -160,6 +199,7 @@ export default handleActions(
                 senderName: "Mercedes-Benz",
                 receivedDate: "March 25",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             10: {
@@ -169,6 +209,7 @@ export default handleActions(
                 senderName: "TimelessLaughter",
                 receivedDate: "March 25",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             11: {
@@ -178,6 +219,7 @@ export default handleActions(
                 senderName: "Laugh.com",
                 receivedDate: "March 25",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             12: {
@@ -187,6 +229,7 @@ export default handleActions(
                 senderName: "LaughingWeekend",
                 receivedDate: "March 26",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             13: {
@@ -196,6 +239,7 @@ export default handleActions(
                 senderName: "Laugh Help",
                 receivedDate: "March 26",
                 read: false,
+                favorite: false,
                 category: "social"
             },
             14: {
@@ -205,6 +249,7 @@ export default handleActions(
                 senderName: "Laugh Plug",
                 receivedDate: "March 26",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             15: {
@@ -214,6 +259,7 @@ export default handleActions(
                 senderName: "Laugh Forever",
                 receivedDate: "March 28",
                 read: false,
+                favorite: false,
                 category: "social"
             },
             16: {
@@ -223,6 +269,7 @@ export default handleActions(
                 senderName: "Karen Valentine",
                 receivedDate: "March 28",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             17: {
@@ -232,6 +279,7 @@ export default handleActions(
                 senderName: "GrouponDeals",
                 receivedDate: "March 28",
                 read: false,
+                favorite: false,
                 category: "primary"
             },
             18: {
@@ -241,6 +289,7 @@ export default handleActions(
                 senderName: "LaughTown Promotions",
                 receivedDate: "March 29",
                 read: false,
+                favorite: false,
                 category: "primary"
             }
         }

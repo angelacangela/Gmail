@@ -462,8 +462,14 @@
 }
 
 #checkBoxAndSender input {
-    margin-right: 10px;
+    margin: auto 0px;
     font-size: 44px;
+}
+
+#favoriteUn {
+    font-size: 17px;
+    color: darkgray;
+    margin: auto 10px auto 15px;
 }
 
 #bigLeftBox {
@@ -945,7 +951,7 @@
 }
 
 #menuItems {
-    height: 30%;
+    height: 212px;
     border-bottom: 2px solid #e6e6e6;
     overflow: scroll;
 }

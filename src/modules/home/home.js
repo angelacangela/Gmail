@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import EmailForm from "../../components/email-form.js";
 import InboxCategoryMenu from "../../components/inbox-category-menu.js";
+import EmailDetails from "../../components/email-details.js";
 import EmailList from "../../components/email-list.js";
 import Header from "../../components/header.js";
 import Tabs from "../../components/tabs.js";
@@ -61,7 +62,7 @@ class Home extends Component {
     }
 
     render() {
-        const { activeEmail, deleteEmail, setActiveEmail, sendEmail } = this.props;
+        const { activeEmail, deleteEmail, favoriteEmail, sendEmail, setActiveEmail, unfavoriteEmail } = this.props;
         const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
@@ -70,14 +71,7 @@ class Home extends Component {
             inputContent,
             showActiveEmail
         } = this.state;
-        const {
-            body,
-            id,
-            receivedDate,
-            senderEmail,
-            senderName,
-            subject
-        } = activeEmail;
+        const { id } = activeEmail;
 
         const primary = inboxCategory === "primary";
         const social = inboxCategory === "social";
@@ -128,25 +122,7 @@ class Home extends Component {
                                             <div id="settings"><span className="glyphicon glyphicon-cog"></span></div>
                                         </div>
                                     </div>
-                                    <div id="subject">{subject}
-                                        <div id="contentPrint"><span className="glyphicon glyphicon-print"></span></div>
-                                        <div id="newWindowLink"><span className="glyphicon glyphicon-new-window"></span></div>
-                                    </div>
-                                    <div>
-                                        <div id="senderLine">
-                                            <div id="senderName">{senderName}</div>
-                                            <div id="senderEmail">{senderEmail}</div>
-                                            <div id="receivedDate">{receivedDate}</div>
-                                            <div id="favorite"><span className="glyphicon glyphicon-star"></span></div>
-                                            <div id="replyreply"><span className="glyphicon glyphicon-share-alt"></span></div>
-                                            <div id="moreoptions"><span className="glyphicon glyphicon-option-vertical"></span></div>
-                                        </div>
-                                    </div>
-                                    <div id="emailContent">{body}</div>
-                                    <div id="bottomButton">
-                                        <div id="replyButton"> <span className="glyphicon glyphicon-arrow-right"></span>Reply</div>
-                                        <div id="forwardButton"><span className="glyphicon glyphicon-share-alt"></span>Forward</div>
-                                    </div>
+                                    <EmailDetails email={activeEmail}/>
                                 </div>
                             ) 
                         }
@@ -157,6 +133,8 @@ class Home extends Component {
                                     category={inboxCategory}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
+                                    favoriteEmail={favoriteEmail}
+                                    unfavoriteEmail={unfavoriteEmail}
                                 />
                             )
                         }
@@ -167,6 +145,8 @@ class Home extends Component {
                                     category={inboxCategory}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
+                                    favoriteEmail={favoriteEmail}
+                                    unfavoriteEmail={unfavoriteEmail}
                                 />
                             )
                         }
@@ -177,6 +157,8 @@ class Home extends Component {
                                     category={inboxCategory}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
+                                    favoriteEmail={favoriteEmail}
+                                    unfavoriteEmail={unfavoriteEmail}
                                 />
                             )
                         }    
