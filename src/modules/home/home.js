@@ -79,7 +79,7 @@ class Home extends Component {
 
         return (
             <div id="wholeBox">
-                { composeNewEmail && <EmailForm sendEmail={sendEmail}/> }
+                { composeNewEmail && <EmailForm sendEmail={sendEmail} toggleEmailForm={this.toggleEmailForm} /> }
                 <Header 
                     inputContent={inputContent}
                     onChangeHandler={(e) => this.onChangeHandler(e)}
@@ -103,7 +103,7 @@ class Home extends Component {
                             showActiveEmail && (
                                 <div>
                                     <div id="topHeadingIcons">
-                                        <div id="backToInbox"><span className="glyphicon glyphicon-arrow-left"></span></div>
+                                        <div id="backToInbox"><span onClick={() => this.toggleActiveEmail(false)} className="glyphicon glyphicon-arrow-left"></span></div>
                                         <div id="archieve"> <span className="glyphicon glyphicon-collapse-down"></span></div>
                                         <div id="reportSpam"><span className="glyphicon glyphicon-exclamation-sign"></span></div>
                                         <div id="delette" onClick={() => {

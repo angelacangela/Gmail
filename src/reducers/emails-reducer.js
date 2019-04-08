@@ -100,8 +100,8 @@ export default handleActions(
     {
         activeEmail: {
             id: 1,
-            subject: "Angela, welcome to your new Google Account",
-            body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
+            subject: "Security alert",
+            body: "The password for your Google account angela@gmail.com was changed. If you didn't change it, you should recover your account.",
             senderName: "Google",
             senderEmail: "no-reply@accounts.google.com",
             receivedDate: "Wed Mar 27 2019 21:36:22 GMT-0700 (Pacific Daylight Time)",

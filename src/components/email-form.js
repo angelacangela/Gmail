@@ -20,14 +20,22 @@ class EmailForm extends Component {
         }
         this.updateSubject = this.updateSubject.bind(this);
         this.updateBody =  this.updateBody.bind(this);
-        this.handleSend = this.handleSend.bind(this)
+        this.handleSend = this.handleSend.bind(this);
+        this.handleX = this.handleX.bind(this);
     }
 
     handleSend() {
-        const { sendEmail } = this.props;
+        const { sendEmail, toggleEmailForm } = this.props;
         const { subject, body } = this.state
         sendEmail({ subject, body })
+        toggleEmailForm()
     }
+
+    handleX() {
+        const { toggleEmailForm } = this.props;
+        toggleEmailForm()
+    }
+
 
     updateSubject(e) {
         e.preventDefault();
@@ -65,7 +73,7 @@ class EmailForm extends Component {
                         <div id="NewMessage">
                             <span className="glyphicon glyphicon-minus"></span>
                             <span className="glyphicon glyphicon-resize-full"></span>
-                            <span className="glyphicon glyphicon-remove-circle"></span>
+                            <span button onClick={ this.handleX } id="xCompose" className="glyphicon glyphicon-remove-circle"></span>
                         </div>
                     </div>
                 </div>
