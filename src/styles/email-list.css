@@ -22,7 +22,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-#backToInbox {
+#topHeadingItem {
     height: 40px;
     width: 40px;
     font-size: 16px;
@@ -30,130 +30,28 @@
     padding-top: 10px;
     align-content: left;
     cursor: pointer;
+    /* color: red; */
 }
 
-#backToInbox:hover {
+#topHeadingItem:hover {
     height: 40px;
     width: 40px;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2eb;
     border-radius: 20px;
 }
 
-#archieve {
+#topHeadingRightAlign {
     height: 40px;
     width: 40px;
     font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    align-content: left;
+    align-items: center;
     cursor: pointer;
-}
-
-#archieve:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#reportSpam {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
-    cursor: pointer;
-}
-
-#reportSpam:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#delette {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    border-right: 1px solid lightgray;
-    align-content: left;
-    cursor: pointer;
-}
-
-#delette:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#markasunread {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
-    cursor: pointer;
-}
-
-#markasunread:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#snooze {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    border-right: 1px solid lightgray;
-    align-content: left;
-    cursor: pointer;
-}
-
-#snooze:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#moveto {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
-    cursor: pointer;
+    justify-content: flex-end;
 } 
 
-#moveto:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-}
-
-#labels {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
-    cursor: pointer;
-}
-
-#labels:hover {
+#topHeadingRightAlign:hover {
     height: 40px;
     width: 40px;
     background-color: #f2f2f2;
@@ -161,20 +59,9 @@
 }
 
 #moreoptions {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
-    cursor: pointer;
-}
-
-#moreoptions:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
     border-radius: 20px;
+    width: 40px;
+    cursor: pointer;
 }
 
 #titleOptions {
@@ -236,7 +123,6 @@
     justify-content: flex-end;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
     cursor: pointer;
 }
 
@@ -369,43 +255,50 @@
 }
 
 #senderLine {
-    height: 14px;
     color: #5F6368;
-    padding-bottom: 20px;
     padding-top: 20px;
-    height: 60px;
     display: flex;
     flex-direction: row;
 }
 
+#senderLineLeft {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#senderLineContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#senderPhoto {
+    height: 32px;
+    width: 32px;
+    margin: 0px 16px;
+}
+
 #favorite {
-    width: 26px;
-    height: 26px;
+    align-content: center;
+    align-items: center;
+    width: 40px;
     cursor: pointer;
 }
 
 #favorite:hover {
-    background-color: #f2f2f2;;
-    border-radius: 13px;
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    padding-top: 6px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
 
 #replyreply {
-    width: 26px;
-    height: 26px;
+    border-radius: 20px;
+    width: 40px;
     cursor: pointer;
 }
 
 #replyreply:hover {
     background-color: #f2f2f2;;
-    border-radius: 13px;
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    padding-top: 6px;
 }
 
 #allEmails {
@@ -413,22 +306,18 @@
     flex: 1;
 }
 
-#contentPrint {
+#rightSubjectLineItem {
+    align-items: center;
+    color: rgb(102,102,102);
     font-size: 16px;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
-    display: flex;
+    border-radius: 13px;
+    width: 40px;
 }
 
-#contentPrint:hover {
+#rightSubjectLineItem:hover {
     background-color: #f2f2f2;
-    border-radius: 8px;
-    width: 16px;
-    height: 16px;
-}
-
-#newwindowLink {
-
 }
 
 #senderName {
@@ -440,10 +329,32 @@
 }
 
 #senderEmail {
-    color:#202124;
-    font-size: 14px;
+    align-items: center;
+    color:#555555;
+    font-size: 12px;
     text-align: left;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-weight: 500;
+}
+
+#detailsSenderName {
+    color: #202124;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#senderDetailsTop {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#toMe {
+    color: #5F6368;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
 }
 
 #receivedDate {
@@ -820,17 +731,52 @@
     white-space: nowrap;
 }
 
-#subject {
-    font-size: 14px;    
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 3.6em;
-    line-height: 1.8em;
-    text-align: left;
-    white-space: nowrap;
-    flex: 1;
+#subjectLine {
+    font-size: 14px;
     display: flex;
     flex-direction: row;
+    padding: 20px 8px 8px 64px;
+    justify-content: space-between;
+}
+
+#subject {
+    align-items: center;
+    color: #202124;
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+#leftSubjectLine {
+    display: flex;
+    flex-direction: row;
+}
+
+#rightSubjectLine {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#inboxTag {
+    color: #666666;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+#inboxTagContainer {
+    align-items: center;
+    background: #dddddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-height: 18px;
+    padding: 5px;
+}
+
+#inboxX {
+    color: darkgray;
+    font-size: 9px;
 }
 
 #emailLine {
@@ -1089,4 +1035,17 @@
     color: rgb(102,102,102);
     font-size: 18px;
     margin-right: 18px;
+}
+
+#email-list-subject {
+    font-size: 14px;    
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em;
+    text-align: left;
+    white-space: nowrap;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
 }

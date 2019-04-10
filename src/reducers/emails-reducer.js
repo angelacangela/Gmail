@@ -4,7 +4,8 @@ import {
     DELETE_EMAIL,
     SEND_EMAIL,
     FAVORITE_EMAIL,
-    UNFAVORITE_EMAIL
+    UNFAVORITE_EMAIL,
+    MARK_UNREAD
 } from "../actions/types";
 import { generateEmail, generateId } from "./utils";
 
@@ -95,6 +96,19 @@ export default handleActions(
                 }
             }
         },
+        [MARK_UNREAD] : (state, { payload }) => {
+            const { id } = payload;
+            return {
+                ...state,
+                emails: {
+                    ...state.emails,
+                    [id]: {
+                        ...state.emails[id],
+                        unread: true
+                    }
+                }
+            }
+        },
     },
 
     {
@@ -117,6 +131,7 @@ export default handleActions(
                 subject: "Angela, welcome to your new Google Account",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 21",
                 read: false,
                 favorite: true,
@@ -127,6 +142,7 @@ export default handleActions(
                 subject: "Critical security alert",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 22",
                 read: false,
                 favorite: true,
@@ -137,6 +153,7 @@ export default handleActions(
                 subject: "Angela, your 2018 Corolla is due for a service.",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Toyota",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 23",
                 read: false,
                 favorite: false,
@@ -147,6 +164,7 @@ export default handleActions(
                 subject: "STOP LAUGHNG NOW, LEARN HOW!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 23",
                 read: false,
                 favorite: false,
@@ -157,6 +175,7 @@ export default handleActions(
                 subject: "Everyone around you keep laughing? Click this email",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 24",
                 read: false,
                 favorite: false,
@@ -167,6 +186,7 @@ export default handleActions(
                 subject: "Angela, stop laughing today. We can show you how.",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 24",
                 read: false,
                 favorite: false,
@@ -177,6 +197,7 @@ export default handleActions(
                 subject: "Driving people away because of your laughter? We can change that.",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 24",
                 read: false,
                 favorite: false,
@@ -187,6 +208,7 @@ export default handleActions(
                 subject: "PLEASE LAUGH TODAY :)",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "LaughToday",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 24",
                 read: false,
                 favorite: false,
@@ -197,6 +219,7 @@ export default handleActions(
                 subject: "New Lease Deals on the 2019 GLE350",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Mercedes-Benz",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 25",
                 read: false,
                 favorite: false,
@@ -207,6 +230,7 @@ export default handleActions(
                 subject: "Laughter has no age",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "TimelessLaughter",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 25",
                 read: false,
                 favorite: false,
@@ -227,6 +251,7 @@ export default handleActions(
                 subject: "Laugh Around This Weekend!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "LaughingWeekend",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 26",
                 read: false,
                 favorite: false,
@@ -237,6 +262,7 @@ export default handleActions(
                 subject: "Need laugh help? We can help.",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Laugh Help",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 26",
                 read: false,
                 favorite: false,
@@ -247,6 +273,7 @@ export default handleActions(
                 subject: "Introducing the Laugh Plug. Stop laughing today!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Laugh Plug",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 26",
                 read: false,
                 favorite: false,
@@ -257,6 +284,7 @@ export default handleActions(
                 subject: "Laugh Forever - the cologne",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Laugh Forever",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 28",
                 read: false,
                 favorite: false,
@@ -267,6 +295,7 @@ export default handleActions(
                 subject: "Learn to be your best laugher, TODAY!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Karen Valentine",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 28",
                 read: false,
                 favorite: false,
@@ -277,6 +306,7 @@ export default handleActions(
                 subject: "laugh in a class TOMORROW! What are you waiting for?",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "GrouponDeals",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 28",
                 read: false,
                 favorite: false,
@@ -287,6 +317,7 @@ export default handleActions(
                 subject: "LaughTown, coming to San Jose this weekend!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "LaughTown Promotions",
+                senderEmail: "no-reply@accounts.google.com",
                 receivedDate: "March 29",
                 read: false,
                 favorite: false,

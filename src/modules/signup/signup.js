@@ -110,6 +110,8 @@ class SignUp extends Component {
                 <div id="signUpBoxHelp">
                     <select id="languageBox">
                         <option value="korean">Korean</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="chinese">Chinese</option>
                         <option value="spanish">Spanish</option>
                         <option value="french">French</option>
                         <option selected value="English">English (United States)</option>

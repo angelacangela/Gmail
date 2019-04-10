@@ -6,6 +6,7 @@ import EmailList from "../../components/email-list.js";
 import Header from "../../components/header.js";
 import Tabs from "../../components/tabs.js";
 import "../../styles/email-list.css";
+import EmailOptionsMenu from "../../components/email-options-menu.js";
 
 class Home extends Component {
     constructor(props) {
@@ -93,39 +94,22 @@ class Home extends Component {
                         toggleEmailForm={this.toggleEmailForm}
                     />
                     <div id="emailSubjectContent">
-                        <Tabs 
-                            promotions={promotions}
-                            primary={primary}
-                            selectInboxCategory={this.selectInboxCategory}
-                            social={social}
+                        <EmailOptionsMenu 
+                            id={id}
+                            deleteEmail={deleteEmail}
+                            toggleActiveEmail={this.toggleActiveEmail}
                         />
                         {
-                            showActiveEmail && (
-                                <div>
-                                    <div id="topHeadingIcons">
-                                        <div id="backToInbox"><span onClick={() => this.toggleActiveEmail(false)} className="glyphicon glyphicon-arrow-left"></span></div>
-                                        <div id="archieve"> <span className="glyphicon glyphicon-collapse-down"></span></div>
-                                        <div id="reportSpam"><span className="glyphicon glyphicon-exclamation-sign"></span></div>
-                                        <div id="delette" onClick={() => {
-                                            deleteEmail({ id: id });
-                                            this.toggleActiveEmail(false);
-                                        }}><span className="glyphicon glyphicon-trash"></span></div>
-                                        <div id="markasunread"><span className="glyphicon glyphicon-modal-window"></span></div>
-                                        <div id="snooze"><span className="glyphicon glyphicon-dashboard"></span></div>
-                                        <div id="moveto"><span className="glyphicon glyphicon-level-up"></span></div>
-                                        <div id="labels"><span className="glyphicon glyphicon-pawn"></span></div>
-                                        <div id="moreoptions"><span className="glyphicon glyphicon-option-vertical"></span></div>
-                                        <div id="titleOptions">
-                                            <div id="newer"><span className="glyphicon glyphicon-menu-left"></span></div>
-                                            <div id="older"><span className="glyphicon glyphicon-menu-right"></span></div>
-                                            <div id="keyboard"><span className="glyphicon glyphicon-list-alt"></span></div>
-                                            <div id="settings"><span className="glyphicon glyphicon-cog"></span></div>
-                                        </div>
-                                    </div>
-                                    <EmailDetails email={activeEmail}/>
-                                </div>
-                            ) 
+                            !showActiveEmail && (
+                                <Tabs 
+                                    promotions={promotions}
+                                    primary={primary}
+                                    selectInboxCategory={this.selectInboxCategory}
+                                    social={social}
+                                />
+                            )
                         }
+                        { showActiveEmail && <EmailDetails email={activeEmail}/> }
                         {
                             !showActiveEmail && primary && (
                                 <EmailList 

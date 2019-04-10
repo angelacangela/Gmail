@@ -3,6 +3,7 @@ import "../styles/email-list.css";
 const unnamed = require(".././assets/unnamed.png");
 const googleLogo = require(".././assets/googlelogo.png");
 const myicon = require(".././assets/myicon.png");
+const senderPhoto = require(".././assets/senderPhoto.png");
 
 const EmailDetails = ({ email }) => {
     const {
@@ -14,14 +15,33 @@ const EmailDetails = ({ email }) => {
     } = email;
     return (
         <div>
-            <div id="subject">{subject}
-                <div id="contentPrint"><span className="glyphicon glyphicon-print"></span></div>
-                <div id="newWindowLink"><span className="glyphicon glyphicon-new-window"></span></div>
+            <div id="subjectLine">
+                <div id="leftSubjectLine">
+                    <div id="subject">{subject}</div>
+                    <div id="inboxTagContainer">
+                        <div id="inboxTag">Inbox</div>
+                        <div id="inboxX" className="glyphicon glyphicon-remove"/>
+                    </div>
+                </div>
+                <div id="rightSubjectLine">
+                    <div id="rightSubjectLineItem"><span className="glyphicon glyphicon-print"></span></div>
+                    <div id="rightSubjectLineItem"><span className="glyphicon glyphicon-new-window"></span></div>
+                </div>
             </div>
-            <div>
+            <div id="senderLineContainer">
+                <div id="senderLineLeft">
+                    <img id="senderPhoto" src={senderPhoto}/>
+                    <div id="senderDetails">
+                        <div id="senderDetailsTop">
+                            <div id="detailsSenderName">{senderName}</div>
+                            <div id="senderEmail">{`<${senderEmail}>`}</div>
+                        </div>
+                        <div id="toMe">
+                            to me
+                        </div>
+                    </div>
+                </div>
                 <div id="senderLine">
-                    <div id="senderName">{senderName}</div>
-                    <div id="senderEmail">{senderEmail}</div>
                     <div id="receivedDate">{receivedDate}</div>
                     <div id="favorite"><span className="glyphicon glyphicon-star"></span></div>
                     <div id="replyreply"><span className="glyphicon glyphicon-share-alt"></span></div>
@@ -42,7 +62,7 @@ const EmailDetails = ({ email }) => {
                     </div>
                     <h3>Your password was changed</h3>
                     <div id="usericon"><img id="myicon" src={myicon}/>angela@gmail.com</div>
-                    The password for your Google account angela@gmail.com was changed. If you didn't change it, you should <a id="recoverYourAccount" href="https://accounts.google.com/signin/v2/recoveryidentifier?fpOnly=1&source=ancppe&Email=kublakhan9292%40gmail.com&anexp=givab-fa--mdv2-fa&flowName=GlifWebSignIn&flowEntry=ServiceLogin">recover your account.</a>
+                    <div>{body}</div>
                     
                 </div>
                 <div id="googleAddress">You received this email to let you know about important changes to your Google Account and services.

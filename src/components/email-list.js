@@ -85,9 +85,7 @@ const EmailList = ({
                                         }
                                     }}
                                     className={favorite ? "glyphicon glyphicon-star" : "glyphicon glyphicon-star-empty"}
-                                    style={{
-                                        color: favorite ? "goldenrod" : "darkgray"
-                                    }}
+                                    style={{ color: favorite ? "goldenrod" : "darkgray" }}
                                 />
                                 <div 
                                     id="senderName"
@@ -97,7 +95,7 @@ const EmailList = ({
                                 >{senderName}</div>
                             </div>
                             <div 
-                                id="subject"
+                                id="email-list-subject"
                                 style={{
                                     fontWeight: read ? "normal" : "bold"
                                 }}
