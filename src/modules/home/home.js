@@ -63,14 +63,15 @@ class Home extends Component {
     }
 
     render() {
-        const { activeEmail, deleteEmail, favoriteEmail, sendEmail, setActiveEmail, unfavoriteEmail } = this.props;
+        const { activeEmail, deleteEmail, favoriteEmail, sendEmail, setActiveEmail, unfavoriteEmail, markUnread } = this.props;
         const emails = Object.values(this.props.emails);
         const { 
             composeNewEmail,
             currentSideMenuCategory,
             inboxCategory,
             inputContent,
-            showActiveEmail
+            showActiveEmail,
+            // markUnread
         } = this.state;
         const { id } = activeEmail;
 
@@ -92,12 +93,14 @@ class Home extends Component {
                         sideMenuCategory={currentSideMenuCategory}
                         toggleActiveEmail={this.toggleActiveEmail}
                         toggleEmailForm={this.toggleEmailForm}
+                        toggleMarkUnread={this.toggleMarkUnread}
                     />
                     <div id="emailSubjectContent">
                         <EmailOptionsMenu 
                             id={id}
                             deleteEmail={deleteEmail}
                             toggleActiveEmail={this.toggleActiveEmail}
+                            toggleMarkUnread={this.toggleMarkUnread}
                         />
                         {
                             !showActiveEmail && (
@@ -119,6 +122,7 @@ class Home extends Component {
                                     toggleActiveEmail={this.toggleActiveEmail}
                                     favoriteEmail={favoriteEmail}
                                     unfavoriteEmail={unfavoriteEmail}
+                                    markUnread={markUnread}
                                 />
                             )
                         }
@@ -131,6 +135,7 @@ class Home extends Component {
                                     toggleActiveEmail={this.toggleActiveEmail}
                                     favoriteEmail={favoriteEmail}
                                     unfavoriteEmail={unfavoriteEmail}
+                                    markUnread={markUnread}
                                 />
                             )
                         }

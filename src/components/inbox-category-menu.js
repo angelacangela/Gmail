@@ -15,10 +15,11 @@ class InboxCategoryMenu extends Component {
     }
 
     handleMenuClick(searchBarValue, sideMenuCategory) {
-        const { setSearchValue, setSideMenuCategory, toggleActiveEmail } = this.props;
+        const { setSearchValue, setSideMenuCategory, toggleActiveEmail, toggleMarkUnread } = this.props;
         setSideMenuCategory(sideMenuCategory);
         setSearchValue(searchBarValue);
         toggleActiveEmail(false);
+        toggleMarkUnread (false);
     }
 
     setMenu(currentHangoutsMenu) {
