@@ -1,55 +1,35 @@
 import React, { Component } from "react";
-import "../../styles/signin.css";
+import "../../styles/forgotemail.css";
+const googleLogo = require("../../assets/googlelogo.png");
 const googlelogo = require("../../assets/googlelogo.png");
 
-
-class SignIn extends Component {
+class ForgotEmail extends Component {
     constructor(props) {
         super(props);
         
     }
     render() {
-        const { changePage } = this.props;
         return (
             <div>
                 <div id="bigContainer">
-                    <div id="signInBox">
-                        <img 
+                    <div id="boxBox">
+                    <img 
                             id="googlelogo"
                             src={googlelogo}
                         />
-                        <div id="signIn">
-                        Sign in
+                    <div id="signIn">
+                        Find your email
                         </div>
                         <div id="toContinuetoGmail">
-                        to continue to Gmail
+                        Enter your phone number or recovery email
                         </div>
                         <input 
                             id="signInInput"
                             placeholder="Email or phone"
                         />
-                        
-                        <div id="row">
-                            <div onClick={() => changePage("ForgotEmail")} id="forgotEmail">
-                            Forgot email?
-                            </div>
-                        </div>
-
-                        <div id="guestMode">
-                        Not your computer? Use Guest mode to sign in privately.
-                        </div>
-                        <div id="learnMore">
-                        <a href="  https://support.google.com/chrome/answer/6130773?hl=en" target="_blank">Learn more</a>
-                      
-                        </div>
-                        <div id="createAccountNext">
-                            <div onClick={() => changePage("SignUp")} id="createAccount">
-                            Create account
-                            </div>
-                            <div onClick={() => changePage("EmailList")} id="next">
+                            <div id="next">
                             Next
                             </div>
-                        </div>
                     </div>
                     <div id="Help">
                         <div id="leftBox">
@@ -111,4 +91,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default ForgotEmail;

@@ -2,12 +2,14 @@ import React from "react";
 import "../styles/email-list.css";
 
 const EmailList = ({
-    emails,
     category,
+    emails,
     favoriteEmail,
+    selectEmail,
     setActiveEmail,
     toggleActiveEmail,
-    unfavoriteEmail
+    unfavoriteEmail,
+    unselectEmail
 }) => {
     const header = category.slice(0,1).toUpperCase() + category.slice(1);
     let blurb;
@@ -70,8 +72,13 @@ const EmailList = ({
                             <div id="checkBoxAndSender">
                                 <input 
                                     type="checkbox"
-                                    onClick={(event) => {
-                                        event.stopPropagation();
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (e.target.checked) {
+                                            selectEmail(id);
+                                        } else {
+                                            unselectEmail(id);
+                                        }
                                     }} 
                                 />
                                 <div 

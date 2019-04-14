@@ -21,7 +21,19 @@
     color: #202124;
 }
 
+#next {
+    width: 88px;
+    height: 36px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px;
+    padding-top: 9px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 
+}
 
 
 

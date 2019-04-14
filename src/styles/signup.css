@@ -249,13 +249,18 @@
 }
 
 #languageBox {
-    background: #ffffff;
+    background-color: #ffffff;
     font-size: 12px;
     cursor: pointer;
     border: none;
+    padding-right: 26px;
+    padding-bottom: 8px;
+    padding-top: 8px;
 }
 
-
+#languageBox:hover {
+    background-color: #eeeeee;
+}
 
 
 

@@ -61,7 +61,16 @@
 #moreoptions {
     border-radius: 20px;
     width: 40px;
+    padding-top: 10px;
     cursor: pointer;
+    height: 40px;
+}
+
+#moreoptions:hover {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 #titleOptions {
@@ -284,21 +293,29 @@
     align-items: center;
     width: 40px;
     cursor: pointer;
+    padding-top: 10px;
 }
 
 #favorite:hover {
     background-color: #f2f2f2;
     border-radius: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 #replyreply {
     border-radius: 20px;
     width: 40px;
     cursor: pointer;
+    width: 40px;
+    padding-top: 10px;
 }
 
 #replyreply:hover {
     background-color: #f2f2f2;;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 #allEmails {

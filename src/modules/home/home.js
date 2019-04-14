@@ -12,18 +12,33 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showActiveEmail: false,
             composeNewEmail: false,
             currentSideMenuCategory: "inbox",
             inboxCategory: "primary",
-            inputContent: ""
+            inputContent: "",
+            selectedEmails: {},
+            showActiveEmail: false
         }
+        this.handleSearch = this.handleSearch.bind(this);
         this.toggleActiveEmail = this.toggleActiveEmail.bind(this);
         this.toggleEmailForm = this.toggleEmailForm.bind(this);
+        this.selectEmail = this.selectEmail.bind(this);
         this.selectInboxCategory = this.selectInboxCategory.bind(this);
         this.setSearchValue = this.setSearchValue.bind(this);
         this.setSideMenuCategory = this.setSideMenuCategory.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
+        this.unselectEmail = this.unselectEmail.bind(this);
+    }
+
+    selectEmail(id) {
+        const { selectedEmails } = this.state;
+        selectedEmails[id] = true;
+        this.setState({ selectedEmails });
+    }
+
+    unselectEmail(id) {
+        const { selectedEmails } = this.state;
+        delete selectedEmails[id];
+        this.setState({ selectedEmails });
     }
 
     selectInboxCategory(inboxCategory) {
@@ -70,11 +85,9 @@ class Home extends Component {
             currentSideMenuCategory,
             inboxCategory,
             inputContent,
-            showActiveEmail,
-            // markUnread
+            showActiveEmail
         } = this.state;
         const { id } = activeEmail;
-
         const primary = inboxCategory === "primary";
         const social = inboxCategory === "social";
         const promotions = inboxCategory === "promotions";
@@ -93,14 +106,14 @@ class Home extends Component {
                         sideMenuCategory={currentSideMenuCategory}
                         toggleActiveEmail={this.toggleActiveEmail}
                         toggleEmailForm={this.toggleEmailForm}
-                        toggleMarkUnread={this.toggleMarkUnread}
+                        // toggleMarkUnread={this.toggleMarkUnread}
                     />
                     <div id="emailSubjectContent">
                         <EmailOptionsMenu 
                             id={id}
                             deleteEmail={deleteEmail}
                             toggleActiveEmail={this.toggleActiveEmail}
-                            toggleMarkUnread={this.toggleMarkUnread}
+                            toggleMarkUnread={markUnread}
                         />
                         {
                             !showActiveEmail && (
@@ -116,38 +129,44 @@ class Home extends Component {
                         {
                             !showActiveEmail && primary && (
                                 <EmailList 
-                                    emails={emails.filter((email) => (email.category === "primary"))}
                                     category={inboxCategory}
+                                    emails={emails.filter((email) => (email.category === "primary"))}
+                                    favoriteEmail={favoriteEmail}
+                                    markUnread={markUnread}
+                                    selectEmail={this.selectEmail}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
-                                    favoriteEmail={favoriteEmail}
                                     unfavoriteEmail={unfavoriteEmail}
-                                    markUnread={markUnread}
+                                    unselectEmail={this.unselectEmail}
                                 />
                             )
                         }
                         {
                             !showActiveEmail && social && (
                                 <EmailList 
-                                    emails={emails.filter((email) => email.category === "social")}
                                     category={inboxCategory}
+                                    emails={emails.filter((email) => email.category === "social")}
+                                    favoriteEmail={favoriteEmail}
+                                    markUnread={markUnread}
+                                    selectEmail={this.selectEmail}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
-                                    favoriteEmail={favoriteEmail}
                                     unfavoriteEmail={unfavoriteEmail}
-                                    markUnread={markUnread}
+                                    unselectEmail={this.unselectEmail}
                                 />
                             )
                         }
                         {
                             !showActiveEmail && promotions && (
                                 <EmailList 
-                                    emails={emails.filter((email) => email.category === "promotions")}
                                     category={inboxCategory}
+                                    emails={emails.filter((email) => email.category === "promotions")}
+                                    favoriteEmail={favoriteEmail}
+                                    selectEmail={this.selectEmail}
                                     setActiveEmail={setActiveEmail}
                                     toggleActiveEmail={this.toggleActiveEmail}
-                                    favoriteEmail={favoriteEmail}
                                     unfavoriteEmail={unfavoriteEmail}
+                                    unselectEmail={this.unselectEmail}
                                 />
                             )
                         }    
