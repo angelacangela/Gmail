@@ -19,7 +19,7 @@ class InboxCategoryMenu extends Component {
         setSideMenuCategory(sideMenuCategory);
         setSearchValue(searchBarValue);
         toggleActiveEmail(false);
-        toggleMarkUnread (false);
+        // toggleMarkUnread (false);
     }
 
     setMenu(currentHangoutsMenu) {
