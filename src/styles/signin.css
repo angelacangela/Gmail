@@ -3,7 +3,6 @@
     margin: auto;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
-    margin-top: 10vh;
     width: 448px;
     height: 500px;
 }
@@ -18,6 +17,7 @@
     width: 448px;
     height: 500px;
     padding: 48px 40px 36px 40px;
+    margin-top: 10vh;
 }
 
 #signIn {
