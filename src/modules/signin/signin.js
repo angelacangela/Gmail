@@ -6,15 +6,15 @@ const googlelogo = require("../../assets/googlelogo.png");
 class SignIn extends Component {
     constructor(props) {
         super(props);
-        
+
     }
     render() {
         const { changePage } = this.props;
         return (
             <div>
-                <div id="bigContainer">
+                <div id="signInBigContainer">
                     <div id="signInBox">
-                        <img 
+                        <img
                             id="googlelogo"
                             src={googlelogo}
                         />
@@ -24,11 +24,11 @@ class SignIn extends Component {
                         <div id="toContinuetoGmail">
                         to continue to Gmail
                         </div>
-                        <input 
+                        <input
                             id="signInInput"
                             placeholder="Email or phone"
                         />
-                        
+
                         <div id="row">
                             <div onClick={() => changePage("ForgotEmail")} id="forgotEmail">
                             Forgot email?
@@ -40,7 +40,7 @@ class SignIn extends Component {
                         </div>
                         <div id="learnMore">
                         <a href="  https://support.google.com/chrome/answer/6130773?hl=en" target="_blank">Learn more</a>
-                      
+
                         </div>
                         <div id="createAccountNext">
                             <div onClick={() => changePage("SignUp")} id="createAccount">
@@ -100,9 +100,9 @@ class SignIn extends Component {
                             <a id="rbButton" href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a>
                         </div>
                     </div>
-                
-                
-                
+
+
+
                 </div>
 
 

@@ -1,11 +1,11 @@
-#bigContainer {
+#signInBigContainer {
     font-family: 'Google Sans',arial,sans-serif;
     margin: auto;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
-    margin-top: 16vh;
+    margin-top: 10vh;
     width: 448px;
-    height: 500px; 
+    height: 500px;
 }
 
 #googlelogo {
@@ -96,7 +96,7 @@
     width: 204px;
     height: 20px;
     color: #1A73E8;
-    margin-top: 8px; 
+    margin-top: 8px;
     font-size: 14px;
     font-weight: bold;
     text-align: left;
