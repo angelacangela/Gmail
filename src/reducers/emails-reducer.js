@@ -24,8 +24,8 @@ export default handleActions(
                 },
                 activeEmail: {
                     ...payload.email,
-                    read: true         
-                }       
+                    read: true
+                }
             }
         },
         [FAVORITE_EMAIL] : (state, {payload}) => {
@@ -161,7 +161,7 @@ export default handleActions(
             },
             4: {
                 id: 4,
-                subject: "STOP LAUGHNG NOW, LEARN HOW!",
+                subject: "STOP LAUGHING NOW, LEARN HOW!",
                 body: "The password for your Google account angelalaughs247@gmail.com was changed. If you didn't change it, you should recover your account.",
                 senderName: "Google",
                 senderEmail: "no-reply@accounts.google.com",
@@ -326,4 +326,3 @@ export default handleActions(
         }
     }
 )
-
