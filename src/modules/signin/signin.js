@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "../../styles/signin.css";
-const googlelogo = require("../../assets/googlelogo.png");
+import { Link } from "react-router-dom";
 
+const googlelogo = require("../../assets/googlelogo.png");
 
 class SignIn extends Component {
     constructor(props) {
@@ -9,7 +10,6 @@ class SignIn extends Component {
 
     }
     render() {
-        const { changePage } = this.props;
         return (
           <div id="signInBigContainer">
               <div id="signInBox">
@@ -29,8 +29,13 @@ class SignIn extends Component {
                   />
 
                   <div id="row">
-                      <div onClick={() => changePage("ForgotEmail")} id="forgotEmail">
+                      <div id="forgotEmail">
+                      <Link
+                        className="forgotemail"
+                        to="./forgotemail"
+                      >
                       Forgot email?
+                      </Link>
                       </div>
                   </div>
 
@@ -42,11 +47,21 @@ class SignIn extends Component {
 
                   </div>
                   <div id="createAccountNext">
-                      <div onClick={() => changePage("SignUp")} id="createAccount">
+                      <div id="createAccount">
+                      <Link
+                        className="signup"
+                        to="./signup"
+                      >
                       Create account
+                      </Link>
                       </div>
-                      <div onClick={() => changePage("EmailList")} id="next">
+                      <div id="next">
+                      <Link
+                        className="next"
+                        to="./home"
+                      >
                       Next
+                      </Link>
                       </div>
                   </div>
               </div>

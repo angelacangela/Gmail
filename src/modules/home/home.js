@@ -7,6 +7,7 @@ import Header from "../../components/header.js";
 import Tabs from "../../components/tabs.js";
 import "../../styles/email-list.css";
 import EmailOptionsMenu from "../../components/email-options-menu.js";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
     constructor(props) {
@@ -42,9 +43,9 @@ class Home extends Component {
     }
 
     selectInboxCategory(inboxCategory) {
-        this.setState({ 
+        this.setState({
             inboxCategory,
-            showActiveEmail: false        
+            showActiveEmail: false
         });
     }
 
@@ -80,7 +81,7 @@ class Home extends Component {
     render() {
         const { activeEmail, deleteEmail, favoriteEmail, sendEmail, setActiveEmail, unfavoriteEmail, markUnread } = this.props;
         const emails = Object.values(this.props.emails);
-        const { 
+        const {
             composeNewEmail,
             currentSideMenuCategory,
             inboxCategory,
@@ -95,12 +96,12 @@ class Home extends Component {
         return (
             <div id="wholeBox">
                 { composeNewEmail && <EmailForm sendEmail={sendEmail} toggleEmailForm={this.toggleEmailForm} /> }
-                <Header 
+                <Header
                     inputContent={inputContent}
                     onChangeHandler={(e) => this.onChangeHandler(e)}
                 />
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                    <InboxCategoryMenu 
+                    <InboxCategoryMenu
                         setSearchValue={this.setSearchValue}
                         setSideMenuCategory={this.setSideMenuCategory}
                         sideMenuCategory={currentSideMenuCategory}
@@ -109,7 +110,7 @@ class Home extends Component {
                         // toggleMarkUnread={this.toggleMarkUnread}
                     />
                     <div id="emailSubjectContent">
-                        <EmailOptionsMenu 
+                        <EmailOptionsMenu
                             id={id}
                             deleteEmail={deleteEmail}
                             toggleActiveEmail={this.toggleActiveEmail}
@@ -117,7 +118,7 @@ class Home extends Component {
                         />
                         {
                             !showActiveEmail && (
-                                <Tabs 
+                                <Tabs
                                     promotions={promotions}
                                     primary={primary}
                                     selectInboxCategory={this.selectInboxCategory}
@@ -128,7 +129,7 @@ class Home extends Component {
                         { showActiveEmail && <EmailDetails email={activeEmail}/> }
                         {
                             !showActiveEmail && primary && (
-                                <EmailList 
+                                <EmailList
                                     category={inboxCategory}
                                     emails={emails.filter((email) => (email.category === "primary"))}
                                     favoriteEmail={favoriteEmail}
@@ -143,7 +144,7 @@ class Home extends Component {
                         }
                         {
                             !showActiveEmail && social && (
-                                <EmailList 
+                                <EmailList
                                     category={inboxCategory}
                                     emails={emails.filter((email) => email.category === "social")}
                                     favoriteEmail={favoriteEmail}
@@ -158,7 +159,7 @@ class Home extends Component {
                         }
                         {
                             !showActiveEmail && promotions && (
-                                <EmailList 
+                                <EmailList
                                     category={inboxCategory}
                                     emails={emails.filter((email) => email.category === "promotions")}
                                     favoriteEmail={favoriteEmail}
@@ -169,14 +170,12 @@ class Home extends Component {
                                     unselectEmail={this.unselectEmail}
                                 />
                             )
-                        }    
-                    </div>     
-                </div>       
+                        }
+                    </div>
+                </div>
             </div>
         )
     }
 }
- 
+
 export default Home;
-
-

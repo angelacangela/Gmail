@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import "../../styles/forgotemail.css";
+import { Link } from "react-router-dom";
+
 const googleLogo = require("../../assets/googlelogo.png");
 const googlelogo = require("../../assets/googlelogo.png");
 
 class ForgotEmail extends Component {
     constructor(props) {
         super(props);
-        
+
     }
     render() {
         return (
             <div>
                 <div id="bigContainer">
                     <div id="boxBox">
-                    <img 
+                    <img
                             id="googlelogo"
                             src={googlelogo}
                         />
@@ -23,12 +25,17 @@ class ForgotEmail extends Component {
                         <div id="toContinuetoGmail">
                         Enter your phone number or recovery email
                         </div>
-                        <input 
+                        <input
                             id="signInInput"
                             placeholder="Email or phone"
                         />
                             <div id="next">
+                            <Link
+                              className="next"
+                              to="./home"
+                            >
                             Next
+                            </Link>
                             </div>
                     </div>
                     <div id="Help">
@@ -80,9 +87,9 @@ class ForgotEmail extends Component {
                             <a id="rbButton" href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a>
                         </div>
                     </div>
-                
-                
-                
+
+
+
                 </div>
 
 

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../../styles/signup.css";
+import { Link } from "react-router-dom";
+
 const googlelogo = require("../../assets/googlelogo.png");
 const accountImage = require("../../assets/account.png");
 
@@ -19,7 +21,6 @@ class SignUp extends Component {
     }
 
     render() {
-        const { changePage } = this.props;
         const { showPassword } = this.state;
         const iconClass = showPassword ? "glyphicon glyphicon-eye-open" : "glyphicon glyphicon-eye-close";
         return (
@@ -27,7 +28,7 @@ class SignUp extends Component {
                 <div id="entireSignUpBox">
                     <div id="fillInTheBlank">
                         <div id="googlelogo">
-                            <img 
+                            <img
                                 id="imageLogo"
                                 src={googlelogo}
                             />
@@ -40,17 +41,17 @@ class SignUp extends Component {
                         </div>
                         <div id="allInputs">
                             <div id="nameInput">
-                                <input 
+                                <input
                                     id="firstNameInput"
                                     placeholder="First name"
                                 />
-                                <input 
+                                <input
                                     id="lastNameInput"
                                     placeholder="Last name"
                                 />
                             </div>
                             <div id="username">
-                                <input 
+                                <input
                                     id="usernameInput"
                                     placeholder="Username"
                                 />
@@ -74,8 +75,8 @@ class SignUp extends Component {
                                     placeholder="Confirm"
                                     type={showPassword ? "text" : "password"}
                                 />
-                                <div 
-                                    id="eyeball" 
+                                <div
+                                    id="eyeball"
                                     className={iconClass}
                                     onClick={this.togglePassword}
                                 />
@@ -84,11 +85,21 @@ class SignUp extends Component {
                             Use 8 or more characters with a mix of letters, numbers & symbols
                             </div>
                             <div id="signInAndNext">
-                                <div onClick={() => changePage("SignIn")} id="signInInstead">
+                                <div id="signInInstead">
+                                <Link
+                                  className="signin"
+                                  to="./signin"
+                                >
                                 Sign in instead
+                                </Link>
                                 </div>
-                                <div onClick={() => changePage("EmailList")} id="next">
+                                <div id="next">
+                                <Link
+                                  className="next"
+                                  to="./home"
+                                >
                                 Next
+                                </Link>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +107,7 @@ class SignUp extends Component {
                     <div id="rightBox">
                         <div id="imageContainer">
                             <div id="imageLogo">
-                                <img 
+                                <img
                                     id="accountImage"
                                     src={accountImage}
                                 />
