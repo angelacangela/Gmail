@@ -1,0 +1,261 @@
+@media (max-width: 320px) {
+  .bubbleChart {
+    display: none;
+  }
+
+  .icons {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 425px) {
+  .eachTab {
+    padding-right: 8px;
+  }
+
+  .icons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 100px;
+  }
+
+  .iconLetter {
+    padding-top: 8px;
+  }
+
+  .googlelogo {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .mobileSrchOptions {
+    color: rgb(0,0,0,0.54);
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+    width: auto;
+  }
+
+  .searchArea {
+    margin: 8px 8px 21px;
+  }
+
+  .topTab2 {
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 13px;
+    /* margin-right: 12px; */
+    margin-top: 13px;
+    padding: 0 0 0 0px;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 426px) {
+  .eachTab {
+    padding-right: 8px;
+  }
+
+  .showOnMobile {
+    display: none;
+  }
+
+  .buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 5px;
+    width: 310px;
+  }
+
+  .searchArea {
+    margin: 5px auto 20px auto;
+  }
+
+  .searchButton1 {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 0 6px;
+    padding: 4px 15px;
+    text-align: center;
+  }
+
+  .searchButton2 {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 0 6px;
+    padding: 4px 15px;
+    text-align: center;
+    height: 32px;
+  }
+
+  .topTab2 {
+    display: flex;
+    height: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    margin-bottom: 13px;
+    margin-right: 12px;
+    margin-top: 13px;
+    padding: 0 0 0 0px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .eachTab {
+    padding-right: 27px;
+  }
+}
+
+@media (max-width:1023px) {
+  .bottomTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bottomTab1 {
+    text-align: center;
+  }
+
+  .bottomTab2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bottomTab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+.all {
+  border-bottom: 3px solid #4285f4;
+  color: #4285f4;
+  font-weight: 700;
+  margin: 3px 22px 0 22px;
+}
+
+.bubbleChart {
+  padding-top: 3px;
+}
+
+.bottomTab {
+  background-color: #f2f2f2;
+  bottom: 0;
+  color: #5F6368;
+  display: flex;
+  font-size: 13px;
+  line-height: 40px;
+  padding: 0 13px;
+  position: fixed;
+  width: 100%;
+}
+
+#googlelogo {
+  height: 104px;
+  margin-bottom: 12px;
+  margin-top: 89px;
+  width: 299px;
+}
+
+.iconTop {
+  padding: 3px 12px 0 12px;
+}
+
+.images {
+  padding-top: 3px;
+}
+
+.searchArea {
+  border: 1px solid #e4e4e4;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  max-width: 482px;
+  padding: 6px 13px;
+  border-radius: 22px;
+}
+
+#searchInput {
+  border: none;
+  color: black;
+  font-family: arial,sans-serif;
+  padding: 0 9px;
+  width: 482px;
+}
+
+.signInButton {
+  background-color: #4285f4;
+  border-radius: 2px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 13px;
+  padding: 5px 9px;
+  text-align: right;
+}
+
+.wholeContent {
+  background: white;
+}
+
+.topTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topTab1 {
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 600;
+  height: 30px;
+  margin-bottom: 13px;
+  margin-top: 12px;
+  margin-left: 2px;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+.wholeContent {
+  align-items: center;
+  align-content: center;
+  background-color: white;
+}

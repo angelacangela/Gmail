@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from "react-router-dom";
 import "../styles/email-list.css";
 const unnamed = require(".././assets/unnamed.png");
 const googleLogo = require(".././assets/googlelogo.png");
@@ -51,7 +53,7 @@ const EmailDetails = ({ email }) => {
             <div id="emailContent">
                 <div id="emailContentBox">
                     <div id="googleLogo">
-                        <img 
+                        <img
                             id="googleLogo"
                             src={googleLogo}
                         />
@@ -63,10 +65,10 @@ const EmailDetails = ({ email }) => {
                     <h3>Your password was changed</h3>
                     <div id="usericon"><img id="myicon" src={myicon}/>angela@gmail.com</div>
                     <div>{body}</div>
-                    
+
                 </div>
                 <div id="googleAddress">You received this email to let you know about important changes to your Google Account and services.
-                © 2019 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA 
+                © 2019 Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
                 </div>
             </div>
             <div id="bottomButton">

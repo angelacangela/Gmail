@@ -8,6 +8,7 @@ import {
     MARK_UNREAD
 } from "../actions/types";
 import { generateEmail, generateId } from "./utils";
+import fetchEmails from "../actions/api"
 
 export default handleActions(
     {

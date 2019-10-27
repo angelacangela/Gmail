@@ -8,7 +8,6 @@ const googlelogo = require("../../assets/googlelogo.png");
 class ForgotEmail extends Component {
     constructor(props) {
         super(props);
-
     }
     render() {
         return (
@@ -27,7 +26,7 @@ class ForgotEmail extends Component {
                         </div>
                         <input
                             id="signInInput"
-                            placeholder="Email or phone"
+                            placeholder="Phone number or email"
                         />
                             <div id="next">
                             <Link
@@ -87,12 +86,7 @@ class ForgotEmail extends Component {
                             <a id="rbButton" href="https://policies.google.com/terms?gl=US&hl=en" target="_blank">Terms</a>
                         </div>
                     </div>
-
-
-
                 </div>
-
-
             </div>
         )
     }

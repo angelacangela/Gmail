@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/email-list.css";
+import { Link } from "react-router-dom";
+import { getEmailEmail, getEmailName, getEmailBody } from "../selectors/emails.selectors"
 
 const EmailList = ({
     category,
@@ -53,92 +55,107 @@ const EmailList = ({
         )
     } else {
         return (
-            <div id="allEmails">
-            {
-                emails.map((email, index) => {
-                    const { id, favorite, receivedDate, senderName, subject, read } = email;
-                    return (
-                        <div 
-                            key={index} 
-                            id="emailLine"
-                            onClick={() => {
-                                setActiveEmail({ email });
-                                toggleActiveEmail();
-                            }} 
-                            style={{
-                                background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
-                            }}
-                        >
-                            <div id="checkBoxAndSender">
-                                <input 
-                                    type="checkbox"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        if (e.target.checked) {
-                                            selectEmail(id);
-                                        } else {
-                                            unselectEmail(id);
-                                        }
-                                    }} 
-                                />
-                                <div 
-                                    id="favoriteUn" 
-                                    onClick={(event) => {
-                                        event.stopPropagation();
-                                        if (favorite) {
-                                            unfavoriteEmail({ id }) 
-                                        } else {
-                                            favoriteEmail({id})
-                                        }
-                                    }}
-                                    className={favorite ? "glyphicon glyphicon-star" : "glyphicon glyphicon-star-empty"}
-                                    style={{ color: favorite ? "goldenrod" : "darkgray" }}
-                                />
-                                <div 
-                                    id="senderName"
-                                    style={{
-                                        fontWeight: read ? "normal" : "bold"
-                                    }}
-                                >{senderName}</div>
-                            </div>
-                            <div 
-                                id="email-list-subject"
-                                style={{
-                                    fontWeight: read ? "normal" : "bold"
-                                }}
-                            >{subject}</div>
-                            <div 
-                                id="receivedDate"
-                                style={{
-                                    fontWeight: read ? "normal" : "bold"
-                                }}
-                            >{receivedDate}</div>
-                        </div>  
-                    )
-                })
-            }     
-                <div id="emailFooter">
-                    <div id="emailFooterPiece">
-                        <div id="footerStatement">0 GB (0%) of 15 GB used</div>
-                        <div id="footerLinks">
-                            <a id="footerLink" href="https://policies.google.com/terms?hl=en">Terms</a>
-                            ·
-                            <a id="footerLink" href="https://policies.google.com/privacy?hl=en">Privacy</a>
-                            ·
-                            <a id="footerLink" href="https://www.google.com/gmail/about/policy/">Program Policies</a>
-                        </div>
-                        <div id="footerStatement">
-                            Last account activity: 1 hour ago
-                        </div>
-                    </div>
-                    <div id="emailFooterPiece">
-                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Manage</a>
-                        <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Details</a>
-                    </div>
+          <div id="allEmails">
+            {emails.map((email) => (
+              <Link
+                to={`/emails/${email.id}`}
+                key={getEmailEmail(email)}
+              >
+              <div>
+              TITLE: {getEmailName(email)}
+              </div>
+              <div>
+              BODY: {getEmailBody(email)}
+              </div>
+              <br />
+              </Link>
+            ))}
+            <div id="emailFooter">
+              <div id="emailFooterPiece">
+                <div id="footerStatement">0 GB (0%) of 15 GB used</div>
+                <div id="footerLinks">
+                    <a id="footerLink" href="https://policies.google.com/terms?hl=en">Terms</a>
+                    ·
+                    <a id="footerLink" href="https://policies.google.com/privacy?hl=en">Privacy</a>
+                    ·
+                    <a id="footerLink" href="https://www.google.com/gmail/about/policy/">Program Policies</a>
                 </div>
+                <div id="footerStatement">
+                    Last account activity: 1 hour ago
+                </div>
+              </div>
+              <div id="emailFooterPiece">
+                <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Manage</a>
+                <a id="footerLink" href="https://one.google.com/u/0/storage?hl=en">Details</a>
+              </div>
             </div>
+          </div>
         )
     }
 }
+
+// {
+//     emails.map((email, index) => {
+//         const { id, favorite, receivedDate, senderName, subject, read } = email;
+//         return (
+//             <div
+//                 key={index}
+//                 id="emailLine"
+//                 onClick={() => {
+//                     setActiveEmail({ email });
+//                     toggleActiveEmail();
+//                 }}
+//                 style={{
+//                     background: read ? "rgba(242,245,245,0.8)" : "#ffffff"
+//                 }}
+//             >
+//                 <div id="checkBoxAndSender">
+//                     <input
+//                         type="checkbox"
+//                         onClick={(e) => {
+//                             e.stopPropagation();
+//                             if (e.target.checked) {
+//                                 selectEmail(id);
+//                             } else {
+//                                 unselectEmail(id);
+//                             }
+//                         }}
+//                     />
+//                     <div
+//                         id="favoriteUn"
+//                         onClick={(event) => {
+//                             event.stopPropagation();
+//                             if (favorite) {
+//                                 unfavoriteEmail({ id })
+//                             } else {
+//                                 favoriteEmail({id})
+//                             }
+//                         }}
+//                         className={favorite ? "glyphicon glyphicon-star" : "glyphicon glyphicon-star-empty"}
+//                         style={{ color: favorite ? "goldenrod" : "darkgray" }}
+//                     />
+//                     <div
+//                         id="senderName"
+//                         style={{
+//                             fontWeight: read ? "normal" : "bold"
+//                         }}
+//                     >{senderName}</div>
+//                 </div>
+//                 <div
+//                     id="email-list-subject"
+//                     style={{
+//                         fontWeight: read ? "normal" : "bold"
+//                     }}
+//                 >{subject}</div>
+//                 <div
+//                     id="receivedDate"
+//                     style={{
+//                         fontWeight: read ? "normal" : "bold"
+//                     }}
+//                 >{receivedDate}</div>
+//             </div>
+//         )
+//     })
+// }
 
 export default EmailList;

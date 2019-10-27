@@ -1,98 +1,148 @@
-#signInBigContainer {
+
+@media (max-width: 425px) {
+  .bigBox {
+    background-color: white;
+    width: 708px;
+    height: 798px;
+    font-size: 14px;
+    color: rgb(32,33,36);
     font-family: 'Google Sans',arial,sans-serif;
+    padding-top: 26px;
     margin: auto;
-    border: 1px solid #E0E0E0;
-    border-radius: 4px;
-    width: 448px;
-    height: 500px;
-}
+  }
 
-#googlelogo {
-    width: 100%;
-    height: 37px;
-    margin: auto;
-}
+  .createAccount {
+    width: 204px;
+    height: 20px;
+    color: #1A73E8;
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+  }
 
-#signInBox {
-    width: 448px;
-    height: 500px;
-    padding: 48px 40px 36px 40px;
-    margin-top: 10vh;
-}
-
-#signIn {
-    color: #202124;
-    margin: auto;
-    font-size: 24px;
-    padding-top: 16px;
-}
-
-#toContinuetoGmail {
-    color: #202124;
-    width: 145px;
-    height: 16px;
-    font-size: 16px;
-    margin: auto;
-    padding-bottom: 24px;
-    padding-top: 8px;
-}
-
-#signInInput {
-    width: 366px;
+  #email {
+    width: 560px;
     border: 1px solid #e6e6e6;
     border-radius: 4px;
     font-size: 16px;
     margin-top: 32px;
-    padding: 13px 15px;
-}
+    padding-top: 13px auto;
+    height: 77px;
+    margin-bottom: 6px;
+  }
+  .emailInput {
+    padding-right: 30px;
+    font-size: 30px;
+  }
 
-#forgotEmail {
-    font-size: 14px;
+  .forgotEmail {
+    font-size: 22px;
     color: #1A73E8;
     cursor: pointer;
     font-weight: bold;
     text-align: left;
     width: 100px;
-}
+    padding-top: 9px;
+  }
 
-#guestMode {
-    font-size: 14px;
-    color: #5F6363;
-    text-align: left;
-    padding-top: 35px;
-}
+  .googleLogo {
+    max-width: 178px;
+    max-height: 78px;
+  }
 
-#learnMore {
+  .googleLogoBox {
+    align-content: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  .innerBox {
+    border: 1px solid none;
+    border-radius: 4px;
+    height: 500px;
+    width: 448px;
+    margin: auto;
+  }
+
+  .innerofInner {
+    padding: 0;
+  }
+
+  .learnMore {
     color: #1a73e8;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-}
+  }
 
-#createAccountNext {
+  .lowerBox {
+    bottom: 0px;
+    color: #757575;
+    font-size: 12px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /* padding-bottom: 20px; */
-    padding-top: 30px;
-}
+    align-items: space-between;
+    height: 100px;
+    padding-left: 130px;
+    margin: auto;
+    text-align: center;
+  }
 
-#next {
-    width: 88px;
-    height: 36px;
+  .nextButton {
     background-color: #1a73e8;
     color: white;
-    font-size: 14px;
-    padding-top: 9px;
+    font-size: 22px;
     border-radius: 4px;
     font-weight: bold;
+    padding: 14px 44px;
     text-align: center;
     cursor: pointer;
+  }
 
+  .notYour {
+    font-size: 22px;
+    color: #5F6363;
+    text-align: left;
+    padding-top: 43px;
+  }
+
+  .signInLetter {
+    color: #202124;
+    margin: auto;
+    font-size: 41px;
+    padding-top: 12px;
+    font-weight: 400;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+  .toContinue {
+    color: #202124;
+    height: 18px;
+    font-size: 27px;
+    margin: auto;
+    padding-bottom: 24px;
+    font-weight: 200;
+    text-align: center;
+  }
 }
 
-#createAccount {
+@media (min-width: 426px) {
+  .bigBox {
+    background-color: white;
+    width: 708px;
+    height: 798px;
+    font-size: 14px;
+    color: rgb(32,33,36);
+    font-family: 'Google Sans',arial,sans-serif;
+    padding-top: 106px;
+    margin: auto;
+  }
+
+  .createAccount {
     width: 204px;
     height: 20px;
     color: #1A73E8;
@@ -101,43 +151,549 @@
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-}
+  }
 
-#Help {
-    font-family: 'Google Sans',arial,sans-serif;
+  #email {
+    width: 366px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 32px;
+    padding: 13px 18px;
+    height: 54px;
+    margin-bottom: 6px;
+  }
+
+  .forgotEmail {
+    font-size: 14px;
+    color: #1A73E8;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: left;
+    width: 100px;
+    padding-top: 9px;
+  }
+
+  .googleLogo {
+    max-width: 105px;
+    max-height: 41px;
+  }
+
+  .googleLogoBox {
+    align-content: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  .innerBox {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    height: 500px;
     width: 448px;
     margin: auto;
-    padding-top: 18px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    cursor: pointer;
-    color: #757575;
+  }
+
+  .innerofInner {
+    padding: 40px 40px 36px;
+  }
+
+  .learnMore {
+    color: #1a73e8;
+    font-size: 14px;
     font-weight: bold;
-}
+    text-align: left;
+    cursor: pointer;
+  }
 
-#leftBox {
-    color: #202124;
-    font-size: 12px;
-    font-weight: normal;
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-#rightBoxButtons {
+  .lowerBox {
     color: #757575;
     font-size: 12px;
     display: flex;
     flex-direction: row;
     align-items: space-between;
+    height: 100px;
+    padding-left: 130px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .nextButton {
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 9px 29px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .notYour {
+    font-size: 14px;
+    color: #5F6363;
+    text-align: left;
+    padding-top: 43px;
+  }
+
+  .signInLetter {
+    color: #202124;
+    margin: auto;
+    font-size: 24px;
+    padding-top: 12px;
+    font-weight: 400;
+    padding-bottom: 6px;
+    text-align: center;
+  }
+
+  .toContinue {
+    color: #202124;
+    width: 145px;
+    height: 18px;
+    font-size: 16px;
+    margin: auto;
+    padding-bottom: 24px;
+    font-weight: 200;
+  }
+
 }
 
-#rbButton {
-    color: #757575;
-    padding: 6px 16px;
+.accountImg {
+  height: 238px;
+  width: 238px;
+  object-fit: contain;
+  align-content: center;
+  padding-left: 20px;
+  padding-top: 100px;
+}
+.atGmail {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 7px 0px;
+  margin-right: 40px;
 }
 
-#row {
-    padding-top: 25px;
-    width: "100%";
+.bigBox3 {
+  font-family: 'Google Sans',arial,sans-serif;
+  margin: auto;
+  border: 1px solid #E0E0E0;
+  width: 448px;
+  height: 500px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 163px;
+}
+
+.createAcct {
+  font-size: 24px;
+  font-weight: 400;
+  color: #202124;
+  width: 100%;
+  padding-top: 11px;
+  height: 48px;
+  text-align: left;
+}
+.createOrNext{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.enteryour3 {
+  padding-top: 19px;
+  font-size: 16px;
+  color: black;
+  width: 360px;
+  margin: auto;
+  padding-right: 20px;
+}
+.entireBox {
+  background: white;
+  width: 750px;
+  height: 540px;
+}
+.explain {
+  color: #202124;
+  width: 320px;
+  height: 17px;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 8px;
+}
+.eye {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.findEmail {
+  font-size: 24px;
+  color: #202124;
+  padding-top: 18px;
+  width: 300px;
+  padding-left: 40px;
+  text-align: center;
+}
+#firstName {
+  width: 164px;
+  height: 32px;
+  font-size: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 9px;
+}
+
+.googleLogo2 {
+  width: auto;
+  height: 37px;
+  display:flex;
+  flex-direction: row;
+}
+.googleLogoBox2 {
+  align-content: center;
+  margin: auto;
+  text-align: center;
+  padding-right: 55px;
+}
+.googleLogo3 {
+  width: 75px;
+  height: 28px;
+  align-items: center;
+}
+.help {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 22px;
+  padding-left: 156px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+.help2 {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 25px;
+  padding-left: 156px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+.hptboxes {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  height: 100px;
+  width: 150px;
+  align-self: flex-end;
+}
+.hptboxes2 {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  height: 100px;
+  width: 150px;
+  align-self: flex-end;
+  margin: auto;
+  /* margin-top: 24px; */
+  font-family: 'Google Sans',arial,sans-serif;
+}
+
+.privacy {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 22px;
+  padding-left: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+.privacy2 {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 25px;
+  padding-left: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+
+.terms {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 22px;
+  padding-left: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+.terms2 {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 448px;
+  padding-top: 25px;
+  padding-left: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: #757575;
+  font-weight: bold;
+}
+
+.languageBox {
+  color: #202124;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 22px;
+  padding-bottom: 6px;
+}
+.languageBox2 {
+  color: #202124;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 25px;
+  padding-bottom: 6px;
+  cursor: pointer;
+  border: none;
+  padding-right: 26px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.languageBox2:hover {
+  background-color: #eeeeee;
+}
+
+#lastName {
+  margin-left: 12px;
+  width: 164px;
+  height: 32px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 14px;
+  padding-left: 9px;
+}
+
+.leftSide {
+  width: 400px;
+  height: 454px;
+  padding-left: 40px;
+  padding-top: 45px;
+}
+
+.lowerBox2{
+  color: #757575;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  width: 800px;
+  padding-left: 360px;
+}
+
+.lowerBox3{
+  color: #757575;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  height: 100px;
+  width: 980px;
+  padding-top: 125px;
+}
+
+.mainBox3 {
+  width: 448px;
+  height: 1000px;
+  margin-top: 45px;
+  margin-left: 38px;
+  margin-right: 38px;
+  padding-right: 38px;
+}
+
+.nameEntry {
+  height: 50px;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.next3 {
+  width: 88px;
+  height: 26px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 14px;
+  padding-top: 9px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 34px;
+}
+
+.nextButton2 {
+  width: 88px;
+  height: 27px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 14px;
+  padding-top: 9px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 13px;
+  margin-right: 34px;
+}
+
+.nextButton2:hover {
+  background-color: #4285f4;
+}
+
+.nextButton3 {
+  padding-left: 320px;
+  padding-top: 90px;
+  margin-right: 38px;
+}
+
+.oneAcc {
+  font-size: 16px;
+  color: #202124;
+  text-align: center;
+  width: 80%;
+  padding-left: 20px;
+}
+
+#password {
+  width: 138px;
+  height: 33px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  padding-left: 9px;
+}
+
+#pwConfirm {
+  width: 138px;
+  height: 33px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  padding-left: 9px;
+  margin-left: 15px;
+}
+
+.pwExplain {
+  color: black;
+  font-size: 12px;
+  margin-top: 5px;
+  width: 100%;
+  height: 24px;
+  display: flex;
+}
+
+.pwpw {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+  height: 32px;
+  width: 430px;
+}
+.rightSide {
+  width: 300px;
+  height: 454px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signInInstead {
+  font-size: 14px;
+  color: #1A73E8;
+  margin-top: 8px;
+  padding-top: 8px;
+  font-weight: bold;
+  display: flex;
+  text-align: left;
+  cursor: pointer;
+}
+
+.signInInsteadNext {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 24px;
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toContinue2 {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 32px;
+  color: #202124;
+  padding-bottom: 24px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.userName {
+  display: flex;
+  flex-direction: row;
+  padding-right: 50px;
+}
+
+#userName {
+  width: 353px;
+  height: 32px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+  font-size: 14px;
+  padding-left: 9px;
+}
+
+.wholeBox {
+  font-family: 'Google Sans',arial,sans-serif;
+  width: 748px;
+  height: 536px;
+  margin: auto;
+  margin-top: 17vh;
+  display: flex;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  background-color: #ffffff;
 }

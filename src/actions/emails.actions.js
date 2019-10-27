@@ -10,11 +10,11 @@ const getEmailsRequest = createAction(GET_EMAILS_REQUEST)
 const getEmailsSuccess = createAction(GET_EMAILS_SUCCESS)
 const getEmailsFail = createAction(GET_EMAILS_FAIL)
 
-export const getEmailsContent = (email) => {
+export const getEmailsContent = () => {
   return async function(dispatch) {
     dispatch(getEmailsRequest());
     try {
-      let response = await fetchEmails(email);
+      let response = await fetchEmails();
       let responseJson = await response.json();
       if(response.status < 300 && response.status >= 200) {
         dispatch(getEmailsSuccess(responseJson));
@@ -22,7 +22,7 @@ export const getEmailsContent = (email) => {
         await Promise.reject(responseJson);
       }
     } catch(err) {
-      dispatch(getEmailsFail(err)
+      dispatch(getEmailsFail(err))
     }
   }
 }
