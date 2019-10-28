@@ -1,37 +1,166 @@
 @media (max-width: 320px) {
+  .bigBox {
+    background-color: white;
+    color: rgb(32,33,36);
+    font-family: 'Google Sans',arial,sans-serif;
+    font-size: 14px;
+    margin: auto;
+    padding-top: 17px;
+  }
+  .createAccount {
+    color: #1A73E8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: left;
+    width: 204px;
+  }
+
+  .createOrNext{
+    display: flex;
+    flex-direction: row;
+    font-size: 41px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 35px;
+  }
+
   .eachOption {
+    bottom: 0;
     color: #757575;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
     font-family: 'Google Sans',arial,sans-serif;
     font-weight: bold;
+    margin: 6px 16px;
+  }
+
+  #email {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 9px;
+    padding: 16px 15px;
+    width: 100%;
+  }
+  .emailInput {
+    font-size: 30px;
+    padding-top: 1px;
+  }
+
+  .forgotEmail {
+    color: #1A73E8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 8px;
+    text-align: left;
+  }
+
+  .googleLogo9 {
+    max-height: 52px;
+    max-width: 104px;
+  }
+
+  .googleLogoBox10 {
+    align-content: center;
+    margin: auto;
+    text-align: center;
   }
 
   .hptboxes {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 12px 0 8px -10px;
+    font-size: 12px;
+    justify-content: flex-start;
+    padding: 0 0 14px 8px;
     position: fixed;
+    width: 100%;
+  }
+
+  .innerBox {
+    border: none;
+    border-radius: 4px;
+    margin: auto;
+    padding: 0 24px;
+  }
+
+  .innerofInner {
+    margin: auto;
+    align-content: center;
   }
 
   .languageBox {
+    bottom: 44px;
     color: #202124;
     font-size: 12px;
-    padding-bottom: 10px;
-    position: relative;
+    padding: 8px 24px;
+    position: fixed;
+    text-align: left;
+    width: 100%;
+  }
+
+  .learnMore {
+    color: #1a73e8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
     text-align: left;
   }
 
   .lowerBox {
+    display: flex;
     flex-direction: column;
     margin: auto;
     text-align: left;
+  }
+  .nextButton {
+    background-color: #1a73e8;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 29px;
+    text-align: center;
+  }
 
+  .notYour {
+    color: #5F6363;
+    font-size: 14px;
+    padding-top: 44px;
+    text-align: left;
+  }
+
+  .notYourLearn {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .signInLetter {
+    color: #202124;
+    font-size: 24px;
+    font-weight: 400;
+    margin: auto;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: center;
+  }
+
+  .toContinue {
+    color: #202124;
+    font-size: 16px;
+    font-weight: 200;
+    margin: auto;
+    padding-bottom: 24px;
+    text-align: center;
   }
 }
 
-@media (min-width: 320px) and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 425px) {
   .bigBox {
     background-color: white;
     color: rgb(32,33,36);
@@ -57,7 +186,7 @@
     font-size: 41px;
     justify-content: space-between;
     padding-bottom: 20px;
-    padding-top: 61px;
+    padding-top: 35px;
   }
 
   .eachOption {
@@ -65,19 +194,20 @@
     cursor: pointer;
     font-family: 'Google Sans',arial,sans-serif;
     font-weight: bold;
-    padding-left: 22px;
+    margin-left: 32px;
   }
 
   #email {
     border: 1px solid #e6e6e6;
     border-radius: 4px;
     font-size: 16px;
-    margin-top: 8px;
-    padding: 13px 15px;
+    margin-top: 9px;
+    padding: 16px 15px;
     width: 100%;
   }
   .emailInput {
     font-size: 30px;
+    padding-top: 1px;
   }
 
   .forgotEmail {
@@ -85,9 +215,8 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    padding-top: 9px;
+    padding-top: 8px;
     text-align: left;
-    width: 160px;
   }
 
   .googleLogo9 {
@@ -95,16 +224,19 @@
     max-width: 104px;
   }
 
-  .googleLogoBox {
+  .googleLogoBox10 {
     align-content: center;
+    display: flex;
+    justify-content: center;
     margin: auto;
-    text-align: center;
   }
 
   .hptboxes {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 3px;
+    padding-right: 24px;
   }
 
   .innerBox {
@@ -115,12 +247,14 @@
   }
 
   .innerofInner {
-    padding: 0;
+    margin: auto;
+    align-content: center;
   }
 
   .languageBox {
     color: #202124;
     font-size: 12px;
+    padding-left: 24px;
   }
 
   .learnMore {
@@ -159,7 +293,7 @@
   .notYour {
     color: #5F6363;
     font-size: 14px;
-    padding-top: 52px;
+    padding-top: 44px;
     text-align: left;
   }
 
@@ -169,7 +303,7 @@
     font-weight: 400;
     margin: auto;
     padding-bottom: 8px;
-    padding-top: 16px;
+    padding-top: 8px;
     text-align: center;
   }
 
@@ -219,7 +353,7 @@
     color: #757575;
     font-family: 'Google Sans',arial,sans-serif;
     font-weight: bold;
-    padding: 6px 16px;
+    margin-left: 32px;
   }
 
   #email {
@@ -230,7 +364,7 @@
     padding: 13px 18px;
     margin-bottom: 6px;
     margin-top: 32px;
-    width: 366px;
+    width: 100%;
   }
 
   .forgotEmail {
@@ -240,18 +374,18 @@
     font-size: 14px;
     padding-top: 4px;
     text-align: left;
-    width: 100px;
   }
 
   .googleLogo9 {
-    max-height: 24px;
-    max-width: 75px;
+    align-content: center;
+    max-height: 53px;
+    max-width: 104px;
   }
 
-  .googleLogoBox {
+  .googleLogoBox10 {
     align-content: center;
-    margin: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .hptboxes {
@@ -259,8 +393,6 @@
     align-self: flex-end;
     display: flex;
     flex-direction: row;
-    padding-left: 121px;
-    /* padding-top: 2px; */
     text-align: right;
   }
 
@@ -279,8 +411,6 @@
     color: #202124;
     font-size: 12px;
     font-weight: normal;
-    padding-top: 24px;
-    padding-bottom: 6px;
   }
 
   .learnMore {
@@ -297,8 +427,9 @@
     font-size: 12px;
     display: flex;
     flex-direction: row;
-    margin: auto;
-    padding: 0 131px;
+    justify-content: space-between;
+    margin: 24px auto auto;
+    max-width: 448px;
     text-align: center;
   }
 
@@ -335,8 +466,7 @@
     font-size: 16px;
     font-weight: 200;
     margin: auto;
-    padding-bottom: 24px;
-    width: 145px;
+    text-align: center;
   }
 
 }

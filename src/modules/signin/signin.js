@@ -14,7 +14,7 @@ class SignIn extends Component {
           <div className="bigBox">
             <div className="innerBox">
               <div className="innerofInner">
-                <div className="googleLogoBox">
+                <div className="googleLogoBox10">
                   <img
                       className="googleLogo9"
                       src={googlelogo}
@@ -41,10 +41,8 @@ class SignIn extends Component {
                 </Link>
                 </div>
                 <div className="notYour">
-                Not your computer? Use Guest mode to sign in privately.
-                </div>
-                <div className="learnMore">
-                Learn more
+                  Not your computer? Use Guest mode to sign in privately.
+                  <a className="learnMore"> Learn more</a>
                 </div>
                 <div className="createOrNext">
                   <Link
