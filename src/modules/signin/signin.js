@@ -16,7 +16,7 @@ class SignIn extends Component {
               <div className="innerofInner">
                 <div className="googleLogoBox">
                   <img
-                      className="googleLogo"
+                      className="googleLogo9"
                       src={googlelogo}
                   />
                 </div>
@@ -32,12 +32,14 @@ class SignIn extends Component {
                       placeholder="Email or phone"
                   />
                 </div>
+                <div className="forgotEmail">
                 <Link
                   className="forgotEmail"
                   to="./forgotemail"
                 >
                 Forgot email?
                 </Link>
+                </div>
                 <div className="notYour">
                 Not your computer? Use Guest mode to sign in privately.
                 </div>
@@ -63,17 +65,15 @@ class SignIn extends Component {
               </div>
             </div>
             <div className="lowerBox">
-              <div className="languageBox">
-              English (United States)
-              </div>
+              <div className="languageBox">English (United States)</div>
               <div className="hptboxes">
-                <div className="help">
+                <div className="eachOption">
                 Help
                 </div>
-                <div className="privacy">
+                <div className="eachOption">
                 Privacy
                 </div>
-                <div className="terms">
+                <div className="eachOption">
                 Terms
                 </div>
               </div>

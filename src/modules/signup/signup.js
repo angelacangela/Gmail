@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../../styles/signup.css";
 import { Link } from "react-router-dom";
 
-const googlelogo = require("../../assets/googlelogo.png");
+const googlelogo5 = require("../../assets/googlelogo.png");
 const accountImage = require("../../assets/account.png");
 
 class SignUp extends Component {
@@ -27,17 +27,14 @@ class SignUp extends Component {
             <div>
                 <div id="entireSignUpBox">
                     <div id="fillInTheBlank">
-                        <div id="googlelogo">
+                        <div className="googlelogo5">
                             <img
-                                id="imageLogo"
-                                src={googlelogo}
+                                id="imagelogo5"
+                                src={googlelogo5}
                             />
                         </div>
                         <div id="createYourGoogleAccount">
                             Create your Google Account
-                        </div>
-                        <div id="toContinueToGmail">
-                            to continue to Gmail
                         </div>
                         <div id="allInputs">
                             <div id="nameInput">
@@ -63,6 +60,9 @@ class SignUp extends Component {
                             </div>
                             <div id="userNameInstruction">
                             You can use letters, numbers & periods
+                            </div>
+                            <div id="instead">
+                            Use my current email address instead.
                             </div>
                             <div id="pwpw">
                                 <input
@@ -93,9 +93,9 @@ class SignUp extends Component {
                                 Sign in instead
                                 </Link>
                                 </div>
-                                <div id="next">
+                                <div id="next7">
                                 <Link
-                                  className="next"
+                                  className="next7"
                                   to="./home"
                                 >
                                 Next
@@ -104,11 +104,11 @@ class SignUp extends Component {
                             </div>
                         </div>
                     </div>
-                    <div id="rightBox">
-                        <div id="imageContainer">
-                            <div id="imageLogo">
+                    <div id="rightBox hideOnMobile">
+                        <div id="imageContainer" className="hideOnMobile">
+                            <div id="imageLogo10">
                                 <img
-                                    id="accountImage"
+                                    id="accountImage3"
                                     src={accountImage}
                                 />
                             </div>
