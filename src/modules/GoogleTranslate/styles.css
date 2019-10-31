@@ -1,23 +1,9 @@
 @media (min-width: 320px) and (max-width:425px) {
-
   .background {
     background-color: #777;
   }
 
-  .choiceIcon {
-    background-color: white;
-    padding-bottom: 8px;
-  }
 
-  .choiceIcon {
-    border: 1px solid rgba(0,0,0,0.12);
-    border-radius: 36px;
-    color: gray;
-    height: 72px;
-    padding-top: 18px;
-    width: 72px;
-    text-align: center;
-  }
 
   .choicesOutside {
     align-content: center;
@@ -32,6 +18,11 @@
     width: 100%;
   }
 
+  .detailButtons2 {
+    display: flex;
+    flex-direction: row;
+  }
+
   .entireTranslate {
     margin: auto;
   }
@@ -40,13 +31,9 @@
     color: gray;
     font-size: 11px;
     font-style: italic;
-    /* padding-right:  */
+    padding-right: 0px;
     text-align: right;
-  }
-
-  .googlelogo11 {
-    max-height: 24px;
-    max-width: 74px;
+    width: 100%;
   }
 
   .hideOnMobile {
@@ -73,12 +60,14 @@
 
   .signInButton11 {
     background-color: #1A73E8;
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
     font-size: 14px;
     font-weight: bold;
+    margin: 0 8px 0 10px;
     padding: 8px 18px;
   }
+
   .squareBox {
     display: flex;
     flex-direction: column;
@@ -91,7 +80,6 @@
     display: flex;
     flex-direction: row;
     font-size: 22px;
-    margin: 0 4px;
     overflow: hidden;
   }
 
@@ -130,7 +118,8 @@
   }
 
   .translateTable {
-    border: 1px solid #777;
+    border-bottom: 1px solid #777;
+    border-top: 1px solid rgba(0,0,0,0.12);
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -144,28 +133,21 @@
     width: 47%;
   }
 
-  .txtdocument {
-    background-color: #f5f5f5;
-    /* border-bottom: 1px solid rgba(0,0,0,0.12); */
-    display: flex;
-    flex-direction: row;
-    max-height: 65px;
-    padding: 8px 30px 8px 8px;
-  }
-
   .typeInput {
-    min-height: 70px;
-    width: 50%;
+    min-height: 166px;
+    width: 100%;
   }
 
   .typeOutput {
     border-left: 1px solid rgba(0,0,0,0.12);
     background-color: #1A73E8;
     color: white;
+    min-height: 166px;
     padding-top: 20px;
     padding-left: 28px;
     padding-right: 28px;
-    width: 50%;
+    max-width: 95%;
+    min-width: 94%;
   }
 
   .typeText {
@@ -177,20 +159,17 @@
   }
 
   .typeWords {
+    max-width: 425px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
 
-@media (min-width: 426px) and (max-width: 954px) {
-  .choiceIcon {
-    border: 1px solid rgba(0,0,0,0.12);
-    border-radius: 36px;
-    color: gray;
-    height: 72px;
-    padding-top: 18px;
-    width: 72px;
-    text-align: center;
+@media (min-width: 426px) and (max-width: 767px) {
+  .androidIcon {
+    padding: 13px 8px 8px;
   }
 
   .choicesOutside {
@@ -204,6 +183,13 @@
     max-height: 72px;
     text-align: center;
     width: 100%;
+  }
+  #content-desktop {display: none;}
+
+  .detailButtons2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0 48px 20px 28px;
   }
 
   .entireTranslate {
@@ -216,11 +202,7 @@
     font-style: italic;
     padding-right: 12px;
     text-align: right;
-  }
-
-  .googlelogo11 {
-    max-height: 24px;
-    max-width: 74px;
+    width: 100%;
   }
 
   .languageBar {
@@ -257,16 +239,16 @@
     flex-direction: row;
     font-size: 12px;
     justify-content: space-between;
-    padding-left: 28px;
-    padding-right: 48px;
+    padding: 0 28px 20px 48px;
   }
 
   .signInButton11 {
     background-color: #1A73E8;
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
     font-size: 14px;
     font-weight: bold;
+    margin: auto;
     padding: 8px 23px;
   }
 
@@ -274,22 +256,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-
-  .textButton {
-    background-color: rgb(66,133,244,0.12);
-    border-radius: 4px;
-    color: #1A73E8;
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 20px;
-    padding-top: 6px;
-    padding-left: 16px;
-    padding-right: 16px;
-    /* padding-bottom: 2px; */
-    text-align: center;
   }
 
   .topMenuLeft {
@@ -333,7 +299,8 @@
   }
 
   .translateTable {
-    border: 1px solid #777;
+    border-bottom: 1px solid #777;
+    border-top: 1px solid rgba(0,0,0,0.12);
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -347,15 +314,6 @@
     max-height: 48px;
     overflow: hidden;
     width: 46%;
-  }
-
-  .txtdocument {
-    background-color: #f5f5f5;
-    /* border-bottom: 1px solid rgba(0,0,0,0.12); */
-    display: flex;
-    flex-direction: row;
-    max-height: 65px;
-    padding: 8px 30px 8px 8px;
   }
 
   .typeInput {
@@ -373,8 +331,8 @@
 
   .typeText {
     flex: 1;
-    padding: 20px 106px 18px 28px;
-    width: 100%;
+    padding: 20px 96px 18px 28px;
+    width: 90%;
   }
 
   .typeWords {
@@ -387,15 +345,17 @@
   }
 }
 
-@media (min-width: 955px) {
-  .choiceIcon {
-    border: 1px solid rgba(0,0,0,0.12);
-    border-radius: 36px;
-    color: gray;
-    height: 72px;
-    padding-top: 18px;
-    width: 72px;
-    text-align: center;
+@media (min-width: 768px) {
+  .androidIcon {
+    padding: 13px 8px 8px;
+  }
+
+  .bottomMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 98px;
+    width: 100%;
   }
 
   .choicesOutside {
@@ -406,31 +366,17 @@
     font-size: 14px;
     justify-content: space-between;
     margin: auto;
-    max-height: 72px;
+    max-height: 100px;
+    padding-top: 100px;
     text-align: center;
-    width: 100%;
   }
 
-  .detailButtons {
-    /* padding-bottom: 20px; */
-  }
-
-  .outputBottom {
-    padding-bottom: 0px;
-  }
-
-  .docButton {
-    background-color: white;
-    border: 1px solid rgba(0,0,0,0.12);
-    border-radius: 4px;
-    color: #1A73E8;
+  .detailButtons2 {
     display: flex;
     flex-direction: row;
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 20px;
-    padding: 7px 16px;
-    text-align: center;
+    justify-content: space-between;
+    padding: 0 0 20px 28px;
+    width: 100%;
   }
 
   .entireTranslate {
@@ -441,13 +387,9 @@
     color: gray;
     font-size: 11px;
     font-style: italic;
-    padding-right: 80px;
+    padding-right: 1px;
     text-align: right;
-  }
-
-  .googlelogo11 {
-    max-height: 24px;
-    max-width: 74px;
+    width: 100%
   }
 
   .languageBar {
@@ -484,39 +426,57 @@
     flex-direction: row;
     font-size: 12px;
     justify-content: space-between;
-    padding-left: 28px;
-    padding-right: 48px;
+    padding: 0 48px 20px 28px;
+  }
+/*  */
+
+  .mic {
+    margin-right: 24px;
+  }
+  .outputBottom {
+    border-left: 1px solid rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 50%;
   }
 
+  .outputTxt {
+    display: flex;
+    flex-direction: row;
+    min-height: 70px;
+    padding: 20px 28px 18px;
+    width: 100%;
+  }
+
+  .outputTxtInside {
+
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+
+/*  */
   .signInButton11 {
     background-color: #1A73E8;
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
     font-size: 14px;
     font-weight: bold;
+    margin: auto;
     padding: 8px 23px;
   }
-  
+
   .squareBox {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .textButton {
-    background-color: rgb(66,133,244,0.12);
-    border-radius: 4px;
-    color: #1A73E8;
+  .starIcon {
     display: flex;
     flex-direction: row;
-    font-size: 15px;
-    font-weight: bold;
-    margin-left: 20px;
-    padding-top: 6px;
-    padding-left: 16px;
-    padding-right: 16px;
-    /* padding-bottom: 2px; */
-    text-align: center;
+    width: 10%;
   }
 
   .topMenuLeft {
@@ -532,6 +492,9 @@
   .topMenuRight {
     display: flex;
     flex-direction: row;
+    float: right;
+    justify-content: flex-end;
+    position: relative;
   }
 
   .topMenuTranslate {
@@ -539,7 +502,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-height: 65px;
-    padding: 8px 30px 8px 8px;
+    padding: 8px;
     max-width: 1280px;
   }
 
@@ -560,7 +523,8 @@
   }
 
   .translateTable {
-    border: 1px solid #777;
+    border: 1px solid #919191;
+    border-radius: 9px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -575,46 +539,161 @@
     width: 46%;
   }
 
-  .txtdocument {
-    background-color: #f5f5f5;
-    /* border-bottom: 1px solid rgba(0,0,0,0.12); */
-    display: flex;
-    flex-direction: row;
-    max-height: 65px;
-    padding: 8px 30px 8px 8px;
-  }
-
   .typeInput {
     min-height: 70px;
     width: 50%;
   }
 
   .typeOutput {
-    border-left: 1px solid rgba(0,0,0,0.12);
-    padding-top: 20px;
-    padding-left: 28px;
-    padding-right: 28px;
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 95%;
+    min-height: 70px;
+    width: 93%;
+
   }
 
   .typeText {
     flex: 1;
-    padding: 20px 106px 18px 28px;
-    width: 100%;
+    padding: 20px 90px 18px 28px;
+    width: 90%;
   }
 
   .typeWords {
     border-top: 1px solid rgba(0,0,0,0.12);
-    /* border-bottom: 1px solid #777; */
     color: #878787;
     display: flex;
     flex-direction: row;
     font-size: 24px;
   }
 }
+@media (min-width: 1440px) {
+  .feedback {
+    color: gray;
+    font-size: 11px;
+    font-style: italic;
+    padding-right: 78px;
+    padding-top: 7px;
+    text-align: right;
+    width: 100%
+  }
+}
 
 .arrowBothWay {
   margin: auto;
   padding-top: 3px;
+}
 
+.bottomMenuItem {
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 36px;
+  color: gray;
+  height: 72px;
+  margin-bottom: 8px;
+  padding-top: 18px;
+  width: 72px;
+  text-align: center;
+}
+
+.bottomMenuItemContainer {
+  color: gray;
+  font-weight: bold;
+  margin: 0 31px;
+}
+
+.closeButton {
+  display: flex;
+  flex-direction: row;
+  max-height: 24px;
+  max-width: 24px;
+  padding: 14px 41px 0 0;
+}
+.docButton {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  color: #1A73E8;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 11px;
+  padding: 3px 15px;
+  text-align: center;
+}
+
+.docButton p {
+  margin: auto auto auto 5px;
+}
+
+.feedback {
+  color: gray;
+  font-size: 11px;
+  font-style: italic;
+  text-align: right;
+  width: 100%
+}
+
+.googlelogo11 {
+  margin-top: 7px;
+  max-height: 35px;
+  max-width: 99px;
+}
+
+.gridIcon {
+  padding: 8px 0 12px 12px;
+}
+.insertDriveIcon {
+  padding-top: 3px;
+}
+
+.textButton {
+  background-color: rgb(66,133,244,0.12);
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  color: #1A73E8;
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 3px 15px;
+  text-align: center;
+}
+
+.textButton p {
+  margin: auto auto auto 5px;
+}
+
+.translateLogo {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 10px 0 0 -10px;
+}
+
+.txtdocument {
+  background-color: #f5f5f5;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: row;
+  max-height: 65px;
+  padding: 10px 20px;
+}
+
+.typeInput {
+  min-height: 70px;
+  width: 50%;
+}
+
+.typeWords {
+  border-top: 1px solid rgba(0,0,0,0.12);
+  color: #878787;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+.typeWordsInside {
+  display: flex;
+  flex-direction: row;
 }

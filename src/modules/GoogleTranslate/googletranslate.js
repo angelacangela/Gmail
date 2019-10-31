@@ -8,7 +8,7 @@ import {ic_menu} from 'react-icons-kit/md/ic_menu';
 import {androidApps} from 'react-icons-kit/ionicons/androidApps';
 import {ic_compare_arrows} from 'react-icons-kit/md/ic_compare_arrows';
 import {ic_g_translate} from 'react-icons-kit/md/ic_g_translate';
-import {fileEmpty} from 'react-icons-kit/icomoon/fileEmpty';
+import {ic_insert_drive_file} from 'react-icons-kit/md/ic_insert_drive_file';
 import {ic_more_vert} from 'react-icons-kit/md/ic_more_vert';
 import {volumeUp} from 'react-icons-kit/fa/volumeUp';
 import {filesEmpty} from 'react-icons-kit/icomoon/filesEmpty';
@@ -53,12 +53,12 @@ class GoogleTranslate extends Component {
         <div className="topWindowMenu">
           <div className="topMenuTranslate">
             <div className="topMenuLeft">
-              <Icon size={26} icon={ic_menu}/>
+              <Icon className="gridIcon" size={26} icon={ic_menu}/>
               <img
                   className="googlelogo11"
                   src={googlelogo11}
               />
-              Translate
+              <div className="translateLogo">Translate</div>
             </div>
             <div className="topMenuRight">
               <div className="androidIcon hideOnMobile">
@@ -72,12 +72,12 @@ class GoogleTranslate extends Component {
           <div className="topMenuTranslate2 hideOnMobile">
             <div className="txtdocument hideOnMobile">
               <div className="textButton hideOnMobile">
-                <Icon size={26} icon={ic_g_translate}/>
-                <p>  Text</p>
+                <Icon size={21} icon={ic_g_translate}/>
+                <p>Text</p>
               </div>
               <div className="docButton hideOnMobile">
-                <Icon size={26} icon={fileEmpty}/>
-                Documents
+                <Icon className="insertDriveIcon" size={21} icon={ic_insert_drive_file}/>
+                <p>Documents</p>
               </div>
             </div>
           </div>
@@ -88,10 +88,10 @@ class GoogleTranslate extends Component {
               <div className="languageBar">
                 <div className="translateFrom">
                   <div className="languageChoice1">
-                  DETECTED
+                  DETECT LANGUAGE
                   </div>
                   <div className="languageChoice hideOnMobile">
-                  English
+                  ENGLISH
                   </div>
                   <div className="languageChoice hideOnMobile">
                   SPANISH
@@ -102,7 +102,7 @@ class GoogleTranslate extends Component {
                 </div>
                 <div className="translateTo">
                   <div className="languageChoice1">
-                  English
+                  ENGLISH
                   </div>
                   <div className="languageChoice hideOnMobile">
                   SPANISH
@@ -114,28 +114,38 @@ class GoogleTranslate extends Component {
               </div>
             <div className="typeWords">
               <div className="typeInput">
-                <textarea
-                  className="typeText"
-                  onChange={this.handleTextInputOnChange}
-                  maxLength="5000"
-                  onSubmit={this.onSubmit}
-                  placeholder="Enter text"
-                  value={currentInput}
-                />
+                <div className="typeWordsInside">
+                  <textarea
+                    className="typeText"
+                    onChange={this.handleTextInputOnChange}
+                    maxLength="5000"
+                    onSubmit={this.onSubmit}
+                    placeholder="Enter text"
+                    value={currentInput}
+                  />
+                  <Icon className="closeButton" size={23} icon={ic_close}/>
+                </div>
                 <div className="maxChar">
                   <div className="detailButtons">
-                    <Icon size={23} icon={ic_close}/>
-                    <Icon size={23} icon={ic_mic}/>
+                    <Icon className="mic" size={23} icon={ic_mic}/>
                     <Icon size={23} icon={volumeUp}/>
                   </div>
                   <p className="wordLimit hideOnMobile">{currentInput.length}/5000</p>
                 </div>
               </div>
-              <div className="typeOutput">
-              {translation ? translation : "Translation"}
-                <div className="outputBottom">
-                  <div className="detailButtons2">
-                    <Icon size={23} icon={starEmpty}/>
+              <div className="outputBottom">
+                <div className="outputTxt">
+                  <div className="outputTxtInside">
+                    <div className="typeOutput">
+                    {translation ? translation : "Translation"}
+                    </div>
+                    <div className="starIcon">
+                      <Icon size={23} icon={starEmpty}/>
+                    </div>
+                  </div>
+                </div>
+                <div id="content-desktop">
+                  <div className="detailButtons2 hideOnMobile">
                     <Icon size={23} icon={volumeUp}/>
                     <Icon size={23} icon={filesEmpty}/>
                     <Icon size={23} icon={ic_more_vert}/>
@@ -149,28 +159,28 @@ class GoogleTranslate extends Component {
       <div className="feedback">
         Send feedback
       </div>
-      <div className="background">
-      <div className="choicesOutside">
-        <div className="history">
-          <div className="choiceIcon">
-          <Icon size={30} icon={repeat}/>
+      <div className="bottomMenu">
+        <div className="choicesOutside">
+          <div className="bottomMenuItemContainer">
+            <div className="bottomMenuItem">
+              <Icon size={30} icon={repeat}/>
+            </div>
+            History
           </div>
-          History
-        </div>
-        <div className="saved">
-          <div className="choiceIcon">
-          <Icon size={30} icon={ic_grade}/>
+          <div className="bottomMenuItemContainer">
+            <div className="bottomMenuItem">
+              <Icon size={30} icon={ic_grade}/>
+            </div>
+            Saved
           </div>
-          Saved
-        <div className="community">
-          <div className="choiceIcon">
-          <Icon size={30} icon={users}/>
+          <div className="bottomMenuItemContainer">
+            <div className="bottomMenuItem">
+              <Icon size={30} icon={users}/>
+            </div>
+            Community
           </div>
-          Community
         </div>
       </div>
-      </div>
-    </div>
     </div>
     )
   }
