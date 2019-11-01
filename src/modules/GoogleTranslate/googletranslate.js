@@ -6,6 +6,7 @@ import debounce from "lodash/debounce";
 import {ic_mic} from 'react-icons-kit/md/ic_mic';
 import {ic_menu} from 'react-icons-kit/md/ic_menu';
 import {androidApps} from 'react-icons-kit/ionicons/androidApps';
+import {ic_keyboard_arrow_down} from 'react-icons-kit/md/ic_keyboard_arrow_down';
 import {ic_compare_arrows} from 'react-icons-kit/md/ic_compare_arrows';
 import {ic_g_translate} from 'react-icons-kit/md/ic_g_translate';
 import {ic_insert_drive_file} from 'react-icons-kit/md/ic_insert_drive_file';
@@ -26,7 +27,7 @@ class GoogleTranslate extends Component {
       currentInput: ""
     }
     this.handleTextInputOnChange = this.handleTextInputOnChange.bind(this);
-    this.handleTranslation = debounce(this.handleTranslation, 3000);
+    this.handleTranslation = debounce(this.handleTranslation, 1500);
   }
 
   handleTextInputOnChange(event) {
@@ -37,11 +38,14 @@ class GoogleTranslate extends Component {
   }
 
   handleTranslation() {
-    this.props.getTranslation({
-      sourceLang: "auto",
-      targetLang: "en",
-      sourceText: this.state.currentInput
-    });
+   const { currentInput } = this.state;
+   if (currentInput.length) {
+     this.props.getTranslation({
+       sourceLang: "auto",
+       targetLang: "ko",
+       sourceText: this.state.currentInput
+     });
+   }
   }
 
   render(){
@@ -96,6 +100,7 @@ class GoogleTranslate extends Component {
                   <div className="languageChoice hideOnMobile">
                   SPANISH
                   </div>
+                  <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
                 </div>
                 <div className="arrowBothWay">
                   <Icon size={29} icon={ic_compare_arrows}/>
@@ -110,6 +115,7 @@ class GoogleTranslate extends Component {
                   <div className="languageChoice hideOnMobile">
                   ARABIC
                   </div>
+                  <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
                 </div>
               </div>
             <div className="typeWords">

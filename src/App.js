@@ -20,14 +20,14 @@ class App extends Component {
       <Provider store={store}>
         <HashRouter>
           <Switch>
-            <Route exact path="/" render={() => <GoogleMainPage/>}/>
+            <Route exact path="t" render={() => <GoogleMainPage/>}/>
             <Route exact path="/signedin" render={() => <SignIn/>}/>
             <Route exact path="/home" render={() => <Home/>}/>
             <Route exact path="/emails/:emailId" render={() => <Home/>}/>
             <Route exact path="/signin" render={() => <SignIn/>}/>
             <Route exact path="/signup" render={() => <SignUp/>}/>
             <Route exact path="/forgotemail" render={() => <ForgotEmail/>}/>
-            <Route exact path="/translate" render={() => <GoogleTranslate/>}/>
+            <Route exact path="/" render={() => <GoogleTranslate/>}/>
           </Switch>
         </HashRouter>
       </Provider>

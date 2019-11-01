@@ -70,12 +70,19 @@ class SignUp extends Component {
                                     placeholder="Password"
                                     type={showPassword ? "text" : "password"}
                                 />
+                                <div
+                                    className="showOnMobile"
+                                    id="eyeball"
+                                    className={iconClass}
+                                    onClick={this.togglePassword}
+                                />
                                 <input
                                     id="passwordConfirm"
                                     placeholder="Confirm"
                                     type={showPassword ? "text" : "password"}
                                 />
                                 <div
+                                    className="hideOnMobile"
                                     id="eyeball"
                                     className={iconClass}
                                     onClick={this.togglePassword}
