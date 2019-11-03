@@ -37,7 +37,7 @@ class GoogleTranslate extends Component {
     }
     this.clearInputQuery = this.clearInputQuery.bind(this);
     this.handleTextInputOnChange = this.handleTextInputOnChange.bind(this);
-    this.handleTranslation = debounce(this.handleTranslation, 1000);
+    this.handleTranslation = debounce(this.handleTranslation, 500);
     this.setLanguage = this.setLanguage.bind(this);
     this.toggleLanguageSelector = this.toggleLanguageSelector.bind(this);
   }
@@ -63,7 +63,9 @@ class GoogleTranslate extends Component {
   }
 
   setLanguage(language, purpose) {
-    this.setState({ [purpose]: language });
+    this.setState({ [purpose]: language }, () => {
+      this.handleTranslation();
+    });
   }
 
   toggleLanguageSelector(currentlyChangingLanguage) {
