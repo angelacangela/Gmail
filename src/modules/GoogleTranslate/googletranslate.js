@@ -28,8 +28,13 @@ class GoogleTranslate extends Component {
       sourceLang: "auto",
       targetLang: "en"
     }
+    this.clearInputQuery = this.clearInputQuery.bind(this);
     this.handleTextInputOnChange = this.handleTextInputOnChange.bind(this);
     this.handleTranslation = debounce(this.handleTranslation, 1000);
+  }
+
+  clearInputQuery() {
+    this.setState({ currentInput: "" });
   }
 
   handleTextInputOnChange(event) {
@@ -41,13 +46,11 @@ class GoogleTranslate extends Component {
 
   handleTranslation() {
    const { currentInput, sourceLang, targetLang } = this.state;
-   if (currentInput.length) {
-     this.props.getTranslation({
-       sourceLang,
-       targetLang,
-       sourceText: currentInput
-     });
-   }
+   this.props.getTranslation({
+     sourceLang,
+     targetLang,
+     sourceText: currentInput
+   });
   }
 
   render(){
@@ -144,18 +147,25 @@ class GoogleTranslate extends Component {
                     placeholder="Enter text"
                     value={currentInput}
                   />
-                  <Icon className="closeButton" size={23} icon={ic_close}/>
+                  <Icon
+                    className="closeButton"
+                    icon={ic_close}
+                    onClick={this.clearInputQuery}
+                    size={23}
+                  />
                 </div>
                 <div className="maxChar">
                   <div className="detailButtons">
                     <Icon className="iconMic" size={23} icon={ic_mic}/>
-                    <Icon className="iconVol" size={23} icon={volumeUp}/>
+                    {translation && (
+                      <Icon className="iconVol" size={23} icon={volumeUp}/>
+                    )}
                   </div>
                   <p className="wordLimit hideOnMobile">{currentInput.length}/5000</p>
                 </div>
               </div>
-              <div className="outputBottom">
-                <div className="outputTxt">
+              <div className={`outputContainer ${translation ? "" : "hideOnMobile"}`}>
+                <div className="outputBottom">
                   <div className="outputTxtInside">
                     <div className="typeOutput">
                     {translation ? translation : "Translation"}
@@ -166,9 +176,7 @@ class GoogleTranslate extends Component {
                       </div>
                     )}
                   </div>
-                </div>
-                {translation && (
-                  <div id="content-desktop">
+                  {translation && (
                     <div className="detailButtons2">
                       <Icon className="iconVolume" size={23} icon={volumeUp}/>
                       <div className="iconTranslateTo">
@@ -176,8 +184,8 @@ class GoogleTranslate extends Component {
                         <Icon className="iconVer" size={23} icon={ic_more_vert}/>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </div>

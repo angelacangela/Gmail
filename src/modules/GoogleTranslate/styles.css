@@ -16,16 +16,15 @@
     flex-direction: row;
     font-size: 14px;
     justify-content: center;
-    margin: auto;
-    max-height: 72px;
     text-align: center;
   }
 
   .detailButtons {
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
+    padding: 0 16px 16px;
   }
+
   .detailButtons2 {
     background: #1A73E8;
     display: flex;
@@ -33,6 +32,7 @@
     justify-content: space-between;
     max-width: 100%;
     position: relative;
+    padding: 0 16px 16px;
   }
 
   .entireTranslate {
@@ -54,14 +54,21 @@
 
   .iconEmpty {
     float: right;
-    padding-left: 191px;
     justify-content: flex-end;
     position: relative;
     text-align: right;
   }
+
   .iconStar {
     background: #1A73E8;
+    padding: 16px 16px 0 0;
   }
+
+  .iconTranslateTo {
+    display: flex;
+    flex-direction: row;
+  }
+
   .iconVer {
     display: flex;
     flex-direction: row;
@@ -69,19 +76,24 @@
     padding-left: 20px;
     text-align: right;
   }
+
   .iconVol {
     float: right;
     justify-content: flex-end;
-    padding-left: 48px;
+    padding: 0 24px;
     text-align: left;
   }
+
   .iconVolume {
-    padding-left: 18px;
   }
 
   .languageChoice1 {
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  .languagesContainer {
+    margin-left: auto;
   }
 
   .outputBottom {
@@ -91,6 +103,12 @@
     flex: 1;
     flex-direction: column;
     width: 100%;
+  }
+
+  .outputContainer {
+    background: #1A73E8;
+    margin-left: -1px;
+    width: 101%;
   }
 
   .outputTxt {
@@ -156,7 +174,7 @@
   }
 
   .translateBox {
-    border-bottom: 1px solid #919191;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
     color: rgb(0,0,0,0.54);
     display: flex;
     flex-direction: column;
@@ -171,9 +189,11 @@
     overflow: hidden;
     width: 47%;
   }
+
   .translateLogo {
     overflow: hidden;
   }
+
   .translateTable {
     display: flex;
     flex-direction: column;
@@ -182,7 +202,7 @@
   }
 
   .translateBox {
-    border-top: 1px solid #919191;
+    border-top: 1px solid rgba(0,0,0,0.12);
   }
 
   .translateTo {
@@ -207,17 +227,14 @@
     display: flex;
     flex-direction: column;
     min-height: 166px;
-    padding-top: 20px;
-    padding-left: 28px;
-    max-height: 85%;
     max-width: 100%;
-    min-width: 92%;
+    padding: 16px;
   }
 
   .typeText {
     font-size: 23px;
     overflow: visible;
-    padding: 20px 90px 20px 16px;
+    margin: 2px 16px 0 16px;
     resize: none;
     width: inherit;
   }
@@ -230,9 +247,9 @@
   }
 
   .typeWordsInside {
-    min-hegith: 133px;
-    max-height: 166px;
+    min-height: 133px;
     overflow: visible;
+    padding: 16px 0;
     width: 100%;
   }
 }
@@ -256,7 +273,6 @@
     font-size: 14px;
     justify-content: center;
     margin: auto;
-    max-height: 72px;
     text-align: center;
   }
 
@@ -264,11 +280,15 @@
     padding: 14px 25px 0 0;
   }
 
-  #content-desktop {display: none;}
+  #content-desktop {
+    display: none;
+  }
 
   .detailButtons2 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin: 12px 25px 20px 28px;
   }
 
   .entireTranslate {
@@ -284,32 +304,39 @@
     width: 100%;
   }
 
-  .hideOnMobile {
-    display: flex;
-  }
-
   .iconEmpty {
     margin-bottom: 6px;
   }
+
   .iconMic {
     margin-right: 24px;
   }
+
   .iconStar {
     padding: 14px 25px 0 0;
   }
+
   .iconVer {
     margin-bottom: 6px;
   }
+
   .iconVolume {
 
   }
+
   .maxChar {
     display: flex;
     flex-direction: row;
     font-size: 12px;
     justify-content: space-between;
-    margin: 0 25px 20px 28px;
+    margin: 12px 25px 20px 28px;
   }
+
+  .outputContainer {
+    display: flex;
+    width: 100%;
+  }
+
   .signInButton11 {
     background-color: #1A73E8;
     border-radius: 4px;
@@ -319,6 +346,7 @@
     margin: auto;
     padding: 8px 23px;
   }
+
   .squareBox {
     display: flex;
     flex-direction: column;
@@ -350,7 +378,7 @@
   }
 
   .translateBox {
-    border-top: 1px solid #919191;
+    border-top: 1px solid rgba(0,0,0,0.12);
     color: rgb(0,0,0,0.54);
     display: flex;
     flex-direction: row;
@@ -372,9 +400,8 @@
   }
 
   .typeOutput {
-    padding-top: 20px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding: 20px 28px 0;
+    margin-bottom: auto;
     width: 50%;
   }
 
@@ -386,7 +413,6 @@
 
   .typeWords {
     border-top: 1px solid rgba(0,0,0,0.12);
-    /* border-bottom: 1px solid #777; */
     color: #878787;
     display: flex;
     flex-direction: row;
@@ -441,13 +467,24 @@
   .iconEmpty {
     margin-bottom: 6px;
   }
+
+  .iconMic {
+    margin-right: 24px;
+  }
+
   .iconStar {
     padding: 14px 25px 0 0;
   }
+
   .iconVer {
     margin-bottom: 6px;
     padding-left: 20px;
   }
+
+  .iconVol {
+
+  }
+
   .iconVolume {
     margin-top: auto;
   }
@@ -464,14 +501,12 @@
     flex-direction: row;
     font-size: 12px;
     justify-content: space-between;
-    margin: 0 25px 20px 28px;
+    margin: 12px 25px 20px 28px;
   }
 
-  .iconMic {
-    margin-right: 24px;
-  }
-  .iconVol {
-
+  .outputContainer {
+    display: flex;
+    width: 100%;
   }
 
   .outputTxt {
@@ -527,14 +562,14 @@
   }
 
   .translateBox {
-    border-bottom: 1px solid #919191;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-top: 1px solid rgba(0,0,0,0.12);
     color: rgb(0,0,0,0.54);
     display: flex;
     flex-direction: row;
     font-size: 14px;
     width: 100%;
   }
-
 
   .translateTable {
     display: flex;
@@ -585,6 +620,16 @@
     margin: auto 31px;
     width: 72px;
   }
+
+  .closeButton {
+    padding: 14px 25px 0 0;
+  }
+
+  .detailButtons2 {
+    justify-content: space-between;
+    padding: 0 25px 20px 28px;
+  }
+
   .feedback {
     color: gray;
     font-size: 11px;
@@ -594,18 +639,25 @@
     text-align: right;
     width: 100%
   }
+
   .iconEmpty {
     margin-bottom: 6px;
   }
+
+  .iconMic {
+    margin-right: 24px;
+  }
+
   .iconStar {
     padding: 14px 25px 0 0;
   }
+
   .iconVer {
     margin-bottom: 6px;
     padding-left: 20px;
   }
+
   .iconVolume {
-    padding-left: 23px;
   }
 
   .languagesContainer {
@@ -622,6 +674,15 @@
     padding: 20px 28px 18px;
   }
 
+  .outputContainer {
+    display: flex;
+    width: 100%;
+  }
+
+  .outputTxt {
+    margin-bottom: auto;
+  }
+
   .signInButton11 {
     background-color: #1A73E8;
     border-radius: 4px;
@@ -631,6 +692,7 @@
     margin: auto;
     padding: 8px 23px;
   }
+
   .textButton {
     background-color: rgb(66,133,244,0.12);
     border: 1px solid #dadce0;
@@ -646,14 +708,25 @@
     text-align: center;
   }
 
+  .topMenuTranslate2 {
+    position: fixed;
+    padding-bottom: 110px;
+    width: 100%;
+    z-index: 1;
+  }
+
   .translateBox {
+    background: white;
     border: 1px solid #919191;
     border-radius: 9px;
     box-shadow: 1px 1px #919191;
+    z-index: 6;
   }
 
   .translateTable {
     border: none;
+    margin: 56px auto auto;
+    z-index: 6
   }
 
   .typeInput {
@@ -661,62 +734,15 @@
     min-width: 50%;
   }
 
-}
-
-@media (min-width: 2560px) {
-  .bottomMenuItem {
-    margin: auto 31px;
+  .typeOutput {
+    padding: 20px 28px 18px;
   }
 
-  .feedback {
-    color: gray;
-    font-size: 11px;
-    font-style: italic;
-    padding-right: 640px;
-    padding-top: 7px;
-    text-align: right;
-    width: 100%
+  .typeText {
+    flex: 1;
+    overflow: visible;
+    padding: 20px 96px 18px 28px;
   }
-  .iconEmpty {
-    margin-bottom: 6px;
-  }
-  .iconStar {
-    padding: 14px 25px 0 0;
-  }
-  .iconVer {
-    margin-bottom: 6px;
-    padding-left: 20px;
-  }
-  .iconVolume {
-
-  }
-  .outputBottom {
-    max-width: 50%;
-  }
-  .signInButton11 {
-    background-color: #1A73E8;
-    border-radius: 4px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    margin: auto;
-    padding: 8px 23px;
-  }
-  .textButton {
-    background-color: rgb(66,133,244,0.12);
-    border: 1px solid #dadce0;
-    border-radius: 4px;
-    color: #1A73E8;
-    display: flex;
-    flex-direction: row;
-    font-size: 15px;
-    font-weight: 500;
-    justify-content: flex-start;
-    margin-left: 620px;
-    padding: 3px 15px;
-    text-align: center;
-  }
-
 }
 
 .androidIcon {
@@ -765,17 +791,23 @@
   flex-direction: row;
   font-size: 14px;
   justify-content: space-between;
-  margin: auto;
+  margin: auto auto 20px auto;
   padding-top: 100px;
   text-align: center;
 }
 
 .closeButton {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  padding-right: 16px;
 }
 
 .detailButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.detailButtons2 {
   display: flex;
   flex-direction: row;
 }
@@ -846,14 +878,29 @@
   padding: 0 24px;
 }
 
+.languagesContainer {
+  margin-right: auto;
+}
+
 .outputBottom {
   border-left: 1px solid rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-left: -1px;
+  height: 100%;
   max-height: 100%;
+  min-width: 50%;
   width: 100%;
+}
+
+.outputContainer {
+}
+
+.outputTxtInside {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: auto;
 }
 
 .textButton {
@@ -901,8 +948,7 @@
 }
 
 .translateBox {
-  border-bottom: 1px solid #919191;
-  border-top: 1px solid #919191;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 
 .translateFrom {
@@ -919,12 +965,13 @@
   margin: 10px 0 0 -10px;
   overflow: hidden;
 }
+
 .translateTable {
   display: flex;
   flex-direction: column;
-  margin: auto;
   max-width: 1280px;
 }
+
 .translateTo {
   display: flex;
   flex-direction: row;
@@ -941,7 +988,6 @@
 .txtdocument {
   display: flex;
   flex-direction: row;
-  /* justify-content: center;s */
   max-height: 65px;
   max-width: 1278px;
   padding: 10px 20px;
@@ -952,21 +998,19 @@
   min-width: 50%;
 }
 
-
 .typeOutput {
   display: flex;
   flex-direction: row;
   flex: 1;
-  padding: 20px 28px 18px;
+  margin-bottom: auto;
 }
-
 
 .typeText {
   color: black;
   font-size: 23px;
+  flex: 1;
   margin-right: auto;
   overflow: visible;
-  padding: 20px 28px 18px;
   resize: none;
 }
 
@@ -983,7 +1027,6 @@
   display: flex;
   flex-direction: row;
   overflow: visible;
-  max-height: 170px;
   max-width: 100%;
 }
 

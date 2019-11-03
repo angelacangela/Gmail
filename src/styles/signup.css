@@ -123,9 +123,6 @@
     border-radius: 6px;
   }
 
-  .hideOnMobile {
-    display: none;
-  }
   .showOnMobile {
     display: none;
   }
