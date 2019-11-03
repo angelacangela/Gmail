@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./styles.css";
+import LanguageSelector from "../../components/language-selector";
 import { Link } from "react-router-dom";
 import { Icon } from 'react-icons-kit';
 import debounce from "lodash/debounce";
@@ -18,6 +19,10 @@ import {repeat} from 'react-icons-kit/fa/repeat';
 import {ic_grade} from 'react-icons-kit/md/ic_grade';
 import {users} from 'react-icons-kit/icomoon/users';
 import {starEmpty} from 'react-icons-kit/icomoon/starEmpty';
+import {
+    abbrevToReadableLanguages,
+    readableToAbbrevLanguages,
+} from "./utils";
 const googlelogo11 = require("../../assets/googlelogo.png");
 
 class GoogleTranslate extends Component {
@@ -25,12 +30,16 @@ class GoogleTranslate extends Component {
     super(props);
     this.state = {
       currentInput: "",
+      currentlyChangingLanguage: "",
+      showLanguageSelector: false,
       sourceLang: "auto",
       targetLang: "en"
     }
     this.clearInputQuery = this.clearInputQuery.bind(this);
     this.handleTextInputOnChange = this.handleTextInputOnChange.bind(this);
     this.handleTranslation = debounce(this.handleTranslation, 1000);
+    this.setLanguage = this.setLanguage.bind(this);
+    this.toggleLanguageSelector = this.toggleLanguageSelector.bind(this);
   }
 
   clearInputQuery() {
@@ -53,10 +62,21 @@ class GoogleTranslate extends Component {
    });
   }
 
+  setLanguage(language, purpose) {
+    this.setState({ [purpose]: language });
+  }
+
+  toggleLanguageSelector(currentlyChangingLanguage) {
+    this.setState({ currentlyChangingLanguage }, () => {
+      this.setState({ showLanguageSelector: !this.state.showLanguageSelector });
+    });
+  }
+
   render(){
     console.log(this.props);
+    console.log("THE STATE CURRENTLY IS: ", this.state);
     const { translation } = this.props;
-    const { currentInput } = this.state;
+    const { currentlyChangingLanguage, currentInput, sourceLang, showLanguageSelector, targetLang } = this.state;
     return(
       <div className="entireTranslate">
         <div className="topWindowMenu">
@@ -97,21 +117,48 @@ class GoogleTranslate extends Component {
               <div className="languageBar">
                 <div className="translateFrom">
                   <div className="languagesContainer">
-                    <div className="languageChoice1">
-                      DETECT LANGUAGE
+                    <div
+                      className="languageChoice1"
+                      onClick={() => this.toggleLanguageSelector("sourceLang")}
+                    >
+                      {
+                        sourceLang === "auto" ?
+                        "DETECT LANGUAGE" :
+                        abbrevToReadableLanguages[sourceLang].toUpperCase()
+                      }
                     </div>
-                    <div className="languageChoice hideOnMobile">
-                      ENGLISH
-                    </div>
-                    <div className="languageChoice hideOnMobile">
-                      SPANISH
-                    </div>
-                    <div className="languageChoice hideOnMobile">
-                      FRENCH
-                    </div>
+                    {sourceLang !== "en" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("en", "sourceLang")}
+                      >
+                        ENGLISH
+                      </div>
+                    )}
+                    {sourceLang !== "es" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("es", "sourceLang")}
+                      >
+                        SPANISH
+                      </div>
+                    )}
+                    {sourceLang !== "fr" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("fr", "sourceLang")}
+                      >
+                        FRENCH
+                      </div>
+                    )}
                   </div>
                   <div className="hideOnMobile">
-                    <Icon className="arrowDownIcon hideOnMobile" size={29} icon={ic_keyboard_arrow_down}/>
+                    <Icon
+                      className="arrowDownIcon hideOnMobile"
+                      onClick={() => this.toggleLanguageSelector("sourceLang")}
+                      size={29}
+                      icon={ic_keyboard_arrow_down}
+                    />
                   </div>
                 </div>
                 <div className="arrowBothWay">
@@ -119,21 +166,58 @@ class GoogleTranslate extends Component {
                 </div>
                 <div className="translateTo">
                   <div className="languagesContainer">
-                    <div className="languageChoice1">
-                      ENGLISH
+                    <div
+                      className="languageChoice1"
+                      onClick={() => this.toggleLanguageSelector("targetLang")}
+                    >
+                      {
+                        targetLang === "en" ?
+                        "ENGLISH" :
+                        abbrevToReadableLanguages[targetLang].toUpperCase()
+                      }
                     </div>
-                    <div className="languageChoice hideOnMobile">
-                      SPANISH
-                    </div>
-                    <div className="languageChoice hideOnMobile">
-                      ARABIC
-                    </div>
+                    {targetLang !== "en" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("en", "targetLang")}
+                      >
+                        ENGLISH
+                      </div>
+                    )}
+                    {targetLang !== "es" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("es", "targetLang")}
+                      >
+                        SPANISH
+                      </div>
+                    )}
+                    {targetLang !== "ar" && (
+                      <div
+                        className="languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("ar", "targetLang")}
+                      >
+                        ARABIC
+                      </div>
+                    )}
                   </div>
                   <div className="hideOnMobile">
-                    <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
+                    <Icon
+                      className="arrowDownIcon"
+                      icon={ic_keyboard_arrow_down}
+                      onClick={() => this.toggleLanguageSelector("targetLang")}
+                      size={29}
+                    />
                   </div>
                 </div>
               </div>
+            {showLanguageSelector && (
+              <LanguageSelector
+                currentlyChangingLanguage={currentlyChangingLanguage}
+                setLanguage={this.setLanguage}
+                toggleLanguageSelector={this.toggleLanguageSelector}
+              />
+            )}
             <div className="typeWords">
               <div className="typeInput">
                 <div className="typeWordsInside">

@@ -324,6 +324,15 @@
 
   }
 
+  .languageChoice1 {
+    border-bottom: 3px solid #4284f3;
+  }
+
+  .languagesContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
   .maxChar {
     display: flex;
     flex-direction: row;
@@ -408,7 +417,7 @@
   .typeText {
     flex: 1;
     overflow: visible;
-    padding: 20px 96px 18px 28px;
+    padding: 20px 16px 18px 28px;
   }
 
   .typeWords {
@@ -487,6 +496,10 @@
 
   .iconVolume {
     margin-top: auto;
+  }
+
+  .languageChoice1 {
+    border-bottom: 3px solid #4284f3;
   }
 
   .languagesContainer {
@@ -658,6 +671,10 @@
   }
 
   .iconVolume {
+  }
+
+  .languageChoice1 {
+    border-bottom: 3px solid #4284f3;
   }
 
   .languagesContainer {
@@ -868,14 +885,15 @@
 }
 
 .languageChoice1 {
+  color: #4284f3;
   font-size: 14px;
   font-weight: bold;
   display: flex;
   flex-direction: row;
   max-height: 48px;
-  margin: 15px 0;
+  margin: 15px 24px 0 15px;
+  padding-bottom: 15px;
   min-width: fit-content;
-  padding: 0 24px;
 }
 
 .languagesContainer {
