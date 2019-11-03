@@ -119,6 +119,14 @@ class GoogleTranslate extends Component {
               <div className="languageBar">
                 <div className="translateFrom">
                   <div className="languagesContainer">
+                    {sourceLang !== "auto" && (
+                      <div
+                        className="detectLanguage languageChoice hideOnMobile"
+                        onClick={() => this.setLanguage("auto", "sourceLang")}
+                      >
+                        DETECT LANGUAGE
+                      </div>
+                    )}
                     <div
                       className="languageChoice1"
                       onClick={() => this.toggleLanguageSelector("sourceLang")}

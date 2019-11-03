@@ -829,6 +829,10 @@
   flex-direction: row;
 }
 
+.detectLanguage {
+  white-space: nowrap;
+}
+
 .docButton {
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 4px;

@@ -54,7 +54,7 @@ class SignIn extends Component {
                   <div className="nextButton">
                   <Link
                     className="signIntoGmailpage"
-                    to="./GmailPage"
+                    to="./home"
                   >
                   Next
                   </Link>
