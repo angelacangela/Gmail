@@ -24,10 +24,12 @@ class GoogleTranslate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentInput: ""
+      currentInput: "",
+      sourceLang: "auto",
+      targetLang: "en"
     }
     this.handleTextInputOnChange = this.handleTextInputOnChange.bind(this);
-    this.handleTranslation = debounce(this.handleTranslation, 1500);
+    this.handleTranslation = debounce(this.handleTranslation, 1000);
   }
 
   handleTextInputOnChange(event) {
@@ -38,12 +40,12 @@ class GoogleTranslate extends Component {
   }
 
   handleTranslation() {
-   const { currentInput } = this.state;
+   const { currentInput, sourceLang, targetLang } = this.state;
    if (currentInput.length) {
      this.props.getTranslation({
-       sourceLang: "auto",
-       targetLang: "ko",
-       sourceText: this.state.currentInput
+       sourceLang,
+       targetLang,
+       sourceText: currentInput
      });
    }
   }
@@ -91,31 +93,42 @@ class GoogleTranslate extends Component {
             <div className="squareBox">
               <div className="languageBar">
                 <div className="translateFrom">
-                  <div className="languageChoice1">
-                  DETECT LANGUAGE
+                  <div className="languagesContainer">
+                    <div className="languageChoice1">
+                      DETECT LANGUAGE
+                    </div>
+                    <div className="languageChoice hideOnMobile">
+                      ENGLISH
+                    </div>
+                    <div className="languageChoice hideOnMobile">
+                      SPANISH
+                    </div>
+                    <div className="languageChoice hideOnMobile">
+                      FRENCH
+                    </div>
                   </div>
-                  <div className="languageChoice hideOnMobile">
-                  ENGLISH
+                  <div className="hideOnMobile">
+                    <Icon className="arrowDownIcon hideOnMobile" size={29} icon={ic_keyboard_arrow_down}/>
                   </div>
-                  <div className="languageChoice hideOnMobile">
-                  SPANISH
-                  </div>
-                  <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
                 </div>
                 <div className="arrowBothWay">
                   <Icon size={29} icon={ic_compare_arrows}/>
                 </div>
                 <div className="translateTo">
-                  <div className="languageChoice1">
-                  ENGLISH
+                  <div className="languagesContainer">
+                    <div className="languageChoice1">
+                      ENGLISH
+                    </div>
+                    <div className="languageChoice hideOnMobile">
+                      SPANISH
+                    </div>
+                    <div className="languageChoice hideOnMobile">
+                      ARABIC
+                    </div>
                   </div>
-                  <div className="languageChoice hideOnMobile">
-                  SPANISH
+                  <div className="hideOnMobile">
+                    <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
                   </div>
-                  <div className="languageChoice hideOnMobile">
-                  ARABIC
-                  </div>
-                  <Icon className="arrowDownIcon" size={29} icon={ic_keyboard_arrow_down}/>
                 </div>
               </div>
             <div className="typeWords">
@@ -125,6 +138,8 @@ class GoogleTranslate extends Component {
                     className="typeText"
                     onChange={this.handleTextInputOnChange}
                     maxLength="5000"
+                    name="text"
+                    onInput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
                     onSubmit={this.onSubmit}
                     placeholder="Enter text"
                     value={currentInput}
@@ -133,8 +148,8 @@ class GoogleTranslate extends Component {
                 </div>
                 <div className="maxChar">
                   <div className="detailButtons">
-                    <Icon className="mic" size={23} icon={ic_mic}/>
-                    <Icon size={23} icon={volumeUp}/>
+                    <Icon className="iconMic" size={23} icon={ic_mic}/>
+                    <Icon className="iconVol" size={23} icon={volumeUp}/>
                   </div>
                   <p className="wordLimit hideOnMobile">{currentInput.length}/5000</p>
                 </div>
@@ -145,18 +160,24 @@ class GoogleTranslate extends Component {
                     <div className="typeOutput">
                     {translation ? translation : "Translation"}
                     </div>
-                    <div className="starIcon">
-                      <Icon size={23} icon={starEmpty}/>
+                    {translation && (
+                      <div className="starIcon">
+                        <Icon className="iconStar" size={23} icon={starEmpty}/>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {translation && (
+                  <div id="content-desktop">
+                    <div className="detailButtons2">
+                      <Icon className="iconVolume" size={23} icon={volumeUp}/>
+                      <div className="iconTranslateTo">
+                        <Icon className="iconEmpty" size={23} icon={filesEmpty}/>
+                        <Icon className="iconVer" size={23} icon={ic_more_vert}/>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div id="content-desktop">
-                  <div className="detailButtons2 hideOnMobile">
-                    <Icon size={23} icon={volumeUp}/>
-                    <Icon size={23} icon={filesEmpty}/>
-                    <Icon size={23} icon={ic_more_vert}/>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
