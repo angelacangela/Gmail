@@ -55,21 +55,23 @@ const EmailList = ({
         )
     } else {
         return (
-          <div id="allEmails">
-            {emails.map((email) => (
-              <Link
-                to={`/emails/${email.id}`}
-                key={getEmailEmail(email)}
-              >
-              <div>
-              TITLE: {getEmailName(email)}
+            <div id="emailContent13">
+              <div id="allEmails">
+                {emails.map((email) => (
+                  <Link
+                    to={`/emails/${email.id}`}
+                    key={getEmailEmail(email)}
+                  >
+                  <div id="emailSender">
+                  TITLE: {getEmailName(email)}
+                  </div>
+                  <div id="emailTitle">
+                  BODY: {getEmailBody(email)}
+                  </div>
+                  <br />
+                  </Link>
+                ))}
               </div>
-              <div>
-              BODY: {getEmailBody(email)}
-              </div>
-              <br />
-              </Link>
-            ))}
             <div id="emailFooter">
               <div id="emailFooterPiece">
                 <div id="footerStatement">0 GB (0%) of 15 GB used</div>

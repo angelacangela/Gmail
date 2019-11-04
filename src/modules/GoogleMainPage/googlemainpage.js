@@ -11,7 +11,7 @@ import {search} from 'react-icons-kit/icomoon/search';
 import {ic_menu} from 'react-icons-kit/md/ic_menu';
 import {ic_directions_walk} from 'react-icons-kit/md/ic_directions_walk';
 import {androidApps} from 'react-icons-kit/ionicons/androidApps';
-const googlelogo = require("../../assets/googlelogo.png");
+const googlelogo20 = require("../../assets/googlelogo.png");
 
 class GoogleMainPage extends Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class GoogleMainPage extends Component {
               <div className="iconTop">
                 <Icon size={25} icon={androidApps}/>
               </div>
-              <div className="signInButton">
+              <div className="signInButton20">
                 <Link
                   to={`/signin`}
                 >Sign in
@@ -41,10 +41,10 @@ class GoogleMainPage extends Component {
               </div>
             </div>
           </div>
-          <div className="googlelogo">
+          <div className="googlelogo20">
             <img
-                id="googlelogo"
-                src={googlelogo}
+                id="googlelogo20"
+                src={googlelogo20}
             />
           </div>
           <div className="searchArea">

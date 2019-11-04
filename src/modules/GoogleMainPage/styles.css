@@ -3,6 +3,13 @@
     display: none;
   }
 
+  .googlelogo20 {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+  }
+
   .icons {
     margin-left: 8px;
     margin-right: 8px;
@@ -27,9 +34,11 @@
     padding-top: 8px;
   }
 
-  .googlelogo {
-    margin: 0 auto;
+  .googlelogo20 {
     align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
   }
 
   .hideOnMobile {
@@ -157,6 +166,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  .googlelogo20 {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+  }
 
 }
 
@@ -183,13 +198,18 @@
   width: 100%;
 }
 
-#googlelogo {
+#googlelogo20 {
   height: 104px;
   margin-bottom: 12px;
   margin-top: 89px;
   width: 299px;
 }
-
+.googlelogo20 {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
 .iconTop {
   padding: 3px 12px 0 12px;
 }
@@ -217,7 +237,7 @@
   width: 482px;
 }
 
-.signInButton {
+.signInButton20 {
   background-color: #4285f4;
   border-radius: 2px;
   color: white;

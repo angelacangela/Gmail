@@ -1,3 +1,11 @@
+#allEmails {
+  display: flex;
+  flex-direction: row;
+}
+
+#bigLeftBox {
+    min-width: 248px;
+}
 #bigRightBox {
     display: flex;
     flex-direction: column;
@@ -7,211 +15,326 @@
     overflow-y: auto;
     flex:1;
 }
-
-#leftDropMenu {
-    width: 256px;
-    color: #202124;
-    font-size: 14px;
-    font: roboto;
+#bottomMenuButton {
+    color: #333333;
+    cursor: pointer;
+    padding: 6px 8px 10px;
 }
 
-/* INSIDE INBOX MAIL */
-#topHeadingIcons {
+#bottomMenuButton:hover {
+    color: black;
+}
+#chatBottomMenu {
+    border-top: 1px solid #e6e6e6;
+    bottom: 0;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid lightgray;
+    justify-content: center;
+    position: fixed;
+    width: 248px;
 }
-
-#topHeadingItem {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    align-content: left;
+#chart {
+    color: #666666;
     cursor: pointer;
-    /* color: red; */
+    font-size: 20px;
+    padding: 8px;
 }
 
-#topHeadingItem:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2eb;
-    border-radius: 20px;
+#chatBubble {
+    height: 80px;
+    object-fit: contain;
+    width: 72px;
 }
 
-#topHeadingRightAlign {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
+#chatMenu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#chatUser {
+    height: 28px;
+    width: 28px;
+}
+
+#chatUserContainer {
     align-items: center;
-    cursor: pointer;
-    justify-content: flex-end;
-} 
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 26px;
+    padding-bottom: 8px;
+}
 
-#topHeadingRightAlign:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
+#chatPlus {
+    font-size: 16px;
+}
+#checkBoxAndSender {
+    display: flex;
+    flex-direction: row;
+}
+
+#checkBoxAndSender input {
+    margin: auto 0px;
+    font-size: 44px;
+}
+#detailsSenderName {
+    color: #202124;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#emailSender {
+  color: blue;
+}
+#emailContent {
+
+}
+
+#emailContentBox {
+    margin: auto;
+    font-size: 14px;
+    color: rgb(0,0,0,0.87);
+    font-family: Roboto-Regular,Helvetica,Arial,sans-serif;
+    width: 500px;
+    height: 327px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #dadce0;
+    border-radius: 8px;
+    padding: 40px 20px;
+}
+
+
+#email-list-subject {
+  font-size: 14px;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+  text-align: left;
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#emailSender {
+  color: red;
+}
+#favoriteUn {
+  font-size: 17px;
+  color: darkgray;
+  margin: auto 10px auto 15px;
+}
+#leftDropMenu {
+  width: 256px;
+  color: #202124;
+  font-size: 14px;
+  font: roboto;
 }
 
 #moreoptions {
-    border-radius: 20px;
-    width: 40px;
-    padding-top: 10px;
-    cursor: pointer;
-    height: 40px;
+  border-radius: 20px;
+  width: 40px;
+  padding-top: 10px;
+  cursor: pointer;
+  height: 40px;
 }
 
 #moreoptions:hover {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-}
-
-#titleOptions {
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: row;
-    align-items: right;
-    width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 #newer {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    justify-content: flex-end;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: flex-end;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
 }
 
 
 #newer:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    
+  height: 40px;
+  width: 40px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+
 }
 
 #older {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    justify-content: flex-end;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: flex-end;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
 }
 
 #older:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
 }
 
 #keyboard {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 #keyboard:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  background-color: #f2f2f2;
 }
 
 #settings {
-    height: 40px;
-    width: 40px;
-    font-size: 16px;
-    text-align: center;
-    padding-top: 10px;
-    justify-content: flex-end;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: flex-end;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 
 #settings:hover {
-    height: 40px;
-    width: 40px;
-    background-color: #f2f2f2;
-    border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
 }
 
 #TopBox {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 0.5px solid #e6e6e6;
-    margin: 0px -8px 8px -8px;;
-    padding: 8px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.5px solid #e6e6e6;
+  margin: 0px -8px 8px -8px;;
+  padding: 8px;
 }
 
 #wholeBox {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: fixed;
-    width: 100vw;
-} 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+}
 
 #gmailpng {
-    width: 109px;
-    height: 40px;
+  width: 109px;
+  height: 40px;
 }
 
 #header {
-    color: #666666;
-    font-weight: 500;
-    font-size: 16px;
+  color: #666666;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-#emptyEmailPlaceholder {
-    flex: 1;
-}
+
 
 #placeholderContainer {
-    height: 265px;
-    margin: 80px auto auto auto;
-    max-width: 550px;
-}
-
-#placeholderContainer div {
-    text-align: left;
-}
-
-#header {
-    margin-bottom: 8px;
+  height: 265px;
+  margin: 80px auto auto auto;
+  max-width: 550px;
 }
 
 #blurb {
-    color: #666666;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 0px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 0px;
+}
+#emptyEmailPlaceholder {
+  flex: 1;
+}
+#favorite {
+  align-content: center;
+  align-items: center;
+  width: 40px;
+  cursor: pointer;
+  padding-top: 10px;
 }
 
+#favorite:hover {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+#header {
+  margin-bottom: 8px;
+}
+
+#placeholderContainer div {
+  text-align: left;
+}
+
+#replyreply {
+    border-radius: 20px;
+    width: 40px;
+    cursor: pointer;
+    width: 40px;
+    padding-top: 10px;
+}
+
+#replyreply:hover {
+    background-color: #f2f2f2;;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+#senderLine {
+    color: #5F6368;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#senderLineLeft {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#senderLineContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#senderPhoto {
+    height: 32px;
+    width: 32px;
+    margin: 0px 16px;
+}
 #tabSettings {
     color: #666666;
     font-size: 14px;
@@ -263,60 +386,6 @@
     background-color:#f2f2f2;
 }
 
-#senderLine {
-    color: #5F6368;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-}
-
-#senderLineLeft {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-}
-
-#senderLineContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#senderPhoto {
-    height: 32px;
-    width: 32px;
-    margin: 0px 16px;
-}
-
-#favorite {
-    align-content: center;
-    align-items: center;
-    width: 40px;
-    cursor: pointer;
-    padding-top: 10px;
-}
-
-#favorite:hover {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-}
-
-#replyreply {
-    border-radius: 20px;
-    width: 40px;
-    cursor: pointer;
-    width: 40px;
-    padding-top: 10px;
-}
-
-#replyreply:hover {
-    background-color: #f2f2f2;;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-}
 
 #allEmails {
     overflow: scroll;
@@ -354,12 +423,7 @@
     font-weight: 500;
 }
 
-#detailsSenderName {
-    color: #202124;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 5px;
-}
+
 
 #senderDetailsTop {
     align-items: center;
@@ -382,44 +446,6 @@
     text-align: right;
     min-width: 100px;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-}
-
-#checkBoxAndSender {
-    display: flex;
-    flex-direction: row;
-}
-
-#checkBoxAndSender input {
-    margin: auto 0px;
-    font-size: 44px;
-}
-
-#favoriteUn {
-    font-size: 17px;
-    color: darkgray;
-    margin: auto 10px auto 15px;
-}
-
-#bigLeftBox {
-    min-width: 248px;
-}
-
-#emailContent {
-
-}
-
-#emailContentBox {
-    margin: auto;
-    font-size: 14px;
-    color: rgb(0,0,0,0.87);
-    font-family: Roboto-Regular,Helvetica,Arial,sans-serif;
-    width: 500px;
-    height: 327px;
-    border-style: solid;
-    border-width: thin;
-    border-color: #dadce0;
-    border-radius: 8px;
-    padding: 40px 20px;
 }
 
 #recoverYourAccount {
@@ -852,7 +878,7 @@
 }
 
 #bottomButton {
-    height: 36px; 
+    height: 36px;
     width: 284px;
     display: flex;
     flex-direction: row;
@@ -934,12 +960,6 @@
     flex-direction: row;
 }
 
-#chart {
-    color: #666666;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 8px;
-}
 
 #middleHeader {
     flex: 1;
@@ -974,61 +994,10 @@
     overflow: scroll;
 }
 
-#chatMenu {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-}
-
-#chatUser {
-    height: 28px;
-    width: 28px;
-}
-
-#chatUserContainer {
-    align-items: center;
-    border-bottom: 1px solid #e6e6e6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 8px 26px;
-    padding-bottom: 8px;
-}
-
 #photoAndName {
     align-items: center;
     display: flex;
     flex-direction: row;
-}
-
-#chatPlus {
-    font-size: 16px;
-}
-
-#chatBubble {
-    height: 80px;
-    object-fit: contain;
-    width: 72px;
-}
-
-#chatBottomMenu {
-    border-top: 1px solid #e6e6e6;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: fixed;
-    width: 248px;
-}
-
-#bottomMenuButton {
-    color: #333333;
-    cursor: pointer;
-    padding: 6px 8px 10px;
-}
-
-#bottomMenuButton:hover {
-    color: black;
 }
 
 #menuItem {
@@ -1054,15 +1023,53 @@
     margin-right: 18px;
 }
 
-#email-list-subject {
-    font-size: 14px;    
-    word-wrap: break-word;
-    overflow: hidden;
-    max-height: 3.6em;
-    line-height: 1.8em;
-    text-align: left;
-    white-space: nowrap;
-    flex: 1;
+#titleOptions {
+    justify-content: flex-end;
     display: flex;
     flex-direction: row;
+    align-items: right;
+    width: 100%;
+}
+
+/* INSIDE INBOX MAIL */
+#topHeadingIcons {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+}
+
+#topHeadingItem {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-content: left;
+    cursor: pointer;
+    /* color: red; */
+}
+
+#topHeadingItem:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2eb;
+    border-radius: 20px;
+}
+
+#topHeadingRightAlign {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: flex-end;
+}
+
+#topHeadingRightAlign:hover {
+    height: 40px;
+    width: 40px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
