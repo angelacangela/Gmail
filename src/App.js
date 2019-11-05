@@ -6,6 +6,7 @@ import ForgotEmail from "./modules/forgotemail/index.js";
 import GoogleMainPage from "./modules/GoogleMainPage/index.js";
 import GoogleTranslate from "./modules/GoogleTranslate/index.js";
 import Home from "./modules/home/index.js";
+import Symba from "./modules/Symba/index.js";
 import store from "./store/store";
 import { Provider } from "react-redux"
 import {
@@ -20,8 +21,9 @@ class App extends Component {
       <Provider store={store}>
         <HashRouter>
           <Switch>
-            <Route exact path="/" render={() => <GoogleMainPage/>}/>
+            <Route exact path="/t" render={() => <GoogleMainPage/>}/>
             <Route exact path="/signedin" render={() => <SignIn/>}/>
+            <Route exact path="/" render={() => <Symba/>}/>
             <Route exact path="/home" render={() => <Home/>}/>
             <Route exact path="/emails/:emailId" render={() => <Home/>}/>
             <Route exact path="/signin" render={() => <SignIn/>}/>

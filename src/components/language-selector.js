@@ -18,19 +18,21 @@ const LanguageSelector = ({
       <Icon size={29} icon={iosSearchStrong}/>
       <Icon className="iconClose20" size={29} icon={ic_close}/>
     </div>
-    {Object.keys(readableToAbbrevLanguages).slice(1).map(
-      (language) => (
-        <div
+    <div className="languagesList">
+      {Object.keys(readableToAbbrevLanguages).slice(1).map(
+        (language) => (
+          <div
             onClick={() => {
-            setLanguage(readableToAbbrevLanguages[language], currentlyChangingLanguage);
-            toggleLanguageSelector();
-          }}>
-          <div className="language20">
-            <div className="eachLanguage">{language}</div>
+              setLanguage(readableToAbbrevLanguages[language], currentlyChangingLanguage);
+              toggleLanguageSelector();
+            }}
+            className="eachLanguage"
+          >
+            {language}
           </div>
-        </div>
-      )
-    )}
+        )
+      )}
+    </div>
   </div>
 );
 

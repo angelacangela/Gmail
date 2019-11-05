@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/email-list.css";
 import { Link } from "react-router-dom";
-import { getEmailEmail, getEmailName, getEmailBody } from "../selectors/emails.selectors"
+import { Icon } from 'react-icons-kit';
+import { getEmailEmail, getEmailName, getEmailBody } from "../selectors/emails.selectors";
+import {ic_star_border} from 'react-icons-kit/md/ic_star_border';
 
 const EmailList = ({
     category,
@@ -56,22 +58,29 @@ const EmailList = ({
     } else {
         return (
             <div id="emailContent13">
-              <div id="allEmails">
+              <div id="emailLine13">
                 {emails.map((email) => (
                   <Link
                     to={`/emails/${email.id}`}
                     key={getEmailEmail(email)}
                   >
-                  <div id="emailSender">
-                  TITLE: {getEmailName(email)}
+                  <div className="topTitle">
+                    <div id="senderName13">
+                    TITLE: {getEmailName(email)}
+                    </div>
                   </div>
-                  <div id="emailTitle">
-                  BODY: {getEmailBody(email)}
-                  </div>
+                    <div className="checkBoxAndSender13">
+                      <input onClick={() => {}} type="checkbox" />
+
+                      <div id="email-list-subject13">
+                      BODY: {getEmailBody(email)}
+                      </div>
+                      <Icon className="iconStar13" size={29} icon={ic_star_border}/>
+                    </div>
                   <br />
                   </Link>
                 ))}
-              </div>
+            </div>
             <div id="emailFooter">
               <div id="emailFooterPiece">
                 <div id="footerStatement">0 GB (0%) of 15 GB used</div>

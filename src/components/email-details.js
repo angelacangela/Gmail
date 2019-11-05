@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import "../styles/email-list.css";
+
 const unnamed = require(".././assets/unnamed.png");
 const googleLogo = require(".././assets/googlelogo.png");
 const myicon = require(".././assets/myicon.png");

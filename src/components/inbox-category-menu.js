@@ -30,7 +30,7 @@ class InboxCategoryMenu extends Component {
         const { sideMenuCategory, toggleEmailForm } = this.props;
         const { currentHangoutsMenu } = this.state;
         let header;
-        let body; 
+        let body;
         if (currentHangoutsMenu === "conversations") {
             header = "No recent chats";
             body = "Start a new one";
@@ -42,7 +42,7 @@ class InboxCategoryMenu extends Component {
             body = "Also try our mobile apps for Android and iOS"
         }
         return (
-            <div id="bigLeftBox">
+            <div className="bigLeftBox hideOnMobile">
                 <div onClick={() => toggleEmailForm()}>
                     <div id="composeButton">
                         <div className="glyphicon glyphicon-plus" id="composePlus"/>
@@ -50,17 +50,17 @@ class InboxCategoryMenu extends Component {
                     </div>
                 </div>
                 <div id="menuItems">
-                    <div 
-                        onClick={() => this.handleMenuClick("", "inbox")} 
+                    <div
+                        onClick={() => this.handleMenuClick("", "inbox")}
                         id="menuItem"
-                        style={{ 
+                        style={{
                             background: sideMenuCategory === "inbox" ? "rgba(229,109,102,0.10)" : null,
                             color: sideMenuCategory === "inbox" ? "#D93025" : "#202124",
                             fontWeight: "700"
                         }}
                     >
-                        <div 
-                            className="glyphicon glyphicon-inbox" 
+                        <div
+                            className="glyphicon glyphicon-inbox"
                             id="menuItemImage"
                             style={{
                                 color: sideMenuCategory === "inbox" ? "#D93025" : "rgb(102,102,102)",
@@ -68,8 +68,8 @@ class InboxCategoryMenu extends Component {
                         />
                         Inbox
                     </div>
-                    <div 
-                        onClick={() => this.handleMenuClick("is:starred", "starred")} 
+                    <div
+                        onClick={() => this.handleMenuClick("is:starred", "starred")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "starred" ? "rgba(102,102,102,0.15)" : null,
@@ -77,8 +77,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-star" id="menuItemImage"/>Starred</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:snoozed", "snoozed")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:snoozed", "snoozed")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "snoozed" ? "rgba(102,102,102,0.15)" : null,
@@ -86,8 +86,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-time" id="menuItemImage"/>Snoozed</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:sent", "sent")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:sent", "sent")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "sent" ? "rgba(102,102,102,0.15)" : null,
@@ -95,8 +95,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-send" id="menuItemImage"/>Sent</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:draft", "drafts")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:draft", "drafts")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "drafts" ? "rgba(102,102,102,0.15)" : null,
@@ -104,8 +104,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-file" id="menuItemImage"/>Drafts</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("is:important", "important")} 
+                    <div
+                        onClick={() => this.handleMenuClick("is:important", "important")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "important" ? "rgba(102,102,102,0.15)" : null,
@@ -113,8 +113,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-alert" id="menuItemImage"/>Important</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:chats", "chats")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:chats", "chats")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "chats" ? "rgba(102,102,102,0.15)" : null,
@@ -122,8 +122,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-comment" id="menuItemImage"/>Chats</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("", "all mail")} 
+                    <div
+                        onClick={() => this.handleMenuClick("", "all mail")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "all mail" ? "rgba(102,102,102,0.15)" : null,
@@ -131,8 +131,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-envelope" id="menuItemImage"/>All Mail</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:spam", "spam")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:spam", "spam")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "spam" ? "rgba(102,102,102,0.15)" : null,
@@ -140,8 +140,8 @@ class InboxCategoryMenu extends Component {
                         }}
                     >
                         <div className="glyphicon glyphicon-exclamation-sign" id="menuItemImage"/>Spam</div>
-                    <div 
-                        onClick={() => this.handleMenuClick("in:trash", "trash")} 
+                    <div
+                        onClick={() => this.handleMenuClick("in:trash", "trash")}
                         id="menuItem"
                         style={{
                             background: sideMenuCategory === "trash" ? "rgba(102,102,102,0.15)" : null,
@@ -165,21 +165,21 @@ class InboxCategoryMenu extends Component {
                     </div>
                 </div>
                 <div id="chatBottomMenu">
-                    <div 
-                        id="bottomMenuButton" 
-                        onClick={() => this.setMenu("contacts")} 
+                    <div
+                        id="bottomMenuButton"
+                        onClick={() => this.setMenu("contacts")}
                         className="glyphicon glyphicon-user"
                         style={{ background: currentHangoutsMenu === "contacts" ? "rgba(102,102,102,0.05)" : "transparent"}}
                     />
-                    <div 
-                        id="bottomMenuButton" 
-                        onClick={() => this.setMenu("conversations")} 
+                    <div
+                        id="bottomMenuButton"
+                        onClick={() => this.setMenu("conversations")}
                         className="glyphicon glyphicon-comment"
                         style={{ background: currentHangoutsMenu === "conversations" ? "rgba(102,102,102,0.05)" : "transparent"}}
                     />
-                    <div 
-                        id="bottomMenuButton" 
-                        onClick={() => this.setMenu("calls")} 
+                    <div
+                        id="bottomMenuButton"
+                        onClick={() => this.setMenu("calls")}
                         className="glyphicon glyphicon-earphone"
                         style={{ background: currentHangoutsMenu === "calls" ? "rgba(102,102,102,0.05)" : "transparent"}}
                     />
