@@ -1,30 +1,335 @@
-.logoSymba {
-  color: #666666;
-  font-size: 40px;
-  max-height: 47px;
-  max-width: 133px;
+@media (min-width: 320px) and (max-width: 374px) {
+  .manageSymba {
+    background-color: #666666;
+    color: white;
+    font-size: 26px;
+    /* height: 330px; */
+    text-align: center;
+  }
+  .meetSymba {
+    display: flex;
+    flex-direction: row;
+    /* max-height: 330px; */
+    padding: 45px 0;
+
+  }
+  .welcome {
+    margin: auto;
+    /* max-height: 366px; */
+    max-width: 1080px;
+  }
+  .projects {
+    margin: auto;
+    /* max-height: 326px; */
+    max-width: 1080px;
+  }
+  .engage {
+    margin: auto;
+    /* max-height: 325px; */
+    max-width: 1080px;
+  }
+  .feedback {
+    margin: auto;
+    /* max-height: 389px; */
+    max-width: 1080px;
+  }
+  .explainSymba {
+    margin: auto;
+    /* max-height: 322px; */
+  }
+
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+  .manageSymba {
+    background-color: #666666;
+    color: white;
+    font-size: 26px;
+    /* height: 330px; */
+    text-align: center;
+  }
+  .meetSymba {
+    display: flex;
+    flex-direction: row;
+    /* max-height: 330px; */
+    padding: 45px 0;
+
+  }
+  .welcome {
+    margin: auto;
+    /* max-height: 366px; */
+    max-width: 1080px;
+  }
+  .projects {
+    margin: auto;
+    /* max-height: 326px; */
+    max-width: 1080px;
+  }
+  .engage {
+    margin: auto;
+    /* max-height: 325px; */
+    max-width: 1080px;
+  }
+  .feedback {
+    margin: auto;
+    /* max-height: 389px; */
+    max-width: 1080px;
+  }
+  .explainSymba {
+    margin: auto;
+    /* max-height: 322px; */
+  }
+
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .manageSymba {
+    background-color: #666666;
+    color: white;
+    font-size: 26px;
+    /* height: 330px; */
+    text-align: center;
+  }
+  .meetSymba {
+    display: flex;
+    flex-direction: row;
+    /* max-height: 330px; */
+    padding: 45px 0;
+
+  }
+  .welcome {
+    margin: auto;
+    /* max-height: 366px; */
+    max-width: 1080px;
+  }
+  .projects {
+    margin: auto;
+    /* max-height: 326px; */
+    max-width: 1080px;
+  }
+  .engage {
+    margin: auto;
+    /* max-height: 325px; */
+    max-width: 1080px;
+  }
+  .feedback {
+    margin: auto;
+    /* max-height: 389px; */
+    max-width: 1080px;
+  }
+  .explainSymba {
+    margin: auto;
+    /* max-height: 322px; */
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .iconMenu {
+    max-height: 468px;
+  }
+  .manageSymba {
+    background-color: #666666;
+    color: white;
+    font-size: 26px;
+    /* height: 330px; */
+    text-align: center;
+  }
+  .meetSymba {
+    display: flex;
+    flex-direction: row;
+    /* max-height: 330px; */
+    padding: 45px 0;
+
+  }
+  .welcome {
+    margin: auto;
+    /* max-height: 366px; */
+    max-width: 1080px;
+  }
+  .projects {
+    margin: auto;
+    /* max-height: 326px; */
+    max-width: 1080px;
+  }
+  .engage {
+    margin: auto;
+    /* max-height: 325px; */
+    max-width: 1080px;
+  }
+  .feedback {
+    margin: auto;
+    /* max-height: 389px; */
+    max-width: 1080px;
+  }
+  .explainSymba {
+    margin: auto;
+    /* max-height: 322px; */
+  }
+
+}
+@media (min-width: 1024px) {
+  .iconMenu {
+    max-height: 468px;
+  }
+  .manageSymba {
+    background-color: #666666;
+    color: white;
+    font-size: 26px;
+    height: 330px;
+    text-align: center;
+  }
+
+  .meetSymba {
+    display: flex;
+    flex-direction: row;
+    max-height: 468px;
+    padding: 45px 0;
+
+  }
+  .showOnMobile {
+    display: none;
+  }
+  .welcome {
+    margin: auto;
+    max-height: 366px;
+    max-width: 1080px;
+  }
+  .projects {
+    margin: auto;
+    max-height: 326px;
+    max-width: 1080px;
+  }
+  .engage {
+    margin: auto;
+    max-height: 325px;
+    max-width: 1080px;
+  }
+  .feedback {
+    margin: auto;
+    max-height: 389px;
+    max-width: 1080px;
+  }
+  .explainSymba {
+    margin: auto;
+    max-height: 322px;
+  }
+
+}
+.bottomIcons {
+  background-color: #666666;
+  color: rgb(0,0,0,0.32)
+}
+.buttonSure {
+  background-color: #f0b405;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: 700;
+  max-height: 50px;
+  max-width: 90px;
+  padding: 8px 18px;
+}
+.entireContent40 {
+  background-color: rgba(255,255,255,0.84);
+}
+.explainSymba {
+  background-color: #d1ede3;
+  color: #000000;
+  font-size: 20px;
+  padding: 40px 25px 30px;
+
+}
+.explainSymbaInside {
+  padding: 0 0 20px;
+}
+
+
+
+
+.meetSymbaDemo {
+  background-color: #e01a4f;
+  color: #ffffff;
+  font-size: 20px;
+  margin: auto;
+  max-height: 46px;
+  max-width: 194px;
+  padding: 6px 20px;
+  text-align: center;
 }
 .meetSymbaExpl {
   color: #000000;
-  font-size: 30px;
+  padding: 50px 0;
+  font-size: 35px;
+  text-align: center;
 }
 .meetSymbaTitle {
   color: #000000;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 500;
+  padding: 40px 0;
+  text-align: center;
 }
 
+
+
+.platformInterest {
+  color: #333333;
+  font-size: 26px;
+  padding: 0 0 10px;
+  text-align: center;
+}
+.platformQuestion {
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.products {
+  color: #17b298;
+}
+
+.symbalogo {
+  color: #666666;
+  font-size: 40px;
+  height: 58px;
+  margin: 15px 0;
+  width: 140px;
+
+}
+.symbaImage50 {
+  display: flex-end;
+  justify-content: right;
+  height: 325px;
+  padding-top: 60px;
+  text-align: right;
+  width: 487px;
+
+}
 .topHeading40 {
   border-bottom: 1px solid #dedede;
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
   color: black;
+  display: flex;
+  flex-direction: row;
   font-size: 16px;
   font-weight: 500;
+  justify-content: space-between;
   line-height: 23px;
+  margin: auto;
   max-height: 94px;
-  max-width: 100%;
+  max-width: 1080px;
   padding-bottom: 40px;
 }
-
-.buttonSure {
-
+.topHeadingRight {
+  justify-content: space-around;
+  margin: auto;
+  max-width: 562px;
+  padding: 24px 0;
+  text-align: right;
 }
