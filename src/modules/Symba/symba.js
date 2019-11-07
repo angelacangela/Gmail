@@ -62,43 +62,129 @@ class Symba extends Component {
                 />
               </div>
             </div>
-            <div className="manageSymba">
-            Managing your contingent workforce is challenging.
-            Our platform makes it easier.
-            <Icon className="iconDownChev" size={26} icon={chevronsDown}/>
+            <div className="processExplanation">
+              <div className="manageSymba">
+                <div className="manageSymbaInside">
+                Managing your contingent workforce is challenging.
+                Our platform makes it easier.
+                </div>
+                <Icon className="iconDownChev" size={26} icon={chevronsDown}/>
+              </div>
+              <div className="processSymba hideOnMobile">
+                <div className="welcome">
+                  <div className="projectLeft">
+                    <img
+                        className="symbaImage10"
+                        src={symbaImage1}
+                    />
+                  </div>
+                  <div>
+                    <div className="heading40">Welcome & Train</div>
+                    <div className="headingExpl40">
+                      Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                    </div>
+                  </div>
+                </div>
+                <div className="projects">
+                  <div className="projectLeft">
+                    <div className="heading40">Manage Projects</div>
+                    <div className="headingExpl40">
+                      Easily create projects and monitor their progress.
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                        className="symbaImage40"
+                        src={symbaImage2}
+                    />
+                  </div>
+                </div>
+                <div className="engage">
+                  <div className="projectLeft">
+                    <img
+                        className="symbaImage40"
+                        src={symbaImage3}
+                    />
+                  </div>
+                  <div>
+                    <div className="heading40">Engage</div>
+                    <div className="headingExpl40">
+                      Connect with your contingent workforce and encourage collaboration straight through our platform.
+                    </div>
+                  </div>
+                </div>
+                <div className="feedback">
+                  <div className="projectLeft">
+                    <div className="heading40">Provide Feedback</div>
+                    <div className="headingExpl40">
+                    Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                    </div>
+                  </div>
+                  <div>
+                    <img
+                      className="symbaImage40"
+                      src={symbaImage4}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="processSymba">
-              <div className="welcome">
-                <img
-                    className="symbaImage40"
-                    src={symbaImage1}
-                />
-                Welcome & Train
-                Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+            <div className="processSymba2 showOnMobile">
+                <div className="welcome2">\
+                  <div className="heading40">
+                    Welcome & Train
+                  </div>
+                  <div className="headingExpl40">
+                    Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                  </div>
+                  <img
+                      className="symbaImage40"
+                      src={symbaImage1}
+                  />
+                </div>
+                <div className="projects2">
+                  <div className="heading40">
+                    Manage Projects
+                  </div>
+                  <div className="headingExpl40">
+                    Easily create projects and monitor their progress.
+                  </div>
+                  <img
+                      className="symbaImage40"
+                      src={symbaImage2}
+                  />
+                </div>
+                <div className="engage2">
+                  <div className="heading40">
+                    Engage
+                  </div>
+                  <div className="headingExpl40">
+                    Connect with your contingent workforce and encourage collaboration straight through our platform.
+                  </div>
+                  <img
+                      className="symbaImage40"
+                      src={symbaImage3}
+                  />
+                </div>
+                <div className="feedback2">
+                  <div className="heading40">
+                    Provide Feedback
+                  </div>
+                  <div className="headingExpl40">
+                    Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                  </div>
+                  <img
+                      className="symbaImage40"
+                      src={symbaImage4}
+                  />
+                </div>
               </div>
-              <div className="projects">
-                Manage Projects
-                Easily create projects and monitor their progress.
-              <img
-                  className="symbaImage40"
-                  src={symbaImage2}
-              />
+            <div className="explainS">
+              <div className="explainSTop">
+              The gig economy is an important part of the workforce ecosystem.
               </div>
-              <div className="engage">
-              <img
-                  className="symbaImage40"
-                  src={symbaImage3}
-              />
-              Engage
-              Connect with your contingent workforce and encourage collaboration straight through our platform.
-              </div>
-              <div className="feedback">
-              Provide Feedback
-              Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
-              <img
-                  className="symbaImage40"
-                  src={symbaImage4}
-              />
+              <div>
+              We're here to optimize the management of your contingent workforce.
               </div>
             </div>
             <div className="explainSymba">
@@ -114,8 +200,8 @@ class Symba extends Component {
               See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
               <div className="buttonSure">Sure</div>
             </div>
+            <div>powered by Typeform</div>
             <div className="bottomLine40">
-              powered by Typeform
               <div className="bottomIcons">
                 <Icon className="iconFacebook" size={26} icon={facebook}/>
                 <Icon className="iconTwitter" size={26} icon={twitter}/>

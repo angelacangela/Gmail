@@ -1,43 +1,58 @@
 @media (min-width: 320px) and (max-width: 374px) {
+  .engage {
+    margin: auto;
+    max-height: 1275px;
+    max-width: 1080px;
+  }
+
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    max-height: 503px;
+  }
+  .explainSymba {
+    margin: auto;
+    max-height: 528px;
+  }
+  .feedback {
+    margin: auto;
+    max-height: 633px;
+    max-width: 1080px;
+  }
   .manageSymba {
     background-color: #666666;
     color: white;
     font-size: 26px;
-    /* height: 330px; */
+    height: 542px;
     text-align: center;
   }
   .meetSymba {
     display: flex;
     flex-direction: row;
-    /* max-height: 330px; */
+    max-height: 506px;
     padding: 45px 0;
 
   }
-  .welcome {
-    margin: auto;
-    /* max-height: 366px; */
-    max-width: 1080px;
-  }
   .projects {
     margin: auto;
-    /* max-height: 326px; */
+    max-height: 527px;
     max-width: 1080px;
   }
-  .engage {
+  .symbaImage10 {
+    height: 192px;
+    width: 192px;
+  }
+  .symbaImage40 {
+    height: 192px;
+    width: 192px;
+  }
+  .welcome {
     margin: auto;
-    /* max-height: 325px; */
+    max-height: 701px;
     max-width: 1080px;
   }
-  .feedback {
-    margin: auto;
-    /* max-height: 389px; */
-    max-width: 1080px;
-  }
-  .explainSymba {
-    margin: auto;
-    /* max-height: 322px; */
-  }
-
 }
 
 @media (min-width: 375px) and (max-width: 424px) {
@@ -45,85 +60,147 @@
     background-color: #666666;
     color: white;
     font-size: 26px;
-    /* height: 330px; */
+    height: 444px;
     text-align: center;
   }
   .meetSymba {
     display: flex;
     flex-direction: row;
-    /* max-height: 330px; */
+    max-height: 507px;
     padding: 45px 0;
 
   }
-  .welcome {
-    margin: auto;
-    /* max-height: 366px; */
-    max-width: 1080px;
-  }
-  .projects {
-    margin: auto;
-    /* max-height: 326px; */
-    max-width: 1080px;
-  }
+
   .engage {
     margin: auto;
-    /* max-height: 325px; */
+    max-height: 1277px;
     max-width: 1080px;
   }
   .feedback {
     margin: auto;
-    /* max-height: 389px; */
+    max-height: 634px;
     max-width: 1080px;
+  }
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    max-height: 464px;
   }
   .explainSymba {
     margin: auto;
-    /* max-height: 322px; */
+    max-height: 343px;
+  }
+  .projects {
+    margin: auto;
+    max-height: 560px;
+    max-width: 1080px;
+  }
+  .symbaImage10 {
+    height: 210px;
+    width: 210px;
+  }
+  .symbaImage40 {
+    height: 225px;
+    width: 225px;
+  }
+  .welcome {
+    margin: auto;
+    max-height: 700px;
+    max-width: 1080px;
   }
 
 }
+@media (max-width: 426px) {
+  .explainS {
+    max-height: 400px;
+  }
+}
 
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 425px) and (max-width: 768px) {
+  .engage {
+    margin: auto;
+    max-height: 1305px;
+    max-width: 1080px;
+  }
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin: auto;
+  }
+  .explainSymba {
+    margin: auto;
+    max-height: 383px;
+  }
+  .feedback {
+    margin: auto;
+    max-height: 632px;
+    max-width: 1080px;
+  }
   .manageSymba {
     background-color: #666666;
     color: white;
     font-size: 26px;
-    /* height: 330px; */
+    height: 464px;
     text-align: center;
   }
   .meetSymba {
+    border-bottom: 1px solid #dedede;
     display: flex;
     flex-direction: row;
-    /* max-height: 330px; */
+    max-height: 418px;
     padding: 45px 0;
 
   }
-  .welcome {
-    margin: auto;
-    /* max-height: 366px; */
-    max-width: 1080px;
-  }
   .projects {
     margin: auto;
-    /* max-height: 326px; */
+    max-height: 590px;
     max-width: 1080px;
+  }
+  .symbaImage10 {
+    height: 238px;
+    width: 238px;
+  }
+  .symbaImage40 {
+    height: 255px;
+    width: 255px;
+  }
+  .welcome {
+    margin: auto;
+    max-height: 728px;
+    max-width: 1080px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .bottomLine40 {
+    /* 82px; */
   }
   .engage {
     margin: auto;
-    /* max-height: 325px; */
+    max-height: 720px;
     max-width: 1080px;
   }
-  .feedback {
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
     margin: auto;
-    /* max-height: 389px; */
-    max-width: 1080px;
+    max-height: 411px;
   }
   .explainSymba {
     margin: auto;
-    /* max-height: 322px; */
+    max-height: 268px;
   }
 
-}
-@media (min-width: 768px) and (max-width: 1023px) {
+  .feedback {
+    margin: auto;
+    max-height: 760px;
+    max-width: 1080px;
+  }
   .hideOnMobile {
     display: none;
   }
@@ -134,41 +211,35 @@
     background-color: #666666;
     color: white;
     font-size: 26px;
-    /* height: 330px; */
+    height: 369px;
     text-align: center;
   }
   .meetSymba {
+    border-bottom: 1px solid #dedede;
     display: flex;
     flex-direction: row;
-    /* max-height: 330px; */
+    max-height: 401px;
     padding: 45px 0;
 
   }
-  .welcome {
-    margin: auto;
-    /* max-height: 366px; */
-    max-width: 1080px;
-  }
   .projects {
     margin: auto;
-    /* max-height: 326px; */
+    max-height: 718px;
     max-width: 1080px;
   }
-  .engage {
+  .symbaImage10 {
+    height: 430px;
+    width: 430px;
+  }
+  .symbaImage40 {
+    height: 460px;
+    width: 460px;
+  }
+  .welcome {
     margin: auto;
-    /* max-height: 325px; */
+    max-height: 811px;
     max-width: 1080px;
   }
-  .feedback {
-    margin: auto;
-    /* max-height: 389px; */
-    max-width: 1080px;
-  }
-  .explainSymba {
-    margin: auto;
-    /* max-height: 322px; */
-  }
-
 }
 @media (min-width: 1024px) {
   .iconMenu {
@@ -183,74 +254,134 @@
   }
 
   .meetSymba {
+    border-bottom: 1px solid #dedede;
     display: flex;
     flex-direction: row;
     max-height: 468px;
     padding: 45px 0;
 
   }
+
   .showOnMobile {
     display: none;
   }
   .welcome {
     margin: auto;
     max-height: 366px;
-    max-width: 1080px;
+    max-width: 819px;
+    padding: 50px 0 15px;
   }
   .projects {
     margin: auto;
     max-height: 326px;
-    max-width: 1080px;
+    max-width: 819px;
+    padding: 15px 0;
   }
   .engage {
     margin: auto;
     max-height: 325px;
-    max-width: 1080px;
+    max-width: 819px;
+    padding: 2px 0 3px;
+  }
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .explainSTop {
+    padding: 0 0 30px;
   }
   .feedback {
     margin: auto;
     max-height: 389px;
-    max-width: 1080px;
+    max-width: 819px;
+    padding: 15px 0 80px;
+  }
+  .projectLeft {
+    padding: 0 45px 0 0;
   }
   .explainSymba {
     margin: auto;
     max-height: 322px;
   }
-
+  .engage {
+    display: flex;
+    flex-direction: row;
+  }
+  .feedback {
+    display: flex;
+    flex-direction: row;
+  }
+  .projects {
+    display: flex;
+    flex-direction: row;
+  }
+  .welcome {
+    display: flex;
+    flex-direction: row;
+  }
+  .symbaImage10 {
+    height: 271px;
+    width: 271px;
+  }
+  .symbaImage40 {
+    height: 290px;
+    width: 290px;
+  }
 }
+
 .bottomIcons {
   background-color: #666666;
   color: rgb(0,0,0,0.32)
 }
+
+.bottomLine40 {
+  background-color: #ffffff;
+  color: #f0b405;
+  margin: auto;
+}
 .buttonSure {
-  background-color: #f0b405;
+  background-color: #ffffff;
   border-radius: 4px;
-  color: #ffffff;
+  color: #f0b405;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   font-size: 20px;
   font-weight: 700;
+  margin: auto;
   max-height: 50px;
   max-width: 90px;
   padding: 8px 18px;
 }
+
 .entireContent40 {
   background-color: rgba(255,255,255,0.84);
 }
+
+
 .explainSymba {
   background-color: #d1ede3;
   color: #000000;
   font-size: 20px;
   padding: 40px 25px 30px;
-
 }
+
 .explainSymbaInside {
   padding: 0 0 20px;
 }
 
-
-
+.heading40 {
+  color: #000000;
+  font-size: 45px;
+  text-align: left;
+}
+.headingExpl40 {
+  color: #000000;
+  font-size: 20px;
+  text-align: left;
+}
 
 .meetSymbaDemo {
   background-color: #e01a4f;
@@ -264,15 +395,22 @@
 }
 .meetSymbaExpl {
   color: #000000;
-  padding: 50px 0;
+  display: flex;
+  flex-direction: row;
   font-size: 35px;
-  text-align: center;
+  max-width: 400px;
+  text-align: left;
+}
+.meetSymbaLeftside {
+  display: flex;
+  flex-direction: column;
+  margin: 0 180px;
+  /* max-width: 819px;s */
 }
 .meetSymbaTitle {
   color: #000000;
   font-size: 60px;
   font-weight: 500;
-  padding: 40px 0;
   text-align: center;
 }
 
@@ -290,9 +428,11 @@
   font-weight: bold;
   text-align: center;
 }
+
 .products {
   color: #17b298;
 }
+
 
 .symbalogo {
   color: #666666;
@@ -300,19 +440,19 @@
   height: 58px;
   margin: 15px 0;
   width: 140px;
-
 }
+
 .symbaImage50 {
   display: flex-end;
   justify-content: right;
   height: 325px;
-  padding-top: 60px;
+  margin: auto;
+  /* padding-top: 70px; */
   text-align: right;
   width: 487px;
-
 }
+
 .topHeading40 {
-  border-bottom: 1px solid #dedede;
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
   color: black;
   display: flex;
@@ -325,7 +465,9 @@
   max-height: 94px;
   max-width: 1080px;
   padding-bottom: 40px;
+  text-align: center;
 }
+
 .topHeadingRight {
   justify-content: space-around;
   margin: auto;
