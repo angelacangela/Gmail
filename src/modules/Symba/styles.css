@@ -1,31 +1,70 @@
 @media (min-width: 320px) and (max-width: 374px) {
-  .engage {
+  .buttonSure {
+    background-color: #f0b405;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
     margin: auto;
-    max-height: 1275px;
-    max-width: 1080px;
+    max-height: 50px;
+    max-width: 90px;
+    padding: 8px 18px;
+    text-align: center;
   }
-
+  
+  .engage2 {
+    max-width: 100%;
+  }
   .explainS {
     background-color: #2eb89e;
     color: white;
     font-size: 25px;
     font-weight: 600;
-    max-height: 503px;
+    padding: 72px 48px 79px;
+  }
+  .explainSTop {
+    padding: 0 0 25px;
   }
   .explainSymba {
     margin: auto;
     max-height: 528px;
+    padding: 53px 53px 40px;
+  }
+  .explainSymbaInside {
+    padding: 0 0 20px;
   }
   .feedback {
     margin: auto;
     max-height: 633px;
     max-width: 1080px;
   }
+  .heading40 {
+    text-align: center;
+    margin: auto;
+  }
+  .headingExpl40 {
+    margin: auto;
+    text-align: center;
+  }
   .manageSymba {
-    background-color: #666666;
+    background-color: #373737;
     color: white;
+    display: flex;
+    flex-direction: column;
     font-size: 26px;
-    height: 542px;
+    margin: auto;
+    max-height: 542px;
+    padding: 75px 25px;
+    text-align: center;
+  }
+  .manageSymbaInside {
+    font-weight: 500;
+    margin: auto;
+    max-width: 207px;
+    padding: 30px 14px 30px 4px;
     text-align: center;
   }
   .meetSymba {
@@ -35,10 +74,18 @@
     padding: 45px 0;
 
   }
-  .projects {
+  .processSymba2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  /* .projects {
     margin: auto;
     max-height: 527px;
     max-width: 1080px;
+  } */
+  .projects2 {
+    max-width: 100%;
   }
   .symbaImage10 {
     height: 192px;
@@ -53,16 +100,61 @@
     max-height: 701px;
     max-width: 1080px;
   }
+
+  .welcome2 {
+    text-align: center;
+    max-width: 100%;
+  }
+
 }
 
 @media (min-width: 375px) and (max-width: 424px) {
-  .manageSymba {
-    background-color: #666666;
-    color: white;
-    font-size: 26px;
-    height: 444px;
+  .buttonSure {
+    background-color: #f0b405;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto;
+    max-height: 48px;
+    max-width: 82px;
+    padding: 8px 18px;
     text-align: center;
   }
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    max-height: 464px;
+    padding: 72px 48px 79px;
+  }
+  .explainSTop {
+    padding: 0 0 25px;
+  }
+  .explainSymba {
+    margin: auto;
+    max-height: 443px;
+    padding: 53px 53px 40px;
+  }
+  .explainSymbaInside {
+    padding: 0 0 20px;
+  }
+  .manageSymba {
+    background-color: #373737;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    margin: auto;
+    max-height: 464px;
+    padding: 75px 25px;
+    text-align: center;
+  }
+
   .meetSymba {
     display: flex;
     flex-direction: row;
@@ -112,13 +204,49 @@
   }
 
 }
-@media (max-width: 426px) {
-  .explainS {
-    max-height: 400px;
+
+
+@media (min-width: 768px) {
+  .explainSTop {
+    padding: 0 0 30px;
+  }
+  .manageSymba {
+    background-color: #373737;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    margin: auto;
+    max-height: 369px;
+    padding: 106px 70px;
+    text-align: center;
+  }
+
+  .manageSymbaInside {
+    font-weight: 500;
+    margin: auto;
+    max-width: 492px;
+    padding: 30px 15px 30px 5px;
+    text-align: center;
   }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
+  .buttonSure {
+    background-color: #f0b405;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto;
+    max-height: 48px;
+    max-width: 82px;
+    padding: 8px 18px;
+    text-align: center;
+  }
   .engage {
     margin: auto;
     max-height: 1305px;
@@ -130,21 +258,40 @@
     font-size: 25px;
     font-weight: 600;
     margin: auto;
+    max-height: 400px;
+    padding: 72px 48px 79px;
+  }
+
+  .explainSTop {
+    padding: 0 0 25px;
   }
   .explainSymba {
     margin: auto;
     max-height: 383px;
+    padding: 53px 53px 40px;
   }
   .feedback {
     margin: auto;
     max-height: 632px;
     max-width: 1080px;
   }
+
   .manageSymba {
-    background-color: #666666;
+    background-color: #373737;
     color: white;
+    display: flex;
+    flex-direction: column;
     font-size: 26px;
-    height: 464px;
+    margin: auto;
+    max-height: 464px;
+    padding: 75px 25px;
+    text-align: center;
+  }
+  .manageSymbaInside {
+    font-weight: 500;
+    margin: auto;
+    max-width: 234px;
+    padding: 30px 16px 30px 6px;
     text-align: center;
   }
   .meetSymba {
@@ -159,6 +306,9 @@
     margin: auto;
     max-height: 590px;
     max-width: 1080px;
+  }
+  .showOnMobile {
+    display: flex;
   }
   .symbaImage10 {
     height: 238px;
@@ -176,7 +326,28 @@
 }
 @media (min-width: 769px) and (max-width: 1023px) {
   .bottomLine40 {
-    /* 82px; */
+    background-color: rgb(0,0,0,0.32);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-height: 53px;
+    max-width: 100%;
+    padding: 0 102px;
+  }
+  .buttonSure {
+    background-color: #f0b405;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto;
+    max-height: 50px;
+    max-width: 90px;
+    padding: 8px 18px;
+    text-align: center;
   }
   .engage {
     margin: auto;
@@ -191,6 +362,7 @@
     margin: auto;
     max-height: 411px;
   }
+
   .explainSymba {
     margin: auto;
     max-height: 268px;
@@ -201,19 +373,16 @@
     max-height: 760px;
     max-width: 1080px;
   }
+  .heading40 {
+    text-align: center;
+  }
   .hideOnMobile {
     display: none;
   }
   .iconMenu {
     max-height: 468px;
   }
-  .manageSymba {
-    background-color: #666666;
-    color: white;
-    font-size: 26px;
-    height: 369px;
-    text-align: center;
-  }
+
   .meetSymba {
     border-bottom: 1px solid #dedede;
     display: flex;
@@ -222,10 +391,17 @@
     padding: 45px 0;
 
   }
+  .processSymba2 {
+    max-width: 100%;
+    text-align: center;
+  }
   .projects {
     margin: auto;
     max-height: 718px;
     max-width: 1080px;
+  }
+  .showOnMobile {
+    display: flex;
   }
   .symbaImage10 {
     height: 430px;
@@ -240,17 +416,104 @@
     max-height: 811px;
     max-width: 1080px;
   }
+
 }
 @media (min-width: 1024px) {
+  .bottomLine40 {
+    background-color: rgb(0,0,0,0.32);
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-height: 82px;
+    max-width: 100%;
+    padding: 0 102px;
+    text-align: center;
+  }
+  .bottomLine40Inside {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 819px;
+    padding: 15px 0 5px;
+    text-align: center;
+  }
+  .buttonSure {
+    background-color: #f0b405;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    margin: auto;
+    max-height: 50px;
+    max-width: 90px;
+    padding: 8px 18px;
+    text-align: center;
+  }
+  .emerald {
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+    max-width: 100%;
+  }
+
+  .engage {
+    margin: auto;
+    max-height: 325px;
+    max-width: 819px;
+    padding: 15px 0;
+  }
+  .explainS {
+    background-color: #2eb89e;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    max-height: 506px;
+    max-width: 683px;
+    padding: 107px 78px 97px 103px;
+  }
+  .explainSTop {
+    padding: 0 0 30px;
+  }
+  .explainSymba {
+    margin: auto;
+    max-height: 506px;
+    max-width: 341px;
+    padding: 68px 53px 58px;
+  }
+  .engage {
+    display: flex;
+    flex-direction: row;
+  }
+  .feedback {
+    margin: auto;
+    max-height: 389px;
+    max-width: 819px;
+    padding: 15px 0 80px;
+  }
+  .headingWithPic1 {
+    padding-top: 93px;
+  }
+  .headingWithPic2 {
+    padding-top: 93px;
+  }
+  .headingWithPic3 {
+    padding-top: 93px;
+  }
+  .headingWithPic4 {
+    padding-top: 93px;
+  }
+  .iconDownChev {
+    padding: 10px 0 20px;
+    text-align: center;
+  }
   .iconMenu {
     max-height: 468px;
-  }
-  .manageSymba {
-    background-color: #666666;
-    color: white;
-    font-size: 26px;
-    height: 330px;
-    text-align: center;
   }
 
   .meetSymba {
@@ -269,7 +532,7 @@
     margin: auto;
     max-height: 366px;
     max-width: 819px;
-    padding: 50px 0 15px;
+    padding: 75px 0 20px;
   }
   .projects {
     margin: auto;
@@ -277,38 +540,10 @@
     max-width: 819px;
     padding: 15px 0;
   }
-  .engage {
-    margin: auto;
-    max-height: 325px;
-    max-width: 819px;
-    padding: 2px 0 3px;
-  }
-  .explainS {
-    background-color: #2eb89e;
-    color: white;
-    font-weight: 600;
-    font-size: 30px;
-  }
-  .explainSTop {
-    padding: 0 0 30px;
-  }
-  .feedback {
-    margin: auto;
-    max-height: 389px;
-    max-width: 819px;
-    padding: 15px 0 80px;
-  }
   .projectLeft {
     padding: 0 45px 0 0;
   }
-  .explainSymba {
-    margin: auto;
-    max-height: 322px;
-  }
-  .engage {
-    display: flex;
-    flex-direction: row;
-  }
+
   .feedback {
     display: flex;
     flex-direction: row;
@@ -322,38 +557,32 @@
     flex-direction: row;
   }
   .symbaImage10 {
-    height: 271px;
-    width: 271px;
+    height: 357px;
+    width: 357px;
   }
   .symbaImage40 {
-    height: 290px;
-    width: 290px;
+    height: 383px;
+    width: 383px;
   }
 }
-
-.bottomIcons {
-  background-color: #666666;
-  color: rgb(0,0,0,0.32)
-}
-
-.bottomLine40 {
-  background-color: #ffffff;
-  color: #f0b405;
-  margin: auto;
-}
-.buttonSure {
-  background-color: #ffffff;
-  border-radius: 4px;
-  color: #f0b405;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
+.allrights {
   font-weight: 700;
+  padding: 0 0 10px;
+}
+.arrow40 {
+  padding-right: 22px;
+}
+.arrow41 {
+  padding-right: 22px;
+}
+.bottomIcon1 {
+  justify-content: flex-end;
   margin: auto;
-  max-height: 50px;
-  max-width: 90px;
-  padding: 8px 18px;
+  padding-right: 17px;
+}
+.bottomIcons {
+  color: #666666;
+  justify-content: flex-end;
 }
 
 .entireContent40 {
@@ -365,7 +594,7 @@
   background-color: #d1ede3;
   color: #000000;
   font-size: 20px;
-  padding: 40px 25px 30px;
+
 }
 
 .explainSymbaInside {
@@ -414,8 +643,6 @@
   text-align: center;
 }
 
-
-
 .platformInterest {
   color: #333333;
   font-size: 26px;
@@ -426,7 +653,17 @@
   color: #000000;
   font-size: 24px;
   font-weight: bold;
+  max-height: 500px;
+  padding: 40px 0;
   text-align: center;
+}
+.sureDemo {
+  padding: 0 50px;
+  text-align: left;
+}
+.poweredBy {
+  color: #999999;
+  font-size: 12px;
 }
 
 .products {
@@ -469,9 +706,10 @@
 }
 
 .topHeadingRight {
-  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
   margin: auto;
   max-width: 562px;
-  padding: 24px 0;
+  padding: 35px 0 35px 50px;
   text-align: right;
 }

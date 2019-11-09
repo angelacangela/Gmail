@@ -33,14 +33,20 @@ class Symba extends Component {
               </div>
                 <div className="iconMenu showOnMobile"><Icon size={26} icon={alignJustify}/></div>
                 <div className="topHeadingRight hideOnMobile">
-                  <a className="products">Products</a>
-                  <Icon className="products showOnDesktop" size={26} icon={ic_keyboard_arrow_down}/>
+                  <div className="arrow41">
+                    <a className="products">Products</a>
+                    <Icon className="products showOnDesktop" size={26} icon={ic_keyboard_arrow_down}/>
+                  </div>
                   About
                   <Icon className="arrow40" size={26} icon={ic_keyboard_arrow_down}/>
                   Blog
                   <Icon className="arrow40" size={26} icon={ic_keyboard_arrow_down}/>
+                  <div className="arrow41">
                   Request a Demo
+                  </div>
+                  <div className="arrow41">
                   Login
+                  </div>
                 </div>
                 <div>
                 </div>
@@ -68,7 +74,9 @@ class Symba extends Component {
                 Managing your contingent workforce is challenging.
                 Our platform makes it easier.
                 </div>
-                <Icon className="iconDownChev" size={26} icon={chevronsDown}/>
+                <div>
+                <Icon className="iconDownChev" size={49} icon={chevronsDown}/>
+                </div>
               </div>
               <div className="processSymba hideOnMobile">
                 <div className="welcome">
@@ -79,17 +87,21 @@ class Symba extends Component {
                     />
                   </div>
                   <div>
-                    <div className="heading40">Welcome & Train</div>
-                    <div className="headingExpl40">
-                      Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                    <div className="headingWithPic1">
+                      <div className="heading40">Welcome & Train</div>
+                      <div className="headingExpl40">
+                        Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="projects">
                   <div className="projectLeft">
-                    <div className="heading40">Manage Projects</div>
-                    <div className="headingExpl40">
-                      Easily create projects and monitor their progress.
+                    <div className="headingWithPic2">
+                      <div className="heading40">Manage Projects</div>
+                      <div className="headingExpl40">
+                        Easily create projects and monitor their progress.
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -106,7 +118,7 @@ class Symba extends Component {
                         src={symbaImage3}
                     />
                   </div>
-                  <div>
+                  <div className="headingWithPic3">
                     <div className="heading40">Engage</div>
                     <div className="headingExpl40">
                       Connect with your contingent workforce and encourage collaboration straight through our platform.
@@ -115,9 +127,11 @@ class Symba extends Component {
                 </div>
                 <div className="feedback">
                   <div className="projectLeft">
-                    <div className="heading40">Provide Feedback</div>
-                    <div className="headingExpl40">
-                    Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                    <div className="headingWithPic4">
+                      <div className="heading40">Provide Feedback</div>
+                      <div className="headingExpl40">
+                      Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -130,7 +144,7 @@ class Symba extends Component {
               </div>
             </div>
             <div className="processSymba2 showOnMobile">
-                <div className="welcome2">\
+                <div className="welcome2">
                   <div className="heading40">
                     Welcome & Train
                   </div>
@@ -179,36 +193,46 @@ class Symba extends Component {
                   />
                 </div>
               </div>
-            <div className="explainS">
-              <div className="explainSTop">
-              The gig economy is an important part of the workforce ecosystem.
+            <div className="emerald">
+              <div className="explainS">
+                <div className="explainSTop">
+                The gig economy is an important part of the workforce ecosystem.
+                </div>
+                <div>
+                We're here to optimize the management of your contingent workforce.
+                </div>
               </div>
-              <div>
-              We're here to optimize the management of your contingent workforce.
+              <div className="explainSymba">
+                <div className="explainSymbaInside">
+                Our comprehensive solution allows you to easily manage your contingent workforce and create the best possible experiences for you and your employees.
+                </div>
+                <div>
+                  Whether you have 1 or 100 contingent workers, manage them stress-free with Symba.
+                </div>
               </div>
-            </div>
-            <div className="explainSymba">
-              <div className="explainSymbaInside">
-              Our comprehensive solution allows you to easily manage your contingent workforce and create the best possible experiences for you and your employees.
-              </div>
-            <p>Whether you have 1 or 100 contingent workers, manage them stress-free with Symba.</p>
             </div>
             <div className="platformQuestion">
               <div className="platformInterest">
               Interested in our platform?
               </div>
-              See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
+              <div className="sureDemo">
+                See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
+              </div>
               <div className="buttonSure">Sure</div>
             </div>
-            <div>powered by Typeform</div>
+            <div className="poweredBy">powered by Typeform</div>
             <div className="bottomLine40">
-              <div className="bottomIcons">
-                <Icon className="iconFacebook" size={26} icon={facebook}/>
-                <Icon className="iconTwitter" size={26} icon={twitter}/>
-                <Icon className="iconYoutube" size={26} icon={youtube}/>
-                <Icon className="iconLinkedin2" size={26} icon={linkedin2}/>
+              <div className="bottomLine40Inside">
+                <div className="allrights">
+                  Symba © 2018 | Privacy Policy
+                </div>
+                <div className="bottomIcons">
+                  <Icon className="bottomIcon1" size={17} icon={facebook}/>
+                  <Icon className="bottomIcon1" size={17} icon={twitter}/>
+                  <Icon className="bottomIcon1" size={17} icon={linkedin2}/>
+                  <Icon className="bottomIcon1" size={17} icon={youtube}/>
+                </div>
               </div>
-              Symba © 2018 | Privacy Policy
             </div>
           </div>
         )
