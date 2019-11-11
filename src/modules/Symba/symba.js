@@ -31,7 +31,9 @@ class Symba extends Component {
                     src={symbaLogo}
                 />
               </div>
-                <div className="iconMenu showOnMobile"><Icon size={26} icon={alignJustify}/></div>
+                <div className="iconMenu hideOnDesktop">
+                  <Icon size={32} icon={alignJustify}/>
+                </div>
                 <div className="topHeadingRight hideOnMobile">
                   <div className="arrow41">
                     <a className="products">Products</a>
@@ -51,21 +53,25 @@ class Symba extends Component {
                 <div>
                 </div>
             </div>
-            <div className="meetSymba">
-              <div className="meetSymbaLeftside">
-                <div className="meetSymbaTitle">Meet Symba</div>
-                <div className="meetSymbaExpl">
-                  Cultivating symbiotic relationships in the gig economy
+            <div className="meetSymbaContainer">
+              <div className="meetSymba">
+                <div className="meetSymbaLeftside">
+                  <div className="meetSymbaLeftsideContainer">
+                    <div className="meetSymbaTitle">Meet Symba</div>
+                    <div className="meetSymbaExpl">
+                      Cultivating symbiotic relationships in the gig economy
+                    </div>
+                    <div className="meetSymbaDemo">
+                    Request a Demo
+                    </div>
+                  </div>
                 </div>
-                <div className="meetSymbaDemo">
-                Request a Demo
+                <div className="symbaImage50 hideOnMobile">
+                  <img
+                      className="symbaImage50"
+                      src={symbaImage5}
+                  />
                 </div>
-              </div>
-              <div className="symbaImage50 hideOnMobile">
-                <img
-                    className="symbaImage50"
-                    src={symbaImage5}
-                />
               </div>
             </div>
             <div className="processExplanation">
@@ -143,52 +149,58 @@ class Symba extends Component {
                 </div>
               </div>
             </div>
-            <div className="processSymba2 showOnMobile">
+            <div className="processSymba2 hideOnDesktop">
                 <div className="welcome2">
-                  <div className="heading40">
-                    Welcome & Train
-                  </div>
-                  <div className="headingExpl40">
-                    Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                  <div className="welcome2Letters">
+                    <div className="heading400">
+                      Welcome & Train
+                    </div>
+                    <div className="headingExpl400">
+                      Welcome your contingent employees with a customized onboarding experience. Provide key training materials in one easy location.
+                    </div>
                   </div>
                   <img
-                      className="symbaImage40"
+                      className="symbaImage710"
                       src={symbaImage1}
                   />
                 </div>
                 <div className="projects2">
-                  <div className="heading40">
+                  <div className="heading400">
                     Manage Projects
                   </div>
-                  <div className="headingExpl40">
+                  <div className="headingExpl400">
                     Easily create projects and monitor their progress.
                   </div>
                   <img
-                      className="symbaImage40"
+                      className="symbaImage740"
                       src={symbaImage2}
                   />
                 </div>
                 <div className="engage2">
-                  <div className="heading40">
-                    Engage
-                  </div>
-                  <div className="headingExpl40">
-                    Connect with your contingent workforce and encourage collaboration straight through our platform.
+                  <div className="engage2Letters">
+                    <div className="heading400">
+                      Engage
+                    </div>
+                    <div className="headingExpl400">
+                      Connect with your contingent workforce and encourage collaboration straight through our platform.
+                    </div>
                   </div>
                   <img
-                      className="symbaImage40"
+                      className="symbaImage740"
                       src={symbaImage3}
                   />
                 </div>
                 <div className="feedback2">
-                  <div className="heading40">
-                    Provide Feedback
-                  </div>
-                  <div className="headingExpl40">
-                    Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                  <div className="feedback2Letters">
+                    <div className="heading400">
+                      Provide Feedback
+                    </div>
+                    <div className="headingExpl400">
+                      Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
+                    </div>
                   </div>
                   <img
-                      className="symbaImage40"
+                      className="symbaImage740"
                       src={symbaImage4}
                   />
                 </div>
@@ -222,7 +234,7 @@ class Symba extends Component {
             </div>
             <div className="poweredBy">powered by Typeform</div>
             <div className="bottomLine40">
-              <div className="bottomLine40Inside">
+              <div className="bottomLine40Inside hideOnMobile">
                 <div className="allrights">
                   Symba © 2018 | Privacy Policy
                 </div>
@@ -232,6 +244,18 @@ class Symba extends Component {
                   <Icon className="bottomIcon1" size={17} icon={linkedin2}/>
                   <Icon className="bottomIcon1" size={17} icon={youtube}/>
                 </div>
+              </div>
+              <div className="bottomLine40Inside20 hideOnDesktop">
+                <div className="bottomIcons20">
+                  <Icon className="bottomIcon10" size={17} icon={facebook}/>
+                  <Icon className="bottomIcon10" size={17} icon={twitter}/>
+                  <Icon className="bottomIcon10" size={17} icon={linkedin2}/>
+                  <Icon className="bottomIcon10" size={17} icon={youtube}/>
+                </div>
+                <div className="allrights">
+                  Symba © 2018 | Privacy Policy
+                </div>
+
               </div>
             </div>
           </div>
