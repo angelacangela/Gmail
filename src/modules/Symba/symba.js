@@ -165,11 +165,13 @@ class Symba extends Component {
                   />
                 </div>
                 <div className="projects2">
-                  <div className="heading400">
-                    Manage Projects
-                  </div>
-                  <div className="headingExpl400">
-                    Easily create projects and monitor their progress.
+                  <div className="projects2Letters">
+                    <div className="heading400">
+                      Manage Projects
+                    </div>
+                    <div className="headingExpl400">
+                      Easily create projects and monitor their progress.
+                    </div>
                   </div>
                   <img
                       className="symbaImage740"
@@ -191,14 +193,14 @@ class Symba extends Component {
                   />
                 </div>
                 <div className="feedback2">
-                  <div className="feedback2Letters">
+                  <div className="feedback2LettersOnly">
                     <div className="heading400">
                       Provide Feedback
                     </div>
+                  </div>
                     <div className="headingExpl400">
                       Provide feedback on projects to ensure growth. Then, successfully complete a meaningful work experience and offboard!
                     </div>
-                  </div>
                   <img
                       className="symbaImage740"
                       src={symbaImage4}
@@ -210,7 +212,7 @@ class Symba extends Component {
                 <div className="explainSTop">
                 The gig economy is an important part of the workforce ecosystem.
                 </div>
-                <div>
+                <div className="explainSBottom">
                 We're here to optimize the management of your contingent workforce.
                 </div>
               </div>
@@ -230,11 +232,13 @@ class Symba extends Component {
               <div className="sureDemo">
                 See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
               </div>
-              <div className="buttonSure">Sure</div>
+              <div className="buttonSureContainer">
+                <div className="buttonSure">Sure</div>
+              </div>
             </div>
             <div className="poweredBy">powered by Typeform</div>
-            <div className="bottomLine40">
-              <div className="bottomLine40Inside hideOnMobile">
+            <div className="bottomLine50">
+              <div className="bottomLine50Inside hideOnMobile">
                 <div className="allrights">
                   Symba © 2018 | Privacy Policy
                 </div>

@@ -16,14 +16,21 @@
   }
 
   .engage2 {
+    margin: 0 32px;
+    max-height: 547px;
     max-width: 100%;
   }
+
+  .engage2Letters {
+    padding-top: 100px;
+  }
+
   .explainS {
     background-color: #2eb89e;
     color: white;
     font-size: 25px;
     font-weight: 600;
-    padding: 72px 48px 79px;
+    padding: 72px 48px 79px 53px;
   }
 
   .explainSTop {
@@ -40,21 +47,28 @@
     padding: 0 0 20px;
   }
 
-  .feedback {
-    margin: auto;
-    max-height: 633px;
-    max-width: 1080px;
+  .feedback2 {
+    margin: 0 32px;
+    max-height: 728px;
+    padding: 15px 0 80px;
+  }
+
+  .feedback2LettersOnly {
+    padding-top: 100px;
   }
 
   .heading400 {
     color: #000000;
     font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
     text-align: center;
   }
 
   .headingExpl400 {
     color: #000000;
     font-size: 20px;
+    letter-spacing: 0.5px;
     text-align: center;
   }
 
@@ -142,7 +156,14 @@
   }
 
   .projects2 {
+    margin: 0 32px;
+    max-height: 527px;
     max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .projects2Letters {
+    padding-top: 100px;
   }
 
   .symbaImage710 {
@@ -177,8 +198,14 @@
   }
 
   .welcome2 {
-    text-align: center;
+    max-height: 701px;
     max-width: 100%;
+    text-align: center;
+  }
+
+  .welcome2Letters {
+    margin: 0 32px;
+    padding-top: 100px;
   }
 }
 
@@ -206,6 +233,8 @@
   }
 
   .engage2 {
+    display: flex;
+    flex-direction: column;
     margin: 0 37px;
     max-height: 543px;
     padding: 15px 0 80px;
@@ -220,13 +249,13 @@
     color: white;
     font-size: 25px;
     font-weight: 600;
-    max-height: 464px;
-    padding: 72px 48px 79px;
+    height: 464px;
+    padding: 72px 48px 79px 53px;
   }
 
   .explainSymba {
     margin: auto;
-    max-height: 343px;
+    height: 343px;
   }
 
   .explainSTop {
@@ -250,22 +279,30 @@
   }
 
   .feedback2 {
+    display: flex;
+    flex-direction: column;
     margin: 0 37px;
     max-height: 634px;
     padding: 1px 0 3px;
   }
+
   .feedback2Letters {
     padding: 0 0 30px;
   }
+
   .heading400 {
     color: #000000;
     font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding-top: 100px;
     text-align: center;
   }
 
   .headingExpl400 {
     color: #000000;
     font-size: 20px;
+    letter-spacing: 0.5px;
     text-align: center;
   }
 
@@ -359,6 +396,8 @@
   }
 
   .projects2 {
+    display: flex;
+    flex-direction: column;
     margin: 37px;
     max-height: 545px;
     padding: 15px 0;
@@ -398,6 +437,8 @@
   }
 
   .welcome2 {
+    display: flex;
+    flex-direction: column;
     margin: 0 37px;
     max-height: 700px;
     padding: 50px 0 15px;
@@ -415,9 +456,11 @@
   .explainSTop {
     padding: 0 0 30px;
   }
+
   .hideOnMobile {
     display: none;
   }
+
   .manageSymba {
     background-color: #373737;
     color: white;
@@ -456,33 +499,70 @@
     padding: 8px 18px;
     text-align: center;
   }
-  .engage {
-    margin: auto;
-    max-height: 1305px;
-    max-width: 1080px;
+
+  .engage2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 42px;
+    max-height: 573px;
+    max-width: 425px;
+    padding: 15px 0 80px;
   }
+
+  .engage2Letters {
+    padding-top: 100px;
+  }
+
   .explainS {
     background-color: #2eb89e;
     color: white;
+    font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
     font-size: 25px;
     font-weight: 600;
     margin: auto;
-    max-height: 400px;
-    padding: 72px 48px 79px;
+    height: 400px;
+    padding: 72px 48px 79px 53px;
   }
 
   .explainSTop {
     padding: 0 0 25px;
   }
+
   .explainSymba {
     margin: auto;
-    max-height: 383px;
+    height: 383px;
     padding: 53px 53px 40px;
   }
-  .feedback {
-    margin: auto;
-    max-height: 632px;
-    max-width: 1080px;
+
+  .feedback2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 42px;
+    max-height: 732px;
+    max-width: 425px;
+    padding: 15px 0 83px;
+  }
+
+  .feedback2LettersOnly {
+    padding-top: 100px;
+  }
+
+  .heading400 {
+    color: #000000;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    max-height: 100px;
+    text-align: center;
+  }
+
+  .headingExpl400 {
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    max-width: 340px;
+    text-align: center;
   }
 
   .hideOnMobile {
@@ -495,6 +575,7 @@
     padding: 30px 0;
     text-align: right;
   }
+
   .manageSymba {
     background-color: #373737;
     color: white;
@@ -565,12 +646,30 @@
     text-align: center;
   }
 
+  .processSymba2 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .projects2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 42px;
+    max-height: 590px;
+    padding: 15px 0;
+  }
+
+  .projects2Letters {
+    padding: 100px 0 30px;
+  }
+
   .showOnMobile {
     color: red;
   }
 
   .symbaImage710 {
     height: 238px;
+    margin: auto;
     padding-bottom: 5px;
     width: 238px;
   }
@@ -604,16 +703,21 @@
   }
 
   .welcome2 {
+    display: flex;
+    flex-direction: column;
     margin: 0 42px;
     max-height: 728px;
-    padding: 50px 0 15px;
+    margin: 0 42px;
+    padding: 75px 0 20px;
     text-align: center;
   }
 
   .welcome2Letters {
-    padding: 0 0 30px;
+    max-height: 365px;
+    padding: 100px 0 30px;
   }
 }
+
 @media (min-width: 769px) and (max-width: 1023px) {
   .bottomLine40 {
     background-color: rgb(0,0,0,0.32);
@@ -624,6 +728,7 @@
     max-width: 100%;
     padding: 0 102px;
   }
+
   .buttonSure {
     background-color: #f0b405;
     border-radius: 4px;
@@ -639,33 +744,62 @@
     padding: 8px 18px;
     text-align: center;
   }
-  .engage {
-    margin: auto;
+
+  .engage2 {
+    margin: 0 77px;
     max-height: 720px;
-    max-width: 1080px;
+    padding: 2px 0 3px;
   }
+
+  .engage2Letters {
+    padding: 100px 0 30px;
+  }
+
   .explainS {
     background-color: #2eb89e;
     color: white;
     font-size: 30px;
     font-weight: 600;
     margin: auto;
-    max-height: 411px;
+    height: 411px;
+    padding: 107px 78px 79px 103px;
   }
 
   .explainSymba {
     margin: auto;
-    max-height: 268px;
+    height: 268px;
+    padding: 68px 53px 30px;
   }
 
-  .feedback {
-    margin: auto;
+  .feedback2 {
+    margin: 0 77px 83px;
     max-height: 760px;
-    max-width: 1080px;
+    padding: 16px 0;
   }
-  .heading40 {
+
+  .feedback2LettersOnly {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  .heading400 {
+    color: #000000;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    max-height: 256px;
     text-align: center;
   }
+
+  .headingExpl400 {
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    max-width: 550px;
+    text-align: center;
+  }
+
   .hideOnDesktop {
     display: flex;
     flex-direction: column;
@@ -726,20 +860,27 @@
     max-width: 100%;
     text-align: center;
   }
-  .projects {
-    margin: auto;
+
+  .projects2 {
+    margin: 0 77px;
     max-height: 718px;
-    max-width: 1080px;
+    padding: 15px 0 3px 0;
   }
 
-  .symbaImage10 {
+  .projects2Letters {
+    padding: 100px 0 30px;
+  }
+
+  .symbaImage710 {
     height: 430px;
     width: 430px;
   }
-  .symbaImage40 {
+
+  .symbaImage740 {
     height: 460px;
     width: 460px;
   }
+
   .topHeading40 {
     box-shadow: 0 1px 0 rgba(0,0,0,.1);
     color: black;
@@ -755,35 +896,51 @@
     padding-bottom: 40px;
     text-align: center;
   }
-  .welcome {
-    margin: auto;
+
+  .welcome2 {
+    margin: 0 77px;
     max-height: 811px;
-    max-width: 1080px;
+    padding: 50px 0 45px;
+  }
+
+  .welcome2Letters {
+    padding: 100px 0 30px;
   }
 
 }
 @media (min-width: 1024px) {
-  .bottomLine40 {
-    background-color: rgb(0,0,0,0.32);
+  .bottomIcon1 {
     display: flex;
     flex-direction: row;
     margin: auto;
+    padding-right: 17px;
+  }
+
+  .bottomIcons {
+    color: #666666;
+    justify-content: flex-end;
+  }
+
+  .bottomLine50 {
+    background-color: #1f2021;
+    display: block;
     max-height: 82px;
     max-width: 100%;
     padding: 0 102px;
     text-align: center;
   }
-  .bottomLine40Inside {
+
+  .bottomLine50Inside {
     color: #666666;
     display: flex;
     flex-direction: row;
     font-size: 14px;
-    justify-content: space-between;
-    margin: auto;
+    /* justify-content: space-between; */
     max-width: 819px;
     padding: 15px 0 5px;
     text-align: center;
   }
+
   .buttonSure {
     background-color: #f0b405;
     border-radius: 4px;
@@ -799,6 +956,11 @@
     padding: 8px 18px;
     text-align: center;
   }
+
+  .buttonSureContainer {
+    padding-top: 260px;
+  }
+
   .emerald {
     display: flex;
     flex-direction: row;
@@ -812,57 +974,71 @@
     max-width: 819px;
     padding: 15px 0;
   }
+
   .explainS {
     background-color: #2eb89e;
     color: white;
+    display: flex;
+    flex-direction: column;
     font-weight: 600;
     font-size: 30px;
-    max-height: 506px;
+    letter-spacing: 0.5px;
+    height: 506px;
     max-width: 683px;
-    padding: 107px 78px 97px 103px;
+    padding: 107px 78px 107px 103px;
   }
-  .explainSTop {
-    padding: 0 0 30px;
-  }
+
   .explainSymba {
     margin: auto;
-    max-height: 506px;
+    height: 506px;
     max-width: 341px;
     padding: 68px 53px 58px;
   }
+
   .engage {
     display: flex;
     flex-direction: row;
   }
+
   .feedback {
+    display: flex;
+    flex-direction: row;
     margin: auto;
     max-height: 389px;
     max-width: 819px;
     padding: 15px 0 80px;
   }
+
   .headingWithPic1 {
     padding-top: 93px;
   }
+
   .headingWithPic2 {
     padding-top: 93px;
   }
+
   .headingWithPic3 {
     padding-top: 93px;
   }
+
   .headingWithPic4 {
     padding-top: 93px;
   }
+
   .hideOnMobile {
     display: flex;
     flex-direction: column;
   }
+
   .hideOnDesktop {
     display: none;
   }
+
   .iconDownChev {
     padding: 10px 0 20px;
     text-align: center;
   }
+
   .iconMenu {
     max-height: 468px;
   }
@@ -872,32 +1048,6 @@
     flex-direction: row;
     max-height: 493px;
     padding: 45px 0;
-  }
-
-  .topHeadingRight {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .welcome {
-    margin: auto;
-    max-height: 366px;
-    max-width: 819px;
-    padding: 75px 0 20px;
-  }
-  .projects {
-    margin: auto;
-    max-height: 326px;
-    max-width: 819px;
-    padding: 15px 0;
-  }
-  .projectLeft {
-    padding: 0 45px 0 0;
-  }
-
-  .feedback {
-    display: flex;
-    flex-direction: row;
   }
 
   .meetSymbaDemo {
@@ -942,9 +1092,34 @@
     text-align: center;
   }
 
+  .platformInterest {
+    color: #333333;
+    font-size: 26px;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .platformQuestion {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    height: 500px;
+    margin-top: 103px;
+    padding: 80px 0;
+    text-align: center;
+  }
+
   .projects {
     display: flex;
     flex-direction: row;
+    margin: auto;
+    max-height: 326px;
+    max-width: 819px;
+    padding: 15px 0;
+  }
+
+  .projectLeft {
+    padding: 0 45px 0 0;
   }
 
   .symbaImage10 {
@@ -973,29 +1148,32 @@
     text-align: center;
   }
 
-  .welcome {
+  .topHeadingRight {
     display: flex;
     flex-direction: row;
   }
+
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-height: 366px;
+    max-width: 819px;
+    padding: 75px 0 20px;
+  }
 }
+
 .allrights {
   font-weight: 700;
   padding: 0 0 10px;
 }
+
 .arrow40 {
   padding-right: 22px;
 }
+
 .arrow41 {
   padding-right: 22px;
-}
-.bottomIcon1 {
-  justify-content: flex-end;
-  margin: auto;
-  padding-right: 17px;
-}
-.bottomIcons {
-  color: #666666;
-  justify-content: flex-end;
 }
 
 .entireContent40 {
@@ -1003,16 +1181,10 @@
   font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
 }
 
-
 .explainSymba {
   background-color: #d1ede3;
   color: #000000;
   font-size: 20px;
-
-}
-
-.explainSymbaInside {
-  padding: 0 0 20px;
 }
 
 .heading40 {
@@ -1020,6 +1192,7 @@
   font-size: 45px;
   text-align: left;
 }
+
 .headingExpl40 {
   color: #000000;
   font-size: 20px;
@@ -1030,26 +1203,6 @@
   border-top: 1px solid #dedede;
 }
 
-.platformInterest {
-  color: #333333;
-  font-size: 26px;
-  padding: 0 0 10px;
-  text-align: center;
-}
-
-.platformQuestion {
-  color: #000000;
-  font-size: 24px;
-  font-weight: bold;
-  max-height: 500px;
-  padding: 40px 0;
-  text-align: center;
-}
-
-.sureDemo {
-  padding: 0 50px;
-  text-align: left;
-}
 .poweredBy {
   color: #999999;
   font-size: 12px;
@@ -1057,6 +1210,12 @@
 
 .products {
   color: #17b298;
+}
+
+.sureDemo {
+  max-height: 117px;
+  padding: 0 50px;
+  text-align: left;
 }
 
 .symbalogo {
