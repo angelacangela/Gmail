@@ -229,11 +229,15 @@ class Symba extends Component {
               <div className="platformInterest">
               Interested in our platform?
               </div>
-              <div className="sureDemo">
-                See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
-              </div>
-              <div className="buttonSureContainer">
-                <div className="buttonSure">Sure</div>
+              <div className="sureDemoContainer">
+                <div className="sureDemo">
+                  See how Symba can help you easily manage your contingent workforce from training to offboarding. Fill out the form below to request a demo.
+                </div>
+                <div className="buttonSureContainer">
+                  <div className="buttonSure">
+                    <div className="sure">Sure</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="poweredBy">powered by Typeform</div>
@@ -256,7 +260,7 @@ class Symba extends Component {
                   <Icon className="bottomIcon10" size={17} icon={linkedin2}/>
                   <Icon className="bottomIcon10" size={17} icon={youtube}/>
                 </div>
-                <div className="allrights">
+                <div className="allrights2">
                   Symba © 2018 | Privacy Policy
                 </div>
 

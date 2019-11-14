@@ -1,4 +1,52 @@
 @media (min-width: 320px) and (max-width: 374px) {
+  .allrights2 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    margin: auto;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .bottomIcon10 {
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    margin: auto;
+  }
+
+  .bottomIcons20 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 5px;
+    text-align: center;
+  }
+
+  .bottomLine40Inside20 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1080px;
+    padding: 15px 0 5px;
+    text-align: center;
+  }
+
+  .bottomLine50 {
+    background-color: #1f2021;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-height: 82px;
+    max-width: 100%;
+    padding: 0 32px;
+    text-align: center;
+  }
+
   .buttonSure {
     background-color: #f0b405;
     border-radius: 4px;
@@ -10,7 +58,7 @@
     font-weight: 700;
     margin: auto;
     max-height: 50px;
-    max-width: 90px;
+    max-width: 288px;
     padding: 8px 18px;
     text-align: center;
   }
@@ -133,7 +181,6 @@
     display: flex;
     flex-direction: column;
     margin: 0 32px;
-    /* padding: 0 43px; */
   }
 
   .meetSymbaLeftsideContainer {
@@ -146,6 +193,23 @@
     font-size: 50px;
     font-weight: 500;
     padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .platformInterest {
+    color: #333333;
+    font-size: 26px;
+    padding: 20px 0 10px;
+    text-align: center;
+  }
+
+  .platformQuestion {
+    color: #000000;
+    /* font-size: 20px; */
+    font-weight: bold;
+    height: 500px;
+    /* margin-top: 103px; */
+    /* padding: 80px 0 0 0; */
     text-align: center;
   }
 
@@ -164,6 +228,10 @@
 
   .projects2Letters {
     padding-top: 100px;
+  }
+
+  .sure {
+    margin: auto;
   }
 
   .symbaImage710 {
@@ -210,6 +278,50 @@
 }
 
 @media (min-width: 375px) and (max-width: 424px) {
+  .allrights2 {
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 0 10px;
+  }
+
+  .bottomIcon10 {
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    margin: auto;
+    padding-right: 17px;
+  }
+
+  .bottomIcons20 {
+    color: #666666;
+    justify-content: flex-end;
+    margin: 0 0 5px;
+  }
+
+  .bottomLine50 {
+    background-color: #1f2021;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    max-height: 82px;
+    max-width: 1080px;
+    padding: 0 77px;
+    text-align: center;
+  }
+
+  .bottomLine40Inside20 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1080px;
+    padding: 15px 0 5px;
+    text-align: center;
+  }
+
   .buttonSure {
     background-color: #f0b405;
     border-radius: 4px;
@@ -221,7 +333,7 @@
     font-weight: 700;
     margin: auto;
     max-height: 48px;
-    max-width: 82px;
+    max-width: 343px;
     padding: 8px 18px;
     text-align: center;
   }
@@ -389,6 +501,23 @@
     text-align: center;
   }
 
+  .platformInterest {
+    color: #333333;
+    font-size: 26px;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .platformQuestion {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    height: 500px;
+    margin-top: 103px;
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
+
   .projects {
     margin: auto;
     max-height: 560px;
@@ -402,6 +531,10 @@
     max-height: 545px;
     padding: 15px 0;
     text-align: center;
+  }
+
+  .sure {
+    margin: auto;
   }
 
   .symbaImage710 {
@@ -484,6 +617,50 @@
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
+  .allrights2 {
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 0 10px;
+  }
+
+  .bottomIcon10 {
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    margin: auto;
+    padding-right: 17px;
+  }
+
+  .bottomIcons20 {
+    color: #666666;
+    justify-content: flex-end;
+    margin: 0 0 5px;
+  }
+
+  .bottomLine50 {
+    background-color: #1f2021;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    max-height: 82px;
+    max-width: 100%;
+    padding: 0 42px;
+    text-align: center;
+  }
+
+  .bottomLine40Inside20 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 80%;
+    padding: 15px 0 5px;
+    text-align: center;
+  }
+
   .buttonSure {
     background-color: #f0b405;
     border-radius: 4px;
@@ -495,7 +672,7 @@
     font-weight: 700;
     margin: auto;
     max-height: 48px;
-    max-width: 82px;
+    max-width: 393px;
     padding: 8px 18px;
     text-align: center;
   }
@@ -646,6 +823,23 @@
     text-align: center;
   }
 
+  .platformInterest {
+    color: #333333;
+    font-size: 26px;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .platformQuestion {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    height: 500px;
+    margin-top: 103px;
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
+
   .processSymba2 {
     max-width: 100%;
     text-align: center;
@@ -665,6 +859,10 @@
 
   .showOnMobile {
     color: red;
+  }
+
+  .sure {
+    margin: auto;
   }
 
   .symbaImage710 {
@@ -719,14 +917,48 @@
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  .bottomLine40 {
-    background-color: rgb(0,0,0,0.32);
+  .allrights2 {
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 0 10px;
+  }
+
+  .bottomIcon10 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    font-weight: 400;
     margin: auto;
-    max-height: 53px;
-    max-width: 100%;
-    padding: 0 102px;
+    padding-right: 17px;
+  }
+
+  .bottomIcons20 {
+    color: #666666;
+    justify-content: flex-end;
+    margin: 0 0 5px;
+  }
+
+  .bottomLine50 {
+    background-color: #1f2021;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    max-height: 82px;
+    max-width: 1080px;
+    padding: 0 77px;
+    text-align: center;
+  }
+
+  .bottomLine40Inside20 {
+    color: #666666;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1080px;
+    padding: 15px 0 5px;
+    text-align: center;
   }
 
   .buttonSure {
@@ -767,7 +999,7 @@
 
   .explainSymba {
     margin: auto;
-    height: 268px;
+    max-height: 268px;
     padding: 68px 53px 30px;
   }
 
@@ -856,6 +1088,23 @@
     text-align: center;
   }
 
+  .platformInterest {
+    color: #333333;
+    font-size: 26px;
+    padding: 0 0 10px;
+    text-align: center;
+  }
+
+  .platformQuestion {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    height: 500px;
+    margin-top: 103px;
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
+
   .processSymba2 {
     max-width: 100%;
     text-align: center;
@@ -909,9 +1158,16 @@
 
 }
 @media (min-width: 1024px) {
+  .allrights {
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 0 10px;
+  }
+
   .bottomIcon1 {
     display: flex;
     flex-direction: row;
+    font-weight: 400;
     margin: auto;
     padding-right: 17px;
   }
@@ -923,9 +1179,12 @@
 
   .bottomLine50 {
     background-color: #1f2021;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
     max-height: 82px;
-    max-width: 100%;
+    max-width: 1080px;
     padding: 0 102px;
     text-align: center;
   }
@@ -935,8 +1194,9 @@
     display: flex;
     flex-direction: row;
     font-size: 14px;
-    /* justify-content: space-between; */
-    max-width: 819px;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1080px;
     padding: 15px 0 5px;
     text-align: center;
   }
@@ -958,7 +1218,10 @@
   }
 
   .buttonSureContainer {
-    padding-top: 260px;
+    background-color: rgb(0,0,0,0.05);
+    max-height: 70px;
+    max-width: 100%;
+    margin-top: 260px;
   }
 
   .emerald {
@@ -1027,7 +1290,7 @@
 
   .hideOnMobile {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .hideOnDesktop {
@@ -1105,7 +1368,7 @@
     font-weight: bold;
     height: 500px;
     margin-top: 103px;
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     text-align: center;
   }
 
@@ -1120,6 +1383,15 @@
 
   .projectLeft {
     padding: 0 45px 0 0;
+  }
+
+  .sureDemo {
+    padding: 0 50px;
+    text-align: center;
+  }
+
+  .sureDemoContainer {
+    max-height: 500px;
   }
 
   .symbaImage10 {
@@ -1163,11 +1435,6 @@
   }
 }
 
-.allrights {
-  font-weight: 700;
-  padding: 0 0 10px;
-}
-
 .arrow40 {
   padding-right: 22px;
 }
@@ -1185,6 +1452,10 @@
   background-color: #d1ede3;
   color: #000000;
   font-size: 20px;
+}
+
+.explainSymbaInside {
+  padding: 0 0 20px;
 }
 
 .heading40 {
@@ -1206,16 +1477,11 @@
 .poweredBy {
   color: #999999;
   font-size: 12px;
+  padding: 5px 0 0;
 }
 
 .products {
   color: #17b298;
-}
-
-.sureDemo {
-  max-height: 117px;
-  padding: 0 50px;
-  text-align: left;
 }
 
 .symbalogo {
